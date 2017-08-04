@@ -128,9 +128,7 @@ category:addChild(L["Rom'ogg Bonecrusher"], {
 	-- and in box
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Rom'ogg Bonecrusher";
-			--AchieveIt.Box:containsPlayer(41, 57, 54, 78);
+			UnitName("target") == L["Rom'ogg Bonecrusher"];
 
 end;
 
@@ -149,9 +147,7 @@ category:addChild(L["Corla, Herald of Twilight"], {
 	-- and in box
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2 and
-			UnitName("target") == "Corla, Herald of Twilight";
-			--AchieveIt.Box:containsPlayer(22, 40, 7, 21);
+			UnitName("target") == L["Corla, Herald of Twilight"];
 
 end;
 
@@ -170,9 +166,7 @@ category:addChild(L["Karsh Steelbender"], {
 	-- and in box
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2 and 
-			UnitName("target") == "Karsh Steelbender";
-			--AchieveIt.Box:containsPlayer(36, 54, 49, 77);
+			UnitName("target") == L["Karsh Steelbender"];
 
 end;
 
@@ -191,10 +185,7 @@ category:addChild(L["Ascendant Lord Obsidius"], {
 	-- and in box
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2 and 
-			UnitName("target") == "Ascendant Lord Obsidius";
-			--AchieveIt.Box:containsPlayer(59, 78, 40, 68);
-
+			UnitName("target") == L["Ascendant Lord Obsidius"];
 end;
 
 category:inheritAchievements();
@@ -235,8 +226,7 @@ category:addChild(L["Lady Naz'jar"], {
 	-- and in box
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2 and
-			UnitName("target") == "Lady Naz'jar";--AchieveIt.Box:containsPlayer(40, 58, 6, 37);
+			UnitName("target") == L["Lady Naz'jar"];
 
 end;
 
@@ -256,7 +246,6 @@ category:addChild(L["Ozumat"], {
 	return 753 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
 			GetCurrentMapDungeonLevel() == 1;
-			--AchieveIt.Box:containsPlayer(22, 38, 7, 32);
 
 end;
 
@@ -297,8 +286,7 @@ category:addChild(L["High Priestess Azil"], {
 	-- and in box
 	return 768 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "High Priestess Azil";
-			--AchieveIt.Box:containsPlayer(42, 65, 30, 48);
+			UnitName("target") == L["High Priestess Azil"];
 
 end;
 
@@ -341,8 +329,7 @@ category:addChild(L["Asaad"], {
 	-- and in box
 	return 769 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Asaad";
-			--AchieveIt.Box:containsPlayer(24, 35, 30, 47);
+			UnitName("target") == L["Asaad"];
 
 end;
 
@@ -383,8 +370,7 @@ category:addChild(L["General Umbriss"], {
 	-- and in box
 	return 757 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "General Umbriss";
-			--AchieveIt.Box:containsPlayer(34.5, 45, 60, 81);
+			UnitName("target") == L["General Umbriss"];
 
 end;
 
@@ -402,8 +388,7 @@ category:addChild(L["Erudax"], {
 	-- and in box
 	return 757 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Erudax";
-			--AchieveIt.Box:containsPlayer(78, 95, 42, 88);
+			UnitName("target") == L["Erudax"];
 
 end;
 
@@ -447,10 +432,7 @@ category:addChild(L["Temple Guardian Anhuur"], {
 	-- and in box
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Temple Guardian Anhuur";
-			--AchieveIt.Box:containsPlayer(49, 65, 56, 69);
-
+			UnitName("target") == L["Temple Guardian Anhuur"];
 end;
 
 --------------------------------------------
@@ -467,7 +449,7 @@ category:addChild(L["Earthrager Ptah"], {
 	-- on level 2
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2;
+			UnitName("target") == L["Earthrager Ptah"];
 
 end;
 
@@ -486,9 +468,7 @@ category:addChild(L["Rajh"], {
 	-- and in box
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 3 and
-			UnitName("target") == "Rajh";
-			--AchieveIt.Box:containsPlayer(37, 55, 8, 42);
+			UnitName("target") == L["Rajh"];
 
 end;
 
@@ -529,8 +509,7 @@ category:addChild(L["High Prophet Barim"], {
 	-- and in box
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "High Prophet Barim";
-			--AchieveIt.Box:containsPlayer(22, 32, 54, 75);
+			UnitName("target") == L["High Prophet Barim"];
 
 end;
 
@@ -548,8 +527,7 @@ category:addChild(L["Lockmaw"], {
 	-- and in box
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Lockmaw";
-			--AchieveIt.Box:containsPlayer(59, 74, 59, 83);
+			UnitName("target") == L["Lockmaw"];
 
 end;
 
@@ -567,8 +545,7 @@ category:addChild(L["Siamat, Lord of South Wind"], {
 	-- and in box
 	return 759 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Siamat";
-			--AchieveIt.Box:containsPlayer(34, 45, 49, 63);
+			UnitName("target") == L["Siamat"];
 
 end;
 
@@ -608,9 +585,7 @@ category:addChild(L["Glubtok"], {
 	-- and in box
 	return 756 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Glubtok";
-			--AchieveIt.Box:containsPlayer(30, 42, 52, 68);
+			UnitName("target") == L["Glubtok"];
 
 end;
 
@@ -629,9 +604,7 @@ category:addChild(L["Helix Gearbreaker"], {
 	-- and in box
 	return 756 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Helix Gearbreaker";
-			--AchieveIt.Box:containsPlayer(40, 55, 75, 95);
+			UnitName("target") == L["Helix Gearbreaker"];
 
 end;
 
@@ -646,29 +619,10 @@ category:addChild(L["Foe Reaper 5000"], {
 
 	-- in dungeon
 	-- is heroic mode
-	--if (
 	return 756 == GetCurrentMapAreaID() and
 		AchieveIt.difficulty.isHeroicDungeon() and
-	--) then
-
-		-- if on level 1
-		--if (GetCurrentMapDungeonLevel() == 1) then
-
-			--return and UnitName("target") == "Foe Reaper 5000";
-			--AchieveIt.Box:containsPlayer(52, 69, 53, 76);
-
-		-- else on level 2
-		--else
-
-			UnitName("target") == "Foe Reaper 5000";
-			--AchieveIt.Box:containsPlayer(2, 21, 67, 94);
-
-		--end
-
-	--end
-			
-	--return false;			
-
+		UnitName("target") == L["Foe Reaper 5000"];
+		
 end;
 
 ----------------------------------
@@ -682,14 +636,10 @@ category:addChild(L["Admiral Ripsnarl"], {
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 2
-	-- and in box
-	if (
-		756 == GetCurrentMapAreaID() and
+	-- target is
+	if (756 == GetCurrentMapAreaID() and
 		AchieveIt.difficulty.isHeroicDungeon() and
-		GetCurrentMapDungeonLevel() == 2 and
-		UnitName("target") == "Admiral Ripsnarl") 
-		--AchieveIt.Box:containsPlayer(54, 65, 29, 44)
+		UnitName("target") == L["Admiral Ripsnarl"]) 
 	then
 
 		-- get instance lock
@@ -717,12 +667,10 @@ category:addChild(L["\"Captain\" Cookie"], {
 	-- is heroic mode
 	-- on level 2
 	-- and in box
-	if (
-		756 == GetCurrentMapAreaID() and
+	if (756 == GetCurrentMapAreaID() and
 		AchieveIt.difficulty.isHeroicDungeon() and
-		GetCurrentMapDungeonLevel() == 2 --and
-		--AchieveIt.Box:containsPlayer(54, 65, 29, 44)
-	) then
+		UnitName("target") == L["\"Captain\" Cookie"]) 
+		then
 
 		-- get instance lock
 		local lockTimeleft, isPreviousInstance, encountersTotal, encountersComplete = GetInstanceLockTimeRemaining();
@@ -747,10 +695,9 @@ category:addChild(L["Vanessa VanCleef"], {
 
 	-- in dungeon
 	-- is heroic mode
-	if (
-		756 == GetCurrentMapAreaID() and
-		AchieveIt.difficulty.isHeroicDungeon()
-	) then
+	if (756 == GetCurrentMapAreaID() and
+		AchieveIt.difficulty.isHeroicDungeon() and
+		UnitName("target") == L["Vanessa VanCleef"]) then
 
 		-- get instance lock
 		local lockTimeleft, isPreviousInstance, encountersTotal, encountersComplete = GetInstanceLockTimeRemaining();
@@ -802,8 +749,7 @@ category:addChild(L["Baron Ashbury"], {
 	return 764 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
 			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Baron Ashbury";
-			--AchieveIt.Box:containsPlayer(59, 72, 63, 77);
+			UnitName("target") == L["Baron Ashbury"];
 
 end;
 
@@ -823,8 +769,7 @@ category:addChild(L["Commander Springvale"], {
 	return 764 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
 			GetCurrentMapDungeonLevel() == 1 and
-			UnitName("target") == "Commander Springvale";
-			--AchieveIt.Box:containsPlayer(22, 35, 54, 79);
+			UnitName("target") == L["Commander Springvale"];
 
 end;
 
@@ -843,9 +788,7 @@ category:addChild(L["Lord Godfrey"], {
 	-- and in box
 	return 764 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 6 and
-			UnitName("target") == "Lord Godfrey";
-			--AchieveIt.Box:containsPlayer(51, 83, 7, 59);
+			UnitName("target") == L["Lord Godfrey"];
 
 end;
 
@@ -886,9 +829,7 @@ category:addChild(L["High Priest Venoxis"], {
 	-- and in box
 	return 793 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "High Priest Venoxis";
-			--AchieveIt.Box:containsPlayer(47, 53, 48, 59);
-
+			UnitName("target") == L["High Priest Venoxis"];
 end;
 
 ------------------------------------
@@ -905,8 +846,7 @@ category:addChild(L["Bloodlord Mandokir"], {
 	-- and in box
 	return 793 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Bloodlord Mandokir";
-			--AchieveIt.Box:containsPlayer(53, 67, 68, 86);
+			UnitName("target") == L["Bloodlord Mandokir"];
 
 end;
 
@@ -924,8 +864,7 @@ category:addChild(L["Jin'do the Godbreaker"], {
 	-- and in box
 	return 793 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Jin'do the Godbreaker";
-			--AchieveIt.Box:containsPlayer(43, 53, 32, 47);
+			UnitName("target") == L["Jin'do the Godbreaker"];
 
 end;
 
@@ -968,8 +907,7 @@ category:addChild(L["Halazzi"], {
 	-- and in box
 	return 793 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Halazzi";
-			--AchieveIt.Box:containsPlayer(51, 66, 11, 35);
+			UnitName("target") == L["Halazzi"];
 
 end;
 
@@ -987,8 +925,7 @@ category:addChild(L["Daakara"], {
 	-- and in box
 	return 793 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Daakara";
-			--AchieveIt.Box:containsPlayer(80, 97, 37, 65);
+			UnitName("target") == L["Daakara"];
 
 end;
 
@@ -1027,7 +964,7 @@ category:addChild(L["Echo of Tyrande"], {
 	-- on level 5
 	return 820 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 5;
+			UnitName("target") == L["Echo of Tyrande"];
 
 end;
 
@@ -1045,7 +982,7 @@ category:addChild(L["Echo of Sylvanas"], {
 	-- on level 3
 	return 820 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 3;
+			UnitName("target") == L["Echo of Sylvanas"];
 
 end;
 
@@ -1084,8 +1021,7 @@ category:addChild(L["Peroth'arn"], {
 	-- and in box
 	return 816 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Peroth'arn";
-			--AchieveIt.Box:containsPlayer(10, 28, 33, 63);
+			UnitName("target") == L["Peroth'arn"];
 
 end;
 
@@ -1103,8 +1039,7 @@ category:addChild(L["Mannoroth"], {
 	-- and in box
 	return 816 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			UnitName("target") == "Mannoroth";
-			--AchieveIt.Box:containsPlayer(73, 96, 29, 91);
+			UnitName("target") == L["Mannoroth"];
 
 end;
 
@@ -1140,28 +1075,9 @@ category:addChild(L["Archbishop Benedictus"], {
 
 	-- in dungeon
 	-- is heroic mode
-	--if (
 	return 819 == GetCurrentMapAreaID() and
-		AchieveIt.difficulty.isHeroicDungeon() and
-	--) then
-
-		-- if on level 1
-		--if (
-		GetCurrentMapDungeonLevel() == 1;-- then
-
-			--return UnitName("target") == "Archbishop Benedictus";
-			--AchieveIt.Box:containsPlayer(43, 55, 69, 96);
-
-		-- else on level 2
-		--else
-
-			--return true;
-
-		--end
-
-	--end
-			
-	--return false;			
+		AchieveIt.difficulty.isHeroicDungeon() and 
+		UnitName("target") == L["Archbishop Benedictus"];
 
 end;
 
