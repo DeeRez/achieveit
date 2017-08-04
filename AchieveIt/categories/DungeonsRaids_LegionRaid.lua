@@ -101,7 +101,7 @@ category:addChild(L["Nythendra"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1;
+            UnitName("target") == L["Nythendra"];
 
 end;
 
@@ -121,7 +121,8 @@ category:addChild(L["Il'gynoth"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4;
+            (UnitName("target") == L["Il'gynoth"] or 
+			 UnitName("target") == L["Eye of Il'gynoth"]);
 
 end;
 
@@ -141,7 +142,7 @@ category:addChild(L["Elerethe Renferal"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 3;
+            UnitName("target") == L["Elerethe Renferal"];
 
 end;
 
@@ -161,7 +162,7 @@ category:addChild(L["Ursoc"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 10;
+            UnitName("target") == L["Ursoc"];
 
 end;
 
@@ -181,7 +182,10 @@ category:addChild(L["Dragons of Nightmare"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 5;
+            (UnitName("target") == L["Emeriss"] or
+			 UnitName("target") == L["Lethon"] or
+			 UnitName("target") == l["Taerar"] or
+			 UnitName("target") == L["Ysondre"]);
 
 end;
 
@@ -201,7 +205,7 @@ category:addChild(L["Cenarius"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 11;
+            UnitName("target") == L["Cenarius"];
 
 end;
 
@@ -221,7 +225,7 @@ category:addChild(L["Xavius"], {
     -- on level 3
     return 1094 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 12;
+            UnitName("target") == L["Xavius"];
 
 end;
 
@@ -265,7 +269,7 @@ category:addChild(L["Progress"], {
 category:addChild(L["Odyn"], {
     -- Mythic: Odyn
     11396,
-    -- You Ruined Everything!
+    -- You Runed Everything!
     11337
 }).locate = function()
 
@@ -274,7 +278,9 @@ category:addChild(L["Odyn"], {
     -- on level 3
     return 1114 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 2;
+			(UnitName("target") == L["Odyn"] or 
+			 UnitName("target") == L["Hymdall"] or
+			 UnitName("target") == L["Hyrja"]);
 
 end;
 
@@ -294,9 +300,7 @@ category:addChild(L["Guarm"], {
     -- on level 3
     return 1114 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 3 and 
-			UnitName("target") == "Guarm";
-			--AchieveIt.Box:containsPlayer(46, 54, 20, 38);
+			UnitName("target") == L["Guarm"];
 
 end;
 
@@ -319,8 +323,7 @@ category:addChild(L["Helya"], {
     return 1114 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
             GetCurrentMapDungeonLevel() == 3 and 
-			UnitName("target") == "Helya";
-			--AchieveIt.Box:containsPlayer(33,45, 16, 36);
+			UnitName("target") == L["Helya"];
 
 end;
 
@@ -402,9 +405,7 @@ category:addChild(L["Skorpyron"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and 
-			UnitName("target") == "Skorpyron";
-			--AchieveIt.Box:containsPlayer(27, 34, 57, 68);
+			UnitName("target") == L["Skorpyron"];
 
 end;
 
@@ -424,9 +425,7 @@ category:addChild(L["Chronomatic Anomaly"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and 
-			UnitName("target") == "Chronomatic Anomaly";
-			--AchieveIt.Box:containsPlayer(45, 64, 26, 58);
+			UnitName("target") == L["Chronomatic Anomaly"];
 
 end;
 
@@ -446,9 +445,7 @@ category:addChild(L["Trilliax"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and 
-			UnitName("target") == "Trilliax";
-			--AchieveIt.Box:containsPlayer(37, 46, 13, 26);
+			UnitName("target") == L["Trilliax"];
 
 end;
 
@@ -468,9 +465,7 @@ category:addChild(L["Spellblade Aluriel"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 3 and 
-			UnitName("target") == "Spellblade Aluriel";
-			--AchieveIt.Box:containsPlayer(22, 60, 13, 70);
+			UnitName("target") == L["Spellblade Aluriel"];
 
 end;
 
@@ -490,7 +485,7 @@ category:addChild(L["Tichondrius"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 5;
+            UnitName("target") == L["Tichondrius"];
 
 end;
 
@@ -511,8 +506,7 @@ category:addChild(L["Krosus"], {
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
             GetCurrentMapDungeonLevel() == 3 and 
-			UnitName("target") == "Krosus";
-			--AchieveIt.Box:containsPlayer(68, 75, 85, 94);
+			UnitName("target") == L["Krosus"];
 
 end;
 
@@ -532,7 +526,7 @@ category:addChild(L["High Botanist Tel'arn"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4;
+            UnitName("target") == L["High Botanist Tel'arn"];
 
 end;
 
@@ -552,7 +546,7 @@ category:addChild(L["Star Augur Etraeus"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 6;
+            UnitName("target") == L["Star Augur Etraeus"];
 
 end;
 
@@ -572,8 +566,7 @@ category:addChild(L["Grand Magistrix Elisande"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 7 and
-			UnitName("target") == "Elisande";
+			UnitName("target") == L["Elisande"];
 
 end;
 
@@ -593,7 +586,7 @@ category:addChild(L["Gul'dan"], {
     -- on level 3
     return 1088 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 9;
+            UnitName("target") == L["Gul'dan"];
 
 end;
 
