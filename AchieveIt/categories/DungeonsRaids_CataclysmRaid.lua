@@ -56,8 +56,7 @@ category:addChild(L["Magmaw"], {
 	-- on level 1
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(19, 35, 43, 71);
+			UnitName("target") == L["Magmaw"]
 
 end;
 
@@ -76,8 +75,10 @@ category:addChild(L["Omnotron Defense System"], {
 	-- on level 1
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(57, 74, 45, 71);
+			(UnitName("target") == L["Arcanotron"] or
+			 UnitName("target") == L["Electron"] or
+			 UnitName("target") == L["Magmatron"] or
+			 UnitName("target") == L["Toxitron"]);
 
 end;
 
@@ -96,8 +97,7 @@ category:addChild(L["Maloriak"], {
 	-- on level 2
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(59, 78, 58, 81);
+			UnitName("target") == L["Maloriak"];
 
 end;
 
@@ -116,8 +116,7 @@ category:addChild(L["Atramedes"], {
 	-- on level 2
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(34, 60, 11, 49);
+			UnitName("target") == L["Atramedes"];
 
 end;
 
@@ -136,8 +135,7 @@ category:addChild(L["Chimaeron"], {
 	-- on level 2
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(15, 32, 56, 81);
+			UnitName("target") == L["Chimaeron"];
 
 end;
 
@@ -156,8 +154,8 @@ category:addChild(L["Nefarian"], {
 	-- on level 2
 	-- and in box
 	return 754 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(39, 55, 57, 84);
+			(UnitName("target") == L["Nefarian"] or
+			 UnitName("target") == L["Onyxia"]);
 
 end;
 
@@ -195,8 +193,7 @@ category:addChild(L["Halfus Wyrmbreaker"], {
 	-- on level 1
 	-- and in box
 	return 758 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(45, 61, 5, 27);
+            UnitName("target") == L["Halfus Wyrmbreaker"];
 
 end;
 
@@ -215,8 +212,8 @@ category:addChild(L["Valiona and Theralion"], {
 	-- on level 1
 	-- and in box
 	return 758 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(42, 65, 65, 88);
+			(UnitName("target") == L["Valiona"] or
+			 UnitName("target") == L["Theralion"]);
 
 end;
 
@@ -235,8 +232,10 @@ category:addChild(L["Ascendant Council"], {
 	-- on level 2
 	-- and in box
 	return 758 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(26, 52, 22, 67);
+			(UnitName("target") == L["Arion"] or
+			 UnitName("target") == L["Feludius"] or
+			 UnitName("target") == L["Ignacious"] or
+			 UnitName("target") == L["Terrastra"]);
 
 end;
 
@@ -255,8 +254,7 @@ category:addChild(L["Cho'gall"], {
 	-- on level 2
 	-- and in box
 	return 758 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(54, 84, 54, 96);
+			UnitName("target") == L["Cho'gall"];
 
 end;
 
@@ -272,7 +270,7 @@ category:addChild(L["Sinestra"], {
 	-- in raid
 	-- on level 3
 	return 758 == GetCurrentMapAreaID() and
-			GetCurrentMapDungeonLevel() == 3;
+	UnitName("target") == L["Sinestra"];
 
 end;
 
@@ -375,7 +373,15 @@ category:addChild(L["Shannox"], {
 	5806,
 	-- Bucket List
 	5829
-});
+}).locate = function()
+
+	-- in raid
+	-- on level 1
+	-- and in box
+	return 800 == GetCurrentMapAreaID() and
+		UnitName("target") == L["Shannox"];
+
+end;
 
 -------------------------------
 -- Firelands / Lord Rhyolith --
@@ -392,8 +398,9 @@ category:addChild(L["Lord Rhyolith"], {
 	-- on level 1
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1 and
-		AchieveIt.Box:containsPlayer(58, 73, 65, 87);
+		(UnitName("target") == L["Lord Rhyolith"] or
+		 UnitName("target") == L["Left Leg"] or
+		 UnitName("target") == L["Right Leg"]);
 
 end;
 
@@ -412,8 +419,7 @@ category:addChild(L["Beth'tilac"], {
 	-- on level 1
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1 and
-		AchieveIt.Box:containsPlayer(10, 29, 18, 45);
+		UnitName("target") == L["Beth'tilac"];
 
 end;
 
@@ -432,8 +438,7 @@ category:addChild(L["Alysrazor"], {
 	-- on level 1
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1 and
-		AchieveIt.Box:containsPlayer(57, 69, 33, 51);
+		UnitName("target") == L["Alysrazor"];
 
 end;
 
@@ -452,8 +457,7 @@ category:addChild(L["Baleroc"], {
 	-- on level 1
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1 and
-		AchieveIt.Box:containsPlayer(43, 54, 24, 40);
+		UnitName("target") == L["Baleroc"];
 
 end;
 
@@ -472,8 +476,7 @@ category:addChild(L["Majordomo Staghelm"], {
 	-- on level 3
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 3 and
-		AchieveIt.Box:containsPlayer(42, 60, 63, 96);
+		UnitName("target") == L["Majordomo Staghelm"];
 
 end;
 
@@ -492,8 +495,7 @@ category:addChild(L["Ragnaros"], {
 	-- on level 3
 	-- and in box
 	return 800 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 3 and
-		AchieveIt.Box:containsPlayer(38, 63, 3, 46);
+		UnitName("target") == L["Ragnaros"];
 
 end;
 
@@ -531,8 +533,7 @@ category:addChild(L["Morchok"], {
 	-- on level 1
 	-- and in box
 	return 824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1 and
-		AchieveIt.Box:containsPlayer(47, 53, 65, 75);
+		UnitName("target") == L["Morchok"];
 
 end;
 
@@ -550,7 +551,7 @@ category:addChild(L["Warlord Zon'ozz"], {
 	-- in raid
 	-- on level 2
 	return 824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 2;
+		UnitName("target") == L["Warlord Zon'ozz"];
 
 end;
 
@@ -568,7 +569,7 @@ category:addChild(L["Yor'sahj the Unsleeping"], {
 	-- in raid
 	-- on level 3
 	return 824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 3;
+		UnitName("target") == L["Yor'sahj the Unsleeping"];
 
 end;
 
@@ -586,7 +587,7 @@ category:addChild(L["Hagara the Stormbinder"], {
 	-- in raid
 	-- on level 4
 	return 824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 4;
+		UnitName("target") == L["Hagara the Stormbinder"];
 
 end;
 
@@ -602,19 +603,8 @@ category:addChild(L["Ultraxion"], {
 }).locate = function()
 
 	-- in raid
-	-- on level 1
-	if (
-		824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 1
-	) then
-
-		-- get instance lock
-		local lockTimeleft, isPreviousInstance, encountersTotal, encountersComplete = GetInstanceLockTimeRemaining();
-
-		-- boss not yet killed
-		return encountersComplete == 4;
-
-	end;
+	return 824 == GetCurrentMapAreaID() and
+		UnitName("target") == L["Ultraxion"]
 
 end;
 
@@ -632,7 +622,7 @@ category:addChild(L["Warmaster Blackhorn"], {
 	-- in raid
 	-- on level 5
 	return 824 == GetCurrentMapAreaID() and
-		GetCurrentMapDungeonLevel() == 5;
+		UnitName("target") == L["Warmaster Blackhorn"];
 
 end;
 
