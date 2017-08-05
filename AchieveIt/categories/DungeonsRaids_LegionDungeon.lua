@@ -89,8 +89,6 @@ AchieveIt.Categories:addCategory(categoryId, L["Heroic Dungeons"], {
 	10796,
 	-- Heroic: Return to Karazhan
 	11929,
-	--[[-- Heroic: Seat of the Triumverate
-	12007,]]
 	-- Heroic: Vault of the Wardens
 	10802
 	
@@ -141,9 +139,6 @@ AchieveIt.Categories:addCategory(categoryId, L["Mythic Dungeons"], {
 	10797,
 	-- Return to Kharazhan
 	11429,
-	--[[
-	-- Mythic: Seat of the Triumverate
-	12008,]]
 	-- Mythic: The Arcway
 	10813,
 	-- Mythic: Vault of the Wardens
