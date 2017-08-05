@@ -146,12 +146,14 @@ end;
 -----------------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(964), {
-    -- Bloodmaul Slag Mines
+    
+	-- Bloodmaul Slag Mines
     9037,
     -- Heroic: Bloodmaul Slag Mines
     9046,
 	-- Mythic: Bloodmaul Slag Mines
     10076
+	
 });
 
 category.locate = function()
@@ -166,15 +168,17 @@ end;
 -------------------------------------
 
 category:addChild(L["Gug'rokk"], {
-    -- Is Draenor on Fire?
+    
+	-- Is Draenor on Fire?
     9008,
     -- Come With Me If You Want to Live
     9005
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- in box
+    -- target is
 	return 964 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Gug'rokk"];
@@ -186,13 +190,15 @@ end;
 ---------------------------------------
 
 category:addChild(L["Magmolatus"], {
-    -- A Gift of Earth and Fire
+    
+	-- A Gift of Earth and Fire
     8993
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 964 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             (UnitName("target") == L["Forgemaster Gog'duh"] or
@@ -208,12 +214,16 @@ category:inheritAchievements();
 -------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(987), {
-    -- Iron Docks
+    
+	-- Iron Docks
     9038,
     -- Heroic: Iron Docks
     9047,
+    -- Mythic: Iron Docks
+    10079,
     -- Expert Timing
     9081
+	
 });
 
 category.locate = function()
@@ -228,13 +238,15 @@ end;
 --------------------------------------
 
 category:addChild(L["Fleshrender Nok'gar"], {
-    -- Militaristic, Expansionist
+    
+	-- Militaristic, Expansionist
     9083
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 987 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Fleshrender Nok'gar"];
@@ -246,13 +258,15 @@ end;
 --------------------------
 
 category:addChild(L["Skulloc"], {
-    -- Take Cover!
+    
+	-- Take Cover!
     9082
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 867 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Skulloc"];
@@ -267,10 +281,14 @@ category:inheritAchievements();
 -------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(984), {
-    -- Auchindoun
+    
+	-- Auchindoun
     9039,
     -- Heroic: Auchindoun
-    9049
+    9049,
+    -- Mythic: Auchindoun
+    10080
+	
 });
 
 category.locate = function()
@@ -285,13 +303,15 @@ end;
 -----------------------------------
 
 category:addChild(L["Soulbinder Nyami"], {
-    -- ...They All Fall Down
+    
+	-- ...They All Fall Down
     9023
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Soulbinder Nyami"];
@@ -303,13 +323,15 @@ end;
 ---------------------------
 
 category:addChild(L["Azzakel"], {
-    -- Demon's Souls
+    
+	-- Demon's Souls
     9551
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Azzakel"];
@@ -321,13 +343,15 @@ end;
 ----------------------------
 
 category:addChild(L["Teron'gor"], {
-    -- No Tag-backs!
+    
+	-- No Tag-backs!
     9552
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- and in box
+    -- target is
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Teron'gor"];
@@ -342,12 +366,16 @@ category:inheritAchievements();
 -----------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(989), {
-    -- Skyreach
+    
+	-- Skyreach
     8843,
     -- Heroic: Skyreach
     8844,
+	-- Mythic: Skyreach
+    10081,
     -- Magnify... Enhance
     9034
+	
 });
 
 category.locate = function()
@@ -362,14 +390,15 @@ end;
 -----------------------
 
 category:addChild(L["Ranjit"], {
-    -- Ready for Raiding IV
+    
+	-- Ready for Raiding IV
     9033
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 1
-	-- and in box
+    -- target is
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Ranjit"];
@@ -381,14 +410,15 @@ end;
 ------------------------
 
 category:addChild(L["Rukhran"], {
-    -- I Saw Solis
+    
+	-- I Saw Solis
     9035
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-    -- on level 1
-    -- and in box
+    -- target is
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Rukhran"];
@@ -400,13 +430,15 @@ end;
 --------------------------------
 
 category:addChild(L["High Sage Viryx"], {
-    -- Monomania
+    
+	-- Monomania
     9036
+	
 }).locate = function()
 
 	-- in dungeonc
 	-- is heroic mode
-	-- on level 2
+    -- target is
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["High Sage Viryx"];
@@ -421,12 +453,16 @@ category:inheritAchievements();
 ------------------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(995), {
-    -- Upper Blackrock Spire
+    
+	-- Upper Blackrock Spire
     9042,
     -- Heroic: Upper Blackrock Spire
     9055,
+    -- Mythic: Upper Blackrock Spire
+    10085,
     -- Leeeeeeeeeeeeeroy...?
     9058
+	
 });
 
 category.locate = function()
@@ -441,14 +477,15 @@ end;
 --------------------------------------------------
 
 category:addChild(L["Orebender Gor'ashan"], {
-    -- Magnets, How Do They Work?
+    
+	-- Magnets, How Do They Work?
     9045
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 2
-	-- and in box
+    -- target is
 	return 995 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Orebender Gor'ashan"];
@@ -460,14 +497,15 @@ end;
 --------------------------------------------------
 
 category:addChild(L["Ragewing the Untamed"], {
-    -- Bridge Over Troubled Fire
+    
+	-- Bridge Over Troubled Fire
     9056
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 3
-	-- and in box
+    -- target is
 	return 995 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Ragewing the Untamed"];
@@ -479,14 +517,15 @@ end;
 -------------------------------------------
 
 category:addChild(L["Warlord Zaela"], {
-    -- Dragonmaw? More Like Dragonfall!
+    
+	-- Dragonmaw? More Like Dragonfall!
     9057
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 3
-	-- and in box
+    -- target is
 	return 875 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Warlord Zaela"];
@@ -501,10 +540,14 @@ category:inheritAchievements();
 ----------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(1008), {
-    -- The Everbloom
+    
+	-- The Everbloom
     9044,
     -- Heroic: The Everbloom
-    9053
+    9053,
+    -- Mythic: The Everbloom
+    10083
+	
 });
 
 category.locate = function()
@@ -519,14 +562,15 @@ end;
 ----------------------------------
 
 category:addChild(L["Archmage Sol"], {
-    -- They Burn, Burn, Burn
+    
+	-- They Burn, Burn, Burn
     9493
+	
 }).locate = function()
 
--- in dungeon
--- is heroic mode
--- on level 1
--- and in box
+	-- in dungeon
+	-- is heroic mode
+    -- target is
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Archmage Sol"];
@@ -538,13 +582,15 @@ end;
 ---------------------------
 
 category:addChild(L["Yalnu"], {
-    -- Weed Whacker
+    
+	-- Weed Whacker
     9223
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 2
+    -- target is
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Yalnu"];
@@ -556,14 +602,15 @@ end;
 --------------------------------
 
 category:addChild(L["Witherbark"], {
-    -- Water Management
+    
+	-- Water Management
     9017
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 1
-    -- and in box
+    -- target is
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Witherbark"];
@@ -578,10 +625,14 @@ category:inheritAchievements();
 -----------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(993), {
-    -- Grimrail Depot
+    
+	-- Grimrail Depot
     9043,
     -- Heroic: Grimrail Depot
-    9052
+    9052,
+    -- Mythic: Grimrail Depot
+    10082
+	
 });
 
 category.locate = function()
@@ -596,14 +647,15 @@ end;
 ----------------------------------------------
 
 category:addChild(L["Railmaster Rocketspark"], {
-    -- This Is Why We Can't Have Nice Things
+    
+	-- This Is Why We Can't Have Nice Things
     9024
+	
 }).locate = function()
 
 	-- in dungeon
 	-- is heroic mode
-	-- on level 1
-	-- and in box
+    -- target is
 	return 993 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
             (UnitName("target") == L["Borka the Brute"] or
@@ -616,14 +668,15 @@ end;
 ---------------------------------------------
 
 category:addChild(L["Nitrogg Thundertower"], {
-    -- No Ticket
+    
+	-- No Ticket
     9007
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 4
-    -- and in box
+    -- target is
     return 993 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Nitrogg Thundertower"];
@@ -638,10 +691,14 @@ category:inheritAchievements();
 ----------------------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(969), {
-    -- Shadowmoon Burial Grounds
+    
+	-- Shadowmoon Burial Grounds
     9041,
     -- Heroic: Shadowmoon Burial Grounds
-    9054
+    9054,
+    -- Mythic: Shadowmoon Burial Grounds
+    10084
+	
 });
 
 category.locate = function()
@@ -656,14 +713,15 @@ end;
 --------------------------------------------------
 
 category:addChild(L["Sadana Bloodfury"], {
-    -- What's Your Sign?
+    
+	-- What's Your Sign?
     9018
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 1
-    -- and in box
+    -- target is
     return 969 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
 		UnitName("target") == L["Sadana Bloodfury"];
@@ -675,14 +733,15 @@ end;
 -----------------------------------------
 
 category:addChild(L["Bonemaw"], {
-    -- Icky Ichors
+    
+	-- Icky Ichors
     9025
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 2
-    -- and in box
+    -- target is
     return 969 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon()  and 
 		UnitName("target") == L["Bonemaw"];
@@ -694,13 +753,15 @@ end;
 -------------------------------------------
 
 category:addChild(L["Ner'zhul"], {
-    -- Souls of the Lost
+    
+	-- Souls of the Lost
     9026
+	
 }).locate = function()
 
     -- in dungeon
     -- is heroic mode
-    -- on level 3
+    -- target is
     return 969 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
             UnitName("target") == L["Ner'zhul"];
