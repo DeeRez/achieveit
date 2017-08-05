@@ -149,7 +149,9 @@ local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(964
     -- Bloodmaul Slag Mines
     9037,
     -- Heroic: Bloodmaul Slag Mines
-    9046
+    9046,
+	-- Mythic: Bloodmaul Slag Mines
+    10076
 });
 
 category.locate = function()
@@ -175,7 +177,7 @@ category:addChild(L["Gug'rokk"], {
 	-- in box
 	return 964 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-            AchieveIt.Box:containsPlayer(55, 71, 15, 31);
+            UnitName("target") == L["Gug'rokk"];
 
 end;
 
@@ -193,7 +195,8 @@ category:addChild(L["Magmolatus"], {
 	-- and in box
 	return 964 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(20, 42, 44, 66);
+            (UnitName("target") == L["Forgemaster Gog'duh"] or
+			 UnitName("target") == L["Magmolatus"]);
 
 end;
 
@@ -234,7 +237,7 @@ category:addChild(L["Fleshrender Nok'gar"], {
 	-- and in box
 	return 987 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(39, 51, 25, 43);
+            UnitName("target") == L["Fleshrender Nok'gar"];
 
 end;
 
@@ -252,7 +255,7 @@ category:addChild(L["Skulloc"], {
 	-- and in box
 	return 867 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(61, 73, 24, 53);
+            UnitName("target") == L["Skulloc"];
 
 end;
 
@@ -291,7 +294,7 @@ category:addChild(L["Soulbinder Nyami"], {
 	-- and in box
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(40, 61, 58, 76);
+            UnitName("target") == L["Soulbinder Nyami"];
 
 end;
 
@@ -309,7 +312,7 @@ category:addChild(L["Azzakel"], {
 	-- and in box
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(63, 79, 23, 46);
+            UnitName("target") == L["Azzakel"];
 
 end;
 
@@ -327,7 +330,7 @@ category:addChild(L["Teron'gor"], {
 	-- and in box
 	return 984 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			AchieveIt.Box:containsPlayer(39, 60, 16, 48);
+            UnitName("target") == L["Teron'gor"];
 
 end;
 
@@ -369,8 +372,7 @@ category:addChild(L["Ranjit"], {
 	-- and in box
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(56, 70, 28, 48);
+            UnitName("target") == L["Ranjit"];
 
 end;
 
@@ -389,8 +391,7 @@ category:addChild(L["Rukhran"], {
     -- and in box
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(35, 48, 73, 90);
+            UnitName("target") == L["Rukhran"];
 
 end;
 
@@ -408,7 +409,7 @@ category:addChild(L["High Sage Viryx"], {
 	-- on level 2
 	return 989 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2;
+            UnitName("target") == L["High Sage Viryx"];
 
 end;
 
@@ -450,8 +451,7 @@ category:addChild(L["Orebender Gor'ashan"], {
 	-- and in box
 	return 995 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 2 and
-			AchieveIt.Box:containsPlayer(26, 34, 21, 32);
+            UnitName("target") == L["Orebender Gor'ashan"];
 
 end;
 
@@ -470,8 +470,7 @@ category:addChild(L["Ragewing the Untamed"], {
 	-- and in box
 	return 995 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 3 and
-			AchieveIt.Box:containsPlayer(40, 52, 40, 52);
+            UnitName("target") == L["Ragewing the Untamed"];
 
 end;
 
@@ -490,8 +489,7 @@ category:addChild(L["Warlord Zaela"], {
 	-- and in box
 	return 875 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 3 and
-			AchieveIt.Box:containsPlayer(6, 24, 37, 62);
+            UnitName("target") == L["Warlord Zaela"];
 
 end;
 
@@ -531,8 +529,7 @@ category:addChild(L["Archmage Sol"], {
 -- and in box
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(47, 63, 27, 41);
+            UnitName("target") == L["Archmage Sol"];
 
 end;
 
@@ -550,7 +547,7 @@ category:addChild(L["Yalnu"], {
     -- on level 2
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 2;
+            UnitName("target") == L["Yalnu"];
 
 end;
 
@@ -569,8 +566,7 @@ category:addChild(L["Witherbark"], {
     -- and in box
     return 1008 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(44, 62, 48, 70);
+            UnitName("target") == L["Witherbark"];
 
 end;
 
@@ -610,8 +606,8 @@ category:addChild(L["Railmaster Rocketspark"], {
 	-- and in box
 	return 993 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isHeroicDungeon() and
-			GetCurrentMapDungeonLevel() == 1 and
-			AchieveIt.Box:containsPlayer(54, 83, 27, 73);
+            (UnitName("target") == L["Borka the Brute"] or
+			 UnitName("target") == L["Railmaster Rocketspark"]);
 
 end;
 
@@ -630,8 +626,7 @@ category:addChild(L["Nitrogg Thundertower"], {
     -- and in box
     return 993 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 4 and
-            AchieveIt.Box:containsPlayer(54, 94, 28, 73);
+            UnitName("target") == L["Nitrogg Thundertower"];
 
 end;
 
@@ -671,8 +666,7 @@ category:addChild(L["Sadana Bloodfury"], {
     -- and in box
     return 969 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(43, 61, 37, 66);
+		UnitName("target") == L["Sadana Bloodfury"];
 
 end;
 
@@ -690,9 +684,8 @@ category:addChild(L["Bonemaw"], {
     -- on level 2
     -- and in box
     return 969 == GetCurrentMapAreaID() and
-            AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 2 and
-            AchieveIt.Box:containsPlayer(24, 47, 34, 69);
+            AchieveIt.difficulty.isHeroicDungeon()  and 
+		UnitName("target") == L["Bonemaw"];
 
 end;
 
@@ -710,7 +703,7 @@ category:addChild(L["Ner'zhul"], {
     -- on level 3
     return 969 == GetCurrentMapAreaID() and
             AchieveIt.difficulty.isHeroicDungeon() and
-            GetCurrentMapDungeonLevel() == 3;
+            UnitName("target") == L["Ner'zhul"];
 
 end;
 
