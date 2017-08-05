@@ -28,12 +28,14 @@ local category = AchieveIt.Categories:addCategory(categoryId, L["Glories"], {
 ---------------------------
 
 local category = AchieveIt.Categories:addCategory(categoryId, L["World Bosses"], {
-    -- Goliaths of Gorgrond
+    
+	-- Goliaths of Gorgrond
     9423,
     -- So Grossly Incandescent
     9425,
 	-- The Legion Will NOT Conquer All
 	10071
+	
 });
 
 -----------------------
@@ -65,7 +67,8 @@ category:addChild(L["Glory"], {
 -----------------------
 
 category:addChild(L["Progress"], {
-    -- The Walled City
+    
+	-- The Walled City
     8986,
     -- Arcane Sanctum
     8987,
@@ -85,6 +88,7 @@ category:addChild(L["Progress"], {
     8964,
     -- Mythic: Imperator's Fall
     8965
+	
 });
 
 ----------------------------------
@@ -92,10 +96,12 @@ category:addChild(L["Progress"], {
 ----------------------------------
 
 category:addChild(L["Kargath Bladefist"], {
-    -- Mythic: Kargath Bladefist
+    
+	-- Mythic: Kargath Bladefist
     8949,
     -- Flame On!
     8948
+	
 }).locate = function()
 
     -- in raid
@@ -103,7 +109,7 @@ category:addChild(L["Kargath Bladefist"], {
     -- on level 3
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 3;
+			 UnitName("target") == L["Kargath Bladefist"];
 
 end;
 
@@ -112,10 +118,12 @@ end;
 ----------------------------
 
 category:addChild(L["The Butcher"], {
-    -- Mythic: The Butcher
+    
+	-- Mythic: The Butcher
     8960,
     -- Hurry Up, Maggot!
     8947
+	
 }).locate = function()
 
     -- in raid
@@ -124,8 +132,7 @@ category:addChild(L["The Butcher"], {
     -- and in box
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(49, 63, 42, 64);
+			 UnitName("target") == L["The Butcher"];
 
 end;
 
@@ -134,10 +141,12 @@ end;
 -----------------------
 
 category:addChild(L["Tectus"], {
-    -- Mythic: Tectus
+    
+	-- Mythic: Tectus
     8961,
     -- More Like Wrecked-us
     8974
+	
 }).locate = function()
 
     -- in raid
@@ -146,8 +155,7 @@ category:addChild(L["Tectus"], {
     -- and in box
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(26, 43, 64, 85);
+			 UnitName("target") == L["Tectus"];
 
 end;
 
@@ -156,10 +164,12 @@ end;
 -----------------------------
 
 category:addChild(L["Brackenspore"], {
-    -- Mythic: Brackenspore
+    
+	-- Mythic: Brackenspore
     8962,
     -- A Fungus Among Us
     8975
+	
 }).locate = function()
 
     -- in raid
@@ -168,8 +178,7 @@ category:addChild(L["Brackenspore"], {
     -- and in box
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(39, 57, 4, 39);
+			 UnitName("target") == L["Brackenspore"];
 
 end;
 
@@ -178,10 +187,12 @@ end;
 ---------------------------
 
 category:addChild(L["Twin Ogron"], {
+   
     -- Mythic: Twin Ogron
     8963,
     -- Brothers in Arms
     8958
+	
 }).locate = function()
 
     -- in raid
@@ -190,8 +201,8 @@ category:addChild(L["Twin Ogron"], {
     -- and in box
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4 and
-            AchieveIt.Box:containsPlayer(41, 72, 10, 52);
+			(UnitName("target") == L["Pol"] or
+			 UnitName("target") == L["Phemos"]);
 
 end;
 
@@ -200,10 +211,12 @@ end;
 ------------------------
 
 category:addChild(L["Ko'ragh"], {
-    -- Mythic: Ko'ragh
+    
+	-- Mythic: Ko'ragh
     8964,
     -- Pair Annihilation
     8976
+	
 }).locate = function()
 
     -- in raid
@@ -212,8 +225,7 @@ category:addChild(L["Ko'ragh"], {
     -- and in box
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4 and
-            AchieveIt.Box:containsPlayer(23, 49, 49, 87);
+			 UnitName("target") == L["Ko'ragh"];
 
 end;
 
@@ -222,12 +234,14 @@ end;
 ----------------------------------
 
 category:addChild(L["Imperator Mar'gok"], {
-    -- Imperator's Fall
+    
+	-- Imperator's Fall
     8988,
     -- Mythic: Imperator's Fall
     8965,
     -- Lineage of Power
     8977
+	
 }).locate = function()
 
     -- in raid
@@ -235,7 +249,7 @@ category:addChild(L["Imperator Mar'gok"], {
     -- on level 6
     return 994 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 6;
+			 UnitName("target") == L["Imperator Mar'gok"];
 
 end;
 
@@ -272,7 +286,8 @@ category:addChild(L["Glory"], {
 --------------------------------
 
 category:addChild(L["Progress"], {
-    -- Slagworks
+    
+	-- Slagworks
     8989,
     -- Black Forge
     8990,
@@ -300,6 +315,7 @@ category:addChild(L["Progress"], {
     8972,
     -- Mythic: Blackhand's Crucible
     8973
+	
 });
 
 -------------------------------
@@ -307,10 +323,12 @@ category:addChild(L["Progress"], {
 -------------------------------
 
 category:addChild(L["Gruul"], {
-    -- Mythic: Gruul
+    
+	-- Mythic: Gruul
     8966,
     -- The Iron Price
     8978
+	
 }).locate = function()
 
     -- in raid
@@ -319,8 +337,7 @@ category:addChild(L["Gruul"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 2 and
-            AchieveIt.Box:containsPlayer(29, 48, 9, 32);
+			 UnitName("target") == L["Magmolatus"];
 
 end;
 
@@ -329,10 +346,12 @@ end;
 -----------------------------------
 
 category:addChild(L["Oregorger"], {
-    -- Mythic: Oregorger
+    
+	-- Mythic: Oregorger
     8967,
     -- He Shoots, He Ores
     8979
+	
 }).locate = function()
 
 -- in raid
@@ -341,8 +360,7 @@ category:addChild(L["Oregorger"], {
 -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 2 and
-            AchieveIt.Box:containsPlayer(28, 48, 71, 97);
+			 UnitName("target") == L["Oregorger"];
 
 end;
 
@@ -351,10 +369,12 @@ end;
 ----------------------------------------------
 
 category:addChild(L["Hans'gar and Franzok"], {
-    -- Mythic: Hans'gar and Franzok
+    
+	-- Mythic: Hans'gar and Franzok
     8968,
     -- Stamp Stamp Revolution
     8980
+	
 }).locate = function()
 
     -- in raid
@@ -363,8 +383,8 @@ category:addChild(L["Hans'gar and Franzok"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(42, 53, 65, 89);
+			(UnitName("target") == L["Hans'gar"] or
+			 UnitName("target") == L["Franzok"]);
 
 end;
 
@@ -373,10 +393,12 @@ end;
 ------------------------------------------
 
 category:addChild(L["Beastlord Darmac"], {
-    -- Mythic: Beastlord Darmac
+    
+	-- Mythic: Beastlord Darmac
     8956,
     -- Fain Would Lie Down
     8981
+	
 }).locate = function()
 
     -- in raid
@@ -385,8 +407,7 @@ category:addChild(L["Beastlord Darmac"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4 and
-            AchieveIt.Box:containsPlayer(51, 78, 58, 94);
+			 UnitName("target") == L["Beastlord Darmac"];
 
 end;
 
@@ -395,10 +416,12 @@ end;
 ---------------------------------------------
 
 category:addChild(L["Flamebender Ka'graz"], {
-    -- Mythic: Flamebender Ka'graz
+    
+	-- Mythic: Flamebender Ka'graz
     8932,
     -- The Steel Has Been Brought
     8929
+	
 }).locate = function()
 
 -- in raid
@@ -407,8 +430,7 @@ category:addChild(L["Flamebender Ka'graz"], {
 -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(14, 25, 65, 89);
+			 UnitName("target") == L["Flamebender Ka'graz"];
 
 end;
 
@@ -417,10 +439,12 @@ end;
 -----------------------------------------
 
 category:addChild(L["Operator Thogar"], {
-    -- Mythic: Operator Thogar
+    
+	-- Mythic: Operator Thogar
     8969,
     -- There's Always a Bigger Train
     8982
+	
 }).locate = function()
 
     -- in raid
@@ -429,8 +453,7 @@ category:addChild(L["Operator Thogar"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4 and
-            AchieveIt.Box:containsPlayer(35, 55, 13, 42);
+			 UnitName("target") == L["Operator Thogar"];
 
 end;
 
@@ -439,10 +462,12 @@ end;
 ---------------------------------------
 
 category:addChild(L["Blast Furnace"], {
-    -- Mythic: Blast Furnace
+    
+	-- Mythic: Blast Furnace
     8970,
     -- Ya, We've Got Time...
     8930
+	
 }).locate = function()
 
     -- in raid
@@ -451,8 +476,7 @@ category:addChild(L["Blast Furnace"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 2 and
-            AchieveIt.Box:containsPlayer(30, 53, 36, 68);
+            GetCurrentMapDungeonLevel() == 2;
 
 end;
 
@@ -461,10 +485,12 @@ end;
 --------------------------------
 
 category:addChild(L["Kromog"], {
+   
     -- Mythic: Kromog
     8971,
     -- Would You Give Me a Hand?
     8983
+	
 }).locate = function()
 
     -- in raid
@@ -473,8 +499,7 @@ category:addChild(L["Kromog"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(20, 41, 32, 55);
+			 UnitName("target") == L["Kromog"];
 
 end;
 
@@ -483,10 +508,12 @@ end;
 --------------------------------------
 
 category:addChild(L["Iron Maidens"], {
-    -- Mythic: Iron Maidens
+    
+	-- Mythic: Iron Maidens
     8972,
     -- Be Quick or Be Dead
     8984
+	
 }).locate = function()
 
     -- in raid
@@ -495,8 +522,9 @@ category:addChild(L["Iron Maidens"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1 and
-            AchieveIt.Box:containsPlayer(64, 93, 10, 56);
+			(UnitName("target") == L["Admiral Gar'an"] or
+			 UnitName("target") == L["Enforcer Sorka"] or
+			 UnitName("target") == L["Marak the Blooded"]);
 
 end;
 
@@ -505,12 +533,14 @@ end;
 -----------------------------------
 
 category:addChild(L["Blackhand"], {
-    -- Blackhand's Crucible
+    
+	-- Blackhand's Crucible
     8992,
     -- Mythic: Blackhand's Crucible
     8973,
     -- Ashes, Ashes...
     8952
+	
 }).locate = function()
 
     -- in raid
@@ -518,7 +548,7 @@ category:addChild(L["Blackhand"], {
     -- on level 5
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 5;
+			 UnitName("target") == L["Blackhand"];
 
 end;
 
@@ -544,7 +574,6 @@ end;
 
 category:addChild(L["Glory"], {
 
-
 	-- Glory of the Hellfire Raider
 	10149
 
@@ -554,7 +583,8 @@ category:addChild(L["Glory"], {
 -------------------------------
 
 category:addChild(L["Progress"], {
-    -- Hellbreach
+    
+	-- Hellbreach
     10023,
     -- Halls Of Blood
     10024,
@@ -590,6 +620,7 @@ category:addChild(L["Progress"], {
     10042,
 	-- Mythic: Archimonde
 	10043
+	
 });
 
 -----------------------------------------
@@ -597,10 +628,12 @@ category:addChild(L["Progress"], {
 -----------------------------------------
 
 category:addChild(L["Hellfire Assault"], {
-    -- Mythic: Hellfire Assault
+    
+	-- Mythic: Hellfire Assault
     10027,
     -- Nearly Indestructible
     10026
+	
 }).locate = function()
 
     -- in raid
@@ -608,8 +641,7 @@ category:addChild(L["Hellfire Assault"], {
     -- on level 1
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1  and
-            AchieveIt.Box:containsPlayer(55, 75, 17, 72); 
+            GetCurrentMapDungeonLevel() == 2; 
 
 end;
 
@@ -620,10 +652,12 @@ end;
 ------------------------------------
 
 category:addChild(L["Iron Reaver"], {
-    -- Mythic: Iron Reaver
+    
+	-- Mythic: Iron Reaver
     10032,
     -- Turning the Tide
     10057
+	
 }).locate = function()
 
     -- in raid
@@ -631,8 +665,8 @@ category:addChild(L["Iron Reaver"], {
     -- on level 1
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 1  and
-            AchieveIt.Box:containsPlayer(38, 54, 17, 72); 
+            GetCurrentMapDungeonLevel() == 2 and
+			UnitName("target") == L["Iron Reaver"]; 
 
 end;
 
@@ -641,10 +675,12 @@ end;
 --------------------------------
 
 category:addChild(L["Kormrok"], {
-    -- Mythic: Kormrok
+    
+	-- Mythic: Kormrok
     10033,
     -- Waves Came Crashing Down All Around
     10013
+	
 }).locate = function()
 
     -- in raid
@@ -652,7 +688,7 @@ category:addChild(L["Kormrok"], {
     -- on level 4
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 4; 
+			 UnitName("target") == L["Kormrok"]; 
 
 end;
 
@@ -661,10 +697,12 @@ end;
 -----------------------------------------
 
 category:addChild(L["Hellfire Council"], {
-    -- Mythic: Hellfire Council
+    
+	-- Mythic: Hellfire Council
     10034,
     -- Don't Fear The Reaper
     10054
+	
 }).locate = function()
 
     -- in raid
@@ -672,8 +710,9 @@ category:addChild(L["Hellfire Council"], {
     -- on level 5
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 5  and
-            AchieveIt.Box:containsPlayer(60, 82, 50, 80); 
+			(UnitName("target") == L["Blademaster Jubei'thos"] or
+			 UnitName("target") == L["Dia Darkwhisper"] or
+			 UnitName("target") == L["Gurtogg Bloodboil"]); 
 
 end;
 
@@ -693,8 +732,7 @@ category:addChild(L["Kilrogg Deadeye"], {
     -- on level 5
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 5  and
-            AchieveIt.Box:containsPlayer(25, 63, 18, 47); 
+			 UnitName("target") == L["Kilrogg Deadeye"]; 
 
 end;
 
@@ -703,10 +741,12 @@ end;
 ----------------------------------
 
 category:addChild(L["Gorefiend"], {
+   
     -- Mythic: Gorefiend
     10253,
     -- Get In My belly!
     9979
+	
 }).locate = function()
 
     -- in raid
@@ -714,7 +754,7 @@ category:addChild(L["Gorefiend"], {
     -- on level 2
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 2; 
+			 UnitName("target") == L["Gorefiend"]; 
 
 end;
 
@@ -723,10 +763,12 @@ end;
 ------------------------------------------
 
 category:addChild(L["Shadow-Lord Iskar"], {
-    -- Mythic: Shadow-Lord Iskar
+    
+	-- Mythic: Shadow-Lord Iskar
     10037,
     -- Pro Toss
     9988
+	
 }).locate = function()
 
     -- in raid
@@ -734,8 +776,7 @@ category:addChild(L["Shadow-Lord Iskar"], {
     -- on level 6
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 6  and
-            AchieveIt.Box:containsPlayer(36, 56, 50, 90); 
+			 UnitName("target") == L["Shadow-Lord Iskar"]; 
 
 end;
 
@@ -744,10 +785,12 @@ end;
 ----------------------------------------------
 
 category:addChild(L["Socrethar the Eternal"], {
-    -- Mythic: Socrethar the Eternal
+    
+	-- Mythic: Socrethar the Eternal
     10040,
     -- I'm a Soul Man
     10086
+	
 }).locate = function()
 
     -- in raid
@@ -755,8 +798,7 @@ category:addChild(L["Socrethar the Eternal"], {
     -- on level 8
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 8  and
-            AchieveIt.Box:containsPlayer(45, 72, 42, 62); 
+			 UnitName("target") == L["Socrethar the Eternal"]; 
 
 end;
 
@@ -765,10 +807,12 @@ end;
 ---------------------------------------
 
 category:addChild(L["Tyrant Velhari"], {
-    -- Mythic: Tyrant Velhari
+    
+	-- Mythic: Tyrant Velhari
     10041,
     -- Non-Lethal Enforcer
     9989
+	
 }).locate = function()
 
     -- in raid
@@ -776,8 +820,7 @@ category:addChild(L["Tyrant Velhari"], {
     -- on level 8
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 8  and
-            AchieveIt.Box:containsPlayer(25, 35, 45, 60); 
+			 UnitName("target") == L["Tyrant Velhari"]; 
 
 end;
 
@@ -786,10 +829,12 @@ end;
 ----------------------------------------
 
 category:addChild(L["Fel Lord Zakuun"], {
-    -- Mythic: Fel Lord Zakuun
+    
+	-- Mythic: Fel Lord Zakuun
     10038,
     -- This Land Was Green and Good Until...
     10012
+	
 }).locate = function()
 
     -- in raid
@@ -797,8 +842,7 @@ category:addChild(L["Fel Lord Zakuun"], {
     -- on level 6
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 6  and
-            AchieveIt.Box:containsPlayer(43, 56, 9, 33); 
+			 UnitName("target") == L["Fel Lord Zakuun"]; 
 
 end;
 
@@ -807,10 +851,12 @@ end;
 -----------------------------------
 
 category:addChild(L["Xhul'horac"], {
-    -- Mythic: Xhul'horac
+    
+	-- Mythic: Xhul'horac
     10039,
     -- You Gotta Keep 'em Separated
     10087
+	
 }).locate = function()
 
     -- in raid
@@ -818,7 +864,7 @@ category:addChild(L["Xhul'horac"], {
     -- on level 7
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 7; 
+			 UnitName("target") == L["Xhul'horac"]; 
 
 end;
 
@@ -827,10 +873,12 @@ end;
 ----------------------------------
 
 category:addChild(L["Mannoroth"], {
-    -- Mythic: Mannoroth
+    
+	-- Mythic: Mannoroth
     10042,
     -- Bad Manner(oth)
 	10030
+	
 }).locate = function()
 
     -- in raid
@@ -838,7 +886,7 @@ category:addChild(L["Mannoroth"], {
     -- on level 1
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 9; 
+			 UnitName("target") == L["Mannoroth"]; 
 
 end;
 
@@ -847,10 +895,12 @@ end;
 -----------------------------------
 
 category:addChild(L["Archimonde"], {
-    -- Mythic: Archimonde
+    
+	-- Mythic: Archimonde
     10043,
     -- Echoes of Doomfire
     10073
+	
 }).locate = function()
 
     -- in raid
@@ -858,7 +908,7 @@ category:addChild(L["Archimonde"], {
     -- on level 10
     return 1026 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-            GetCurrentMapDungeonLevel() == 10; 
+			 UnitName("target") == L["Archimonde"]; 
 
 end;
 
