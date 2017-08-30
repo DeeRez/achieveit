@@ -19,9 +19,9 @@ AchieveIt.Categories:addCategory(categoryId, L["Progress"], {
 	-- Broken Isles Pathfinder. Part One
 	11190,	
 	-- Broken Isles Pathfinder. Part One
-	11446--[[,
+	11446,
 	-- Paragon of Argus
-	12083 ]]
+	12083
 });
 	
 ----------------------
@@ -124,4 +124,28 @@ AchieveIt.Categories:addCategory(categoryId, L["Broken Shore"], {
 	11802,
 	-- Naxt Victim
 	11841
+});
+
+-----------
+-- Argus --
+-----------
+
+AchieveIt.Categories:addCategory(categoryId, L["Argus"], {
+
+	-- Adventurer of Argus
+	12077,
+	-- Explore Argus
+	12069,
+	-- Commander of Argus
+	12078,
+	-- Envision Invasion Eradication
+	12028,
+	-- Infused and Abused
+	12084,
+	-- Invasion Obliteration
+	12026,
+	-- Paragon of Argus
+	12083,
+	-- Shoot First, Loot Later
+	12074
 });

@@ -196,6 +196,8 @@ local titleAchievements	= {
     1691,
 	-- Mythic: Archimonde
 	10043,
+	-- Mythic: Argus the Unmaker
+	12002,
     -- Mythic: Blackhand's Crucible
     8973,
     -- Mythic: Garrosh Hellscream
@@ -240,6 +242,8 @@ local titleAchievements	= {
     3036,
     -- Observed (25 player)
     3037,
+	-- Paragon of Argus
+	12083,
     -- Pilgrim
     3478,
 	-- Predator
@@ -361,7 +365,9 @@ local mountAchievements		= {
     -- For The Horde!
     { id = 619, faction = AchieveIt.Factions.HORDE },
     -- Gladiator
-    2091,
+    2091,	
+	-- Glory of the Argus Raider
+	11987,
     -- Glory of the Cataclysm Hero
     4845,
     -- Glory of the Cataclysm Raider
@@ -462,6 +468,8 @@ local petAchievements	= {
     9685,
 	-- Family Familiar
 	9696,
+	-- Family Fighter
+	12100,
     -- Going to Need More Leashes
     7500,
     -- Higher Learning
@@ -490,6 +498,8 @@ local petAchievements	= {
     8293,
 	-- Raiding with Leashes III: Drinkin' From the Sunwell
 	9824,
+	-- Raiding with Leashes V: Cutaclysm
+	12079,
     -- Rock Lover
     5449,
     -- Shop Smart, Shop Pet...Smart
@@ -530,12 +540,16 @@ local itemAchievements = {
 	    { id = 10256, faction = AchieveIt.Factions.ALLIANCE },
     -- Charting a Course
         { id = 10258, faction = AchieveIt.Factions.HORDE },
+	-- Commander of Argus
+	12078,
 	-- Darkmoon Racer Roadhog
 	9761,
     -- Deck Your Collection
         { id = 9176, faction = AchieveIt.Factions.ALLIANCE },
     -- Deck Your Collection
         { id = 9177, faction = AchieveIt.Factions.HORDE },
+	-- Fisherfriend of the Isles
+	11725,
     -- Going to Need More Traps
     6556,	 
 	-- Hatchling of the Talon

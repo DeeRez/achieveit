@@ -337,7 +337,7 @@ category:addChild(L["Gruul"], {
     -- and in box
     return 988 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-			 UnitName("target") == L["Magmolatus"];
+			 UnitName("target") == L["Gruul"];
 
 end;
 

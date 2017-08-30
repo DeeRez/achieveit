@@ -19,7 +19,9 @@ local category = AchieveIt.Categories:addCategory(categoryId, L["Glories"], {
 	-- Glory of the Legion Raider
 	11180,
 	-- Glory of the Tomb Raider
-	11763
+	11763,	
+	-- Glory of the Argus Raider
+	11987
 
 });
 
@@ -837,3 +839,281 @@ end;
 	
 	
 category:inheritAchievements();
+
+---------------------------------
+-- Antorus, The Burning Throne --
+---------------------------------
+
+-- local category = AchieveIt.Categories:addCategory(categoryId, L["Antorus, The Burning Throne"]);
+local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(1188));
+	
+category.locate = function()
+
+    -- in raid
+	return 1188 == GetCurrentMapAreaID();
+
+end;
+
+--------------------
+-- Glory Category --
+--------------------
+
+category:addChild(L["Glory"], {
+
+	-- Glory of the Argus Raider
+	11987
+
+});
+
+-----------------------
+-- Progress Category --
+-----------------------
+
+category:addChild(L["Progress"], {
+
+	-- Light's Breach
+	11988,
+	-- Hopes End
+	11989,
+	-- Forbidden Descent
+	11990,
+	-- Seat of the Pantheon
+	11991,
+	-- Mythic: Gorathi Worldbreaker
+	11992,
+	-- Mythic: Hounds of Sargeras
+	11993,
+	-- Mythic: Antoran High Command
+	11994,
+	-- Mythic: Portalkeepr Hasabel
+	11995,
+	-- Mythic: Eonar the Lifebinder
+	11996,
+	-- Mythic: Imonar the Soulhunter
+	11997,
+	-- Mythic: Kin'aroth
+	11998,
+	-- Mythic: Varimathras
+	11999,
+	-- Mythic: The Coven of Shivarra
+	12000,
+	-- Mythic: Aggramar
+	12001,
+	-- Mythic: Argus the Unmaker
+	12002
+});
+
+--------------------------
+-- Gorathi Worldbreaker --
+--------------------------
+
+	category:addChild(L["Gorathi Worldbreaker"], {	
+	-- Mythic: Gorathi Worldbreaker
+	11992,
+	-- Worm-monger
+	11930
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Gorathi Worldbreaker"];
+
+end;
+	
+------------------------
+-- Hounds of Sargeras --
+------------------------
+
+	category:addChild(L["Hounds of Sargeras"], {	
+	-- Mythic: Hounds of Sargeras
+	11993,
+	-- Hounds Good To Me
+	12065
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			(UnitName("target") == L["F'harg"] or
+			UnitName("target") ==L["Shatug"]);
+
+end;
+
+--------------------------
+-- Antoran High Command --
+--------------------------
+
+	category:addChild(L["Antoran High Command"], {	
+	-- Mythic: Antoran High Command
+	11994,
+	-- This is the War Room!
+	12129
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			(UnitName("target") == L["Admiral Svirax"] or
+			UnitName("target") ==L["Chief Engineer Ishkar"] or 
+			UnitName("target") == L["General Erodus"]);
+
+end;
+
+--------------------------
+-- Portalkeeper Hasabel --
+--------------------------
+
+	category:addChild(L["Portalkeeper Hasabel"], {	
+	-- Mythic: Portalkeeper Hasabel
+	11995,
+	-- Portal Combat
+	11928
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Portalkeeper Hasabel"];
+
+end;
+
+---------------------------
+-- Eonar the Life-Binder --
+---------------------------
+
+	category:addChild(L["Eonar the Life-Binder"], {	
+	-- Mythic: Eonar the Life-Binder
+	11996,
+	-- Spheres of Influence
+	12067
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Essence of Eonar"];
+
+end;
+
+---------------------------
+-- Imonar the Soulhunter --
+---------------------------
+
+	category:addChild(L["Imonar the Soulhunter"], {	
+	-- Mythic: Imonar the Soulhunter
+	11997,
+	-- Hard to Kill
+	11949
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Imonar the Soulhunter"];
+
+end;
+
+----------------
+-- Kin'garoth --
+----------------
+
+	category:addChild(L["Kin'garoth"], {	
+	-- Mythic: Kin'garoth
+	11998,
+	-- The World Revolves Around Me
+	12030
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Kin'garoth"];
+
+end;
+
+-----------------
+-- Varimathras --
+-----------------
+
+	category:addChild(L["Varimathras"], {	
+	-- Mythic: Varimathras
+	11999,
+	-- Together We Stand
+	11948
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Varimathras"];
+
+end;
+
+---------------------------
+-- The Coven of Shivarra --
+---------------------------
+
+	category:addChild(L["The Coven of Shivarra"], {	
+	-- Mythic: The Coven of Shivarra
+	12000,
+	-- Remember the Titans
+	12046
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			(UnitName("target") == L["Noura, Mothe of Flames"] or 
+			UnitName("target") == L["Asara, Mother of Night"] or
+			UnitName("target") ==L["Diima, Mother of Gloom"] or 
+			UnitName("target") == L["Thu'raya, Mother of the Cosmos"]);
+
+end;
+
+--------------
+-- Aggramar --
+--------------
+
+	category:addChild(L["Aggramar"], {	
+	-- Mythic: Aggramar
+	12001,
+	-- Don't Sweat the Technique
+	11915
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Aggramar"];
+
+end;
+
+-----------------------
+-- Argus the Unmaker --
+-----------------------
+
+	category:addChild(L["Argus the Unmaker"], {	
+	-- Mythic: Argus the Unmaker
+	12002
+}).locate = function()
+
+    -- in raid
+    -- not raid finder
+    return 1188 == GetCurrentMapAreaID() and
+            not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Argus the Unmaker"];
+
+end;
+		
+category:inheritAchievements();	

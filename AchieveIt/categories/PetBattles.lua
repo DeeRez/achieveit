@@ -81,3 +81,36 @@ AchieveIt.Categories:addCategory(categoryId, L["Draenor"], {
 	-- The Lil' Necromancer
 	9695
 });
+--------------------
+-- Argus Category --
+--------------------
+
+AchieveIt.Categories:addCategory(categoryId, L["Argus"], {
+	-- Aquatic Assault
+	12089,
+	-- Beast Blitz
+	12091,
+	-- Critical Critters
+	12092,
+	-- Draconic Destruction
+	12093,
+	-- Elemental Escalation
+	12094,
+	-- Fierce Fliers
+	12095,
+	-- Humanoid Havoc
+	12096,
+	-- Magical Mayhem
+	12097,
+	-- Mechanical Melee
+	12098,
+	-- Unstoppable Undead
+	12099
+});
+
+
+
+
+
+
+

@@ -135,6 +135,8 @@ AchieveIt.Categories:addCategory(categoryId, L["Broken Isles"], {
 	10595,
 	-- Bigger Fish to Fry
 	10596,
+	-- Fisherfriend of the Isles
+	11725,
 	-- Fishing 'Round the Isles
 	10598,
 	-- Legion Aquaculture

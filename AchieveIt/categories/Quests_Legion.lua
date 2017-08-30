@@ -44,9 +44,9 @@ AchieveIt.Categories:addCategory(categoryId, L["Progress"], {
 	-- Pillars of Creation
 	10877,
 	-- Tehd and Marius' Excellent Adventure
-	11186--[[,
+	11186,
 	-- You Are Now Prepared
-	12066]]
+	12066
 	
 });
 	
@@ -183,5 +183,26 @@ AchieveIt.Categories:addCategory(categoryId, L["Broken Shore"], {
 
     -- in zone
     return 1021 == GetCurrentMapAreaID();
+
+end;
+
+
+-----------
+-- Argus --
+-----------
+
+AchieveIt.Categories:addCategory(categoryId, L["Argus"], {
+
+	-- Locked and Loaded
+	12073,
+	-- You Are Now Prepared
+	12066
+	
+	}).locate = function()
+
+    -- in zone
+    return (1135 == GetCurrentMapAreaID() or 
+			1170 == GetCurrentMapAreaID()or 
+			1171 == GetCurrentMapAreaID());
 
 end;
