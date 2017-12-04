@@ -1106,6 +1106,8 @@ end;
 	category:addChild(L["Argus the Unmaker"], {	
 	-- Mythic: Argus the Unmaker
 	12002
+	-- Stardust Crusaders
+	12257
 }).locate = function()
 
     -- in raid
