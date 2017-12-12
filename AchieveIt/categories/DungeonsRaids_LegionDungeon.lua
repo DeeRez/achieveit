@@ -89,6 +89,8 @@ AchieveIt.Categories:addCategory(categoryId, L["Heroic Dungeons"], {
 	10796,
 	-- Heroic: Return to Karazhan
 	11929,
+	-- Heroic: Seat of the Triumverate
+	12007,
 	-- Heroic: Vault of the Wardens
 	10802
 	
@@ -105,7 +107,7 @@ AchieveIt.Categories:addCategory(categoryId, L["Heroic Dungeons"], {
 		1115, -- Return to Karazhan
         1042, -- Maw of Souls
 		1065, -- Neltharion's Lair
-		--[[1178, -- Seat of the Triumverate]]
+		1178, -- Seat of the Triumverate
         1045  -- Vault of the Wardens
 	};
 
@@ -137,8 +139,10 @@ AchieveIt.Categories:addCategory(categoryId, L["Mythic Dungeons"], {
 	10809,
 	-- Mythic: Neltharion's Lair
 	10797,
-	-- Return to Kharazhan
+	-- Mythic: Return to Kharazhan
 	11429,
+	-- Mythic: Seat of the Triumverate
+	12008,
 	-- Mythic: The Arcway
 	10813,
 	-- Mythic: Vault of the Wardens
@@ -158,7 +162,7 @@ AchieveIt.Categories:addCategory(categoryId, L["Mythic Dungeons"], {
 		1115, -- Return to Karazhan
         1042, -- Maw of Souls
 		1065, -- Neltharion's Lair
-		--[[1178, -- Seat of the Triumverate]]
+		1178, -- Seat of the Triumverate
 		1079, -- The Arcway
         1045 -- Vault of the Wardens
         
@@ -199,7 +203,7 @@ AchieveIt.Categories:addCategory(categoryId, L["Mythic+ Dungeons"], {
 		1115, -- Return to Karazhan
         1042, -- Maw of Souls
 		1065, -- Neltharion's Lair
-		--[[1178, -- Seat of the Triumverate]]
+		1178, -- Seat of the Triumverate
 		1079, -- The Arcway
         1045, -- Vault of the Wardens 
 	};
@@ -793,6 +797,77 @@ category:addChild(L["Naraxas"], {
 	return 1065 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Naraxas"];
+			
+end;
+
+category:inheritAchievements();
+
+-----------------------------
+-- Seat of the Triumverate --
+-----------------------------
+
+local category = AchieveIt.Categories:addCategory(categoryId, GetMapNameByID(1178), {
+	
+	-- Heroic: Seat of the Triumverate
+	12007,
+	-- Mythic: Seat of the Triumverate
+	12008
+	
+});
+
+-------------------------
+-- Zuraal the Ascended --
+-------------------------
+
+category:addChild(L["Zuraal the Ascended"], {
+	-- Welcome the Void
+	12004
+}).locate = function()
+
+	-- in dungeon
+	-- is mythic mode
+	
+	return 1178 == GetCurrentMapAreaID() and
+			AchieveIt.difficulty.isMythicDungeon() and
+			UnitName("target") == "Zuraal the Ascended";
+			
+end;
+
+-------------
+-- Saprish --
+-------------
+
+category:addChild(L["Saprish"], {
+	-- Let it All Out
+	12005
+}).locate = function()
+
+	-- in dungeon
+	-- is mythic mode
+	
+	return 1178 == GetCurrentMapAreaID() and
+			AchieveIt.difficulty.isMythicDungeon() and
+			(UnitName("target") == "Saprish" or
+			UnitName("target") == "Darkfang" or
+			UnitName("target") == "Duskwing");
+			
+end;
+
+-----------
+-- L'ura --
+-----------
+
+category:addChild(L["L'ura"], {
+	-- Darker Side
+	12009
+}).locate = function()
+
+	-- in dungeon
+	-- is mythic mode
+	
+	return 1178 == GetCurrentMapAreaID() and
+			AchieveIt.difficulty.isMythicDungeon() and
+			UnitName("target") == "L'ura";
 			
 end;
 
