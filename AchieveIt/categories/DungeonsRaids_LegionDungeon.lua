@@ -112,7 +112,7 @@ AchieveIt.Categories:addCategory(categoryId, L["Heroic Dungeons"], {
 	};
 
 	return AchieveIt:Contains(ids, GetCurrentMapAreaID()) -- user is in one of these dungeons
-			and AchieveIt.difficulty.isHeroicDungeonDungeon(); -- and it is a heroic version
+			and AchieveIt.difficulty.isHeroicDungeon(); -- and it is a heroic version
 
 end;
 
@@ -169,7 +169,7 @@ AchieveIt.Categories:addCategory(categoryId, L["Mythic Dungeons"], {
 	};
 
 	return AchieveIt:Contains(ids, GetCurrentMapAreaID()) -- user is in one of these dungeons
-			and AchieveIt.difficulty.isMythicDungeonDungeon(); -- and it is a mythic version
+			and AchieveIt.difficulty.isMythicDungeon(); -- and it is a mythic version
 
 end;
 
