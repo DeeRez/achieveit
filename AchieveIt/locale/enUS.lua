@@ -309,7 +309,7 @@ L["Yogg-Saron"] = "Yogg-Saron"
 L["Yor'sahj the Unsleeping"] = "Yor'sahj the Unsleeping"
 L["Zuramat the Obliterator"] = "Zuramat the Obliterator"
 
--- Patch 6.3
+-- Patch 6.2
 L["Archimonde"] = "Archimonde"
 L["MoP Challenge Modes"]= "MoP Challenge Modes"
 L["Draenor"] = "Draenor"
