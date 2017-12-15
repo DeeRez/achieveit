@@ -1073,7 +1073,7 @@ end;
     -- not raid finder
     return 1188 == GetCurrentMapAreaID() and
             not AchieveIt.difficulty.isRaidFinder() and
-			(UnitName("target") == L["Noura, Mothe of Flames"] or 
+			(UnitName("target") == L["Noura, Mother of Flames"] or 
 			UnitName("target") == L["Asara, Mother of Night"] or
 			UnitName("target") ==L["Diima, Mother of Gloom"] or 
 			UnitName("target") == L["Thu'raya, Mother of the Cosmos"]);
