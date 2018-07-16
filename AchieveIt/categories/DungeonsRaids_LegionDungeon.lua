@@ -829,7 +829,7 @@ category:addChild(L["Zuraal the Ascended"], {
 	
 	return 1178 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == "Zuraal the Ascended";
+			UnitName("target") == L["Zuraal the Ascended"];
 			
 end;
 
@@ -847,9 +847,9 @@ category:addChild(L["Saprish"], {
 	
 	return 1178 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isMythicDungeon() and
-			(UnitName("target") == "Saprish" or
-			UnitName("target") == "Darkfang" or
-			UnitName("target") == "Duskwing");
+			(UnitName("target") == L["Saprish"] or
+			UnitName("target") == L["Darkfang"] or
+			UnitName("target") == L["Duskwing"]);
 			
 end;
 
@@ -867,7 +867,7 @@ category:addChild(L["L'ura"], {
 	
 	return 1178 == GetCurrentMapAreaID() and
 			AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == "L'ura";
+			UnitName("target") == L["L'ura"];
 			
 end;
 
