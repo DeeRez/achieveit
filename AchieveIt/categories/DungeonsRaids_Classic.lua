@@ -1,118 +1,39 @@
 -- Dungeons & Raids - Classic
 
 local AchieveIt = AchieveIt;
-
--- Locale
+local CatID = AchieveItConstants.CategoryIDs
+local Zone = AchieveItConstants.zone
+local Difficulty = AchieveItConstants.DifficultyNames
 local L = LibStub("AceLocale-3.0"):GetLocale("AchieveIt");
 
--- The achievement category ID
-local categoryId = 14808;
 
----------------------------
--- Dungeons Sub Category --
----------------------------
-
-local category = AchieveIt.Categories:addCategory(categoryId, _G["DUNGEONS"], {
-	-- Ragefire Chasm
-	629,
-	-- Deadmines
-	628,
-	-- Wailing Caverns
-	630,
-	-- Shadowfang Keep
-	631,
-	-- Blackfathom Deeps
-	632,
-	-- Stormwind Stockade
-	633,
-	-- Razorfen Kraul
-	635,
-	-- Gnomeregan
-	634,
-	-- Razorfen Downs
-	636,
-	-- Scarlet Halls
-	7413,
-	-- Scarlet Monastery
-	637,
-	-- Uldaman
-	638,
-	-- Zul'Farrak
-	639,
-	-- Maraudon
-	640,
-	-- Sunken Temple
-	641,
-	-- Blackrock Depths
-	642,
-	-- Lower Blackrock Spire
-	643,
-	-- King of Dire Maul
-	644,
-	-- Scholomance
-	645,
-	-- Stratholme
-	646
+local category = AchieveIt.Categories:addCategory(CatID.DungeonsAndRaids_Classic, _G["DUNGEONS"], {
+	1283,	-- Classic Dungeonmaster
+	632,	-- Blackfathom Deeps
+	642,	-- Blackrock Depths
+	628,	-- Deadmines
+	634,	-- Gnomeregan
+	644,	-- King of Dire Maul
+	643,	-- Lower Blackrock Spire
+	640,	-- Maraudon
+	629,	-- Ragefire Chasm
+	636,	-- Razorfen Downs
+	635,	-- Razorfen Kraul
+	7413,	-- Scarlet Halls
+	637,	-- Scarlet Monastery
+	645,	-- Scholomance
+	631,	-- Shadowfang Keep
+	633,	-- Stormwind Stockade
+	646,	-- Stratholme
+	641,	-- Sunken Temple
+	638,	-- Uldaman
+	630,	-- Wailing Caverns
+	639,	-- Zul'Farrak
 });
 
-category.locate = function()
-
-	-- classic dungeon map ids
-	local ids = {
-		688, -- Blackfathom Deeps
-		704, -- Blackrock Depths
-		721, -- Blackrock Spire
-		699, -- Dire Maul
-		691, -- Gnomeregan
-		750, -- Maraudon
-		680, -- Ragefire Chasm
-		760, -- Razorfen Downs
-		761, -- Razorfen Kraul
-		871, -- Scarlet Halls
-		874, -- Scarlet Monastery
-		898, -- Scholomance
-		764, -- Shadowfang Keep
-		765, -- Stratholme
-		756, -- The Deadmines
-		690, -- The Stockade
-		687, -- The Temple of Atal'Hakkar
-		692, -- Uldaman
-		749, -- Wailing Caverns
-		686  -- Zul'Farrak
-	};
-
-	return AchieveIt:Contains(ids, GetCurrentMapAreaID()) -- user is in one of these dungeons
-			and AchieveIt.difficulty.isDungeon(); -- and it is a normal version (some have heroics which will be in different categories)
-
-end;
-
-------------------------
--- Raids Sub Category --
-------------------------
-
-local category = AchieveIt.Categories:addCategory(categoryId, _G["RAIDS"], {
-	-- Ruins of Ahn'Qiraj
-	689,
-	-- Molten Core
-	686,
-	-- Blackwing Lair
-	685,
-	-- Temple of Ahn'Qiraj
-	687
+local category = AchieveIt.Categories:addCategory(CatID.DungeonsAndRaids_Classic, _G["RAIDS"], {
+	685,	-- Blackwing Lair
+	686,	-- Molten Core
+	689,	-- Ruins of Ahn'Qiraj
+	687,	-- Temple of Ahn'Qiraj
 });
-
--- add locate
-category.locate = function()
-	
-	-- classic raid map ids
-	local ids = {
-		755, -- Blackwing Lair
-		696, -- Molten Core
-		717, -- Ruins of Ahn'Qiraj
-		766  -- Temple of Ahn'Qiraj
-	};
-	
-	-- return whether user is in one of these raids
-	return AchieveIt:Contains(ids, GetCurrentMapAreaID());
-
-end;

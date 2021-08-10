@@ -1,24 +1,38 @@
------------------------
--- Utility functions --
------------------------
+local _ADDON_NAME, ADDON = ...
 
-local _, AchieveIt = ...;
-
+--TODO: Move this stuff to ADDON.
 
 -- Lua functions
-local type, pairs, tostring, stringrep, next = type, pairs, tostring, string.rep, next;
+local type, pairs, tostring, string_rep, next, select, format, unpack, ipairs = type, pairs, tostring, string.rep, next, select, format, unpack, ipairs
+
+local function table_pack(...)
+  return { n = select("#", ...), ... }
+end
+
+function AchieveIt:Print(...)
+	local message = "";
+	local args = table_pack(...)
+	for i = 1, args.n do
+		message = message .. tostring(args[i]) .. " "
+	end
+	DEFAULT_CHAT_FRAME:AddMessage( message )
+end
+
+function AchieveIt:Printf(...)
+	return self:Print(format(...))
+end
 
 -- Prints a message only if DEBUG mode is enabled
 function AchieveIt:Printd(...)
-	if (self.DEBUG) then
+	if (AchieveIt_Data.DEBUG) then
 		self:Print("|cFFFF0000<debug>|CFFFFFFFF", ...);
 	end
 end
 
 -- Prints a formatted message only if DEBUG mode is enabled
 function AchieveIt:Printfd(...)
-	if (self.DEBUG) then
-		local params = {...};
+	if (AchieveIt_Data.DEBUG) then
+		local params = table_pack(...);
 		params[1] = "|cFFFF0000<debug>|CFFFFFFFF " .. params[1];
 		self:Printf(unpack(params));
 	end
@@ -32,7 +46,7 @@ end
 function AchieveIt:Printt(msg, table, recursive, level)
 
 	-- Only in debug mode
-	if (self.DEBUG) then
+	if (AchieveIt_Data.DEBUG) then
 
 		-- if first argument is a table then there is no message
 		if (type(msg) == 'table') then
@@ -53,10 +67,10 @@ function AchieveIt:Printt(msg, table, recursive, level)
 
 		-- generate indent
 		local indentSpaces	= "     ";
-		local indent		= stringrep(indentSpaces, level);
+		local indent		= string_rep(indentSpaces, level);
 
 		if (type(table) ~= "table") then
-			
+
 			self:Printd(indent, "|CFFAAAAAA", msg, "is not a table");
 
 		else
@@ -212,7 +226,7 @@ AchieveIt.Box = AchieveItBox:new();
 -- Convenience table for querying instance difficulty
 --[[
 	Uses http://www.wowpedia.org/API_GetInstanceInfo
-	DeeRez http://wowprogramming.com/docs/api/GetInstanceInfo 
+	DeeRez http://wowprogramming.com/docs/api/GetInstanceInfo
 	0 = None
 	1 = 5 Player, Scenario
 	2 = 5 Player (Heroic)
@@ -233,7 +247,6 @@ AchieveIt.Box = AchieveItBox:new();
 	17 = Raid Finder
 	23 = 5 Player (Mythic)
 ]]
-
 AchieveIt.difficulty = {
 
 	isDungeon = function()
@@ -321,3 +334,45 @@ AchieveIt.difficulty = {
 		return difficulty == 13;
 	end
 };
+
+function AchieveIt.GetMapName(p_map_id)
+	local map_info = C_Map.GetMapInfo(p_map_id);
+	if(map_info) then
+		return map_info.name;
+	end
+
+	return nil;
+end
+
+--Does the player's current map match any of the ones given?
+function AchieveIt.CurrentMapCheck(...)
+	local current_map = C_Map.GetBestMapForUnit("player");
+	for i,v in ipairs({...}) do
+		if( v == current_map) then
+			return true;
+		end
+	end
+
+	return false;
+end
+
+
+--[[
+
+MUFFMAPS = {}
+for i = 0, 5000 do
+	local map_info = C_Map.GetMapInfo(i);
+	if(map_info) then MUFFMAPS[i] = map_info.name; end;
+end
+
+MUFFMAPS = {}; for i = 0, 5000 do local map_info = C_Map.GetMapInfo(i); if(map_info) then MUFFMAPS[i] = map_info.name; end; end;
+MUFFAREAS = {}; for i = 0, 50000 do local map_info = C_Map.GetAreaInfo(i); if(map_info) then MUFFAREAS[i] = map_info; end; end;
+MUFFDUN = {}; for i = 0, 50000 do local name = GetLFGDungeonInfo(i); if(name) then MUFFDUN[i] = name; end; end;
+
+MUFFMAPS = {}; for i = 0, 5000 do local map_info = C_Map.GetMapInfo(i); if(map_info and string.match(map_info.name,"Revendreth")) then MUFFMAPS[i] = map_info.name; end; end;
+
+
+/tinspect MUFFMAPS
+
+GetLFGDungeonInfo(1732)
+--]]

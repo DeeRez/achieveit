@@ -1,15 +1,60 @@
-local _, AchieveIt = ...
+local ADDON_NAME, ADDON = ... -- Pulls back the Addon-Local Variables and store them locally.
+
+--GLOBALS: AchieveIt, AchieveIt_Data, _G, tremove, pairs, type, next
+
+-- Lua functions
+local tremove, tinsert, pairs, mathceil, type, next = tremove, tinsert, pairs, math.ceil, type, next;
 
 -- Locale
 local L = LibStub("AceLocale-3.0"):GetLocale("AchieveIt");
 
--- Register Event
-AchieveIt:RegisterEvent("ADDON_LOADED", function(eventName, addon)
-	if (addon == "Blizzard_AchievementUI") then
-		ModifyAchievementFrame();
-		AchieveIt:UnregisterEvent(eventName);
+local f = CreateFrame("Frame", nil, UIParent)
+
+local function event_handler(self, event, arg1)
+
+	if(event == "ADDON_LOADED") then
+		if (arg1 == "AchieveIt") then
+			AchieveIt_Data = AchieveIt_Data or {}
+			AchieveIt_Data.DEBUG = AchieveIt_Data.DEBUG or false;
+			if(AchieveIt_Data.DraggableAchievementWindow == nil) then
+				AchieveIt_Data.DraggableAchievementWindow = true;
+			end
+			if(AchieveIt_Data.ShowPvPRewards == nil) then
+				AchieveIt_Data.ShowPvPRewards = true;
+			end
+			if(AchieveIt_Data.ShowBPetRewards == nil) then
+				AchieveIt_Data.ShowBPetRewards = true;
+			end
+		elseif (arg1 == "Blizzard_AchievementUI") then
+			AchieveIt:Printd("ADDON_LOADED: Blizzard_AchievementUI")
+			AchieveIt:LoadCharacterCategories()
+			AchieveIt:LoadQuestCategories()
+			ADDON.LoadRewardCategories()
+			ModifyAchievementFrame()
+		end
+	elseif (event == "PLAYER_ENTERING_WORLD") then
+		AchieveIt_Data.whatsnew_version = MUFFIN_WHATS_NEW_QUEUE.AddConditionalEntry({
+			addon_name = ADDON_NAME,
+			text = ADDON.WHATSNEW_TEXT,
+			version = AchieveIt_Data.whatsnew_version,
+			force_show = false,
+		})
+
+		MUFFIN_WHATS_NEW_QUEUE.Show()
+
+		ADDON.build_opts_frame()
+
+
+		f:UnregisterEvent("PLAYER_ENTERING_WORLD");
 	end
-end);
+end
+
+f:SetScript("OnEvent", event_handler)
+
+f:RegisterEvent("ADDON_LOADED")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
+
+
 
 -- Applies modifications to the achievements frame
 function ModifyAchievementFrame()
@@ -17,8 +62,6 @@ function ModifyAchievementFrame()
 -- fix for 5.4.1 UpdateMicroButtons taint issue
 setfenv(AchievementFrame_OnShow, setmetatable({ UpdateMicroButtons = function() end }, { __index = _G }))
 
--- Lua functions
-local tremove, tinsert, pairs, mathceil = tremove, tinsert, pairs, math.ceil;
 
 local inGuildView = false;
 
@@ -42,9 +85,9 @@ AchieveIt:RawHook("GetCategoryInfo", function(id)
 		-- fetch sub category
 		local subCategory;
 		if (not inGuildView) then
-			subCategory = AchieveIt.Categories:findCategory(id);		
+			subCategory = AchieveIt.Categories:findCategory(id);
 		else
-			subCategory = AchieveIt.GuildCategories:findCategory(id);		
+			subCategory = AchieveIt.GuildCategories:findCategory(id);
 		end
 
 		-- return info (name, parent id, unknown number)
@@ -66,7 +109,7 @@ end, true);
 -- Returns information about an achievement
 -- Overwritten so it can handle using AchieveIt categories/achievement index
 AchieveIt:RawHook("GetAchievementInfo", function(category, achievement)
-	
+
 	-- achievement index is set and category is an AchieveIt category
 	if (achievement and AchieveIt.Categories:isCategory(category)) then
 
@@ -74,7 +117,7 @@ AchieveIt:RawHook("GetAchievementInfo", function(category, achievement)
 		local aiCategory;
 		if (not inGuildView) then
 			aiCategory = AchieveIt.Categories:findCategory(category);
-		else 
+		else
 			aiCategory = AchieveIt.GuildCategories:findCategory(category);
 		end
 
@@ -100,7 +143,7 @@ AchieveIt:RawHook("GetAchievementInfo", function(category, achievement)
 		end
 
 	end
-	
+
 	return AchieveIt.hooks["GetAchievementInfo"](category, achievement);
 
 end, true);
@@ -111,7 +154,7 @@ end, true);
 -- Returns the total, completed and incomplete number of achievements
 -- Overwritten so it can handle addon categories
 AchieveIt:RawHook("GetCategoryNumAchievements", function(categoryId, showAll)
-	
+
 	if (AchieveIt.Categories:isCategory(categoryId)) then
 
 		local aiCategory;
@@ -230,7 +273,7 @@ local getParentChain = function(id)
 		end
 
 	end
-	
+
 	-- inialise entire parent chain
 	local parentChain = {};
 
@@ -263,7 +306,7 @@ end
 local simulateClick = function (id)
 
 	AchieveIt:Printd("Simulating click for ", id);
-	
+
 	-- we will return this as the clicked button once we have found it
 	local clickedButton = nil;
 
@@ -335,7 +378,7 @@ local categoryChange = false;
 local scrollingIntoView = false;
 
 local scrollCategoryInView = function(categoryID)
-	
+
 	local shown, categoryButton = false, nil;
 
 	-- if we have not already started scrolling
@@ -427,7 +470,7 @@ local scrollCategoryInView = function(categoryID)
 
 				end
 
-				-- if nothing has been added then add it to the end				
+				-- if nothing has been added then add it to the end
 				if (not added) then
 
 					tinsert(negativeChain, parentId);
@@ -482,7 +525,7 @@ local scrollCategoryInView = function(categoryID)
 
 			-- check if button is shown
 			buttonAtTop = buttonShown(categoryChain[i]);
-			
+
 			-- while it's not shown
 			while (not buttonAtTop) do
 
@@ -571,7 +614,7 @@ end
 -- We hook into it so we can store out own local verion of the achievementFunctions table
 -- as it is local to the WoW achivements frame and we need to be able to access it in our mods
 AchieveIt:Hook("AchievementFrameBaseTab_OnClick", function(id)
-	
+
 	activeTabId = id;
 
 	-- Character Achievements
@@ -635,11 +678,11 @@ AchieveIt:SecureHook("AchievementFrameCategories_GetCategoryList", function(cate
 	end
 
 	for i = 1, #categories do
-		if (parents[categories[i].id]) then			
+		if (parents[categories[i].id]) then
 			categories[i].hasChildren = true;
 		end
 	end
-	
+
 	local topLevelCategories;
 	if (not inGuildView) then
 		topLevelCategories = AchieveIt.Categories:findParent(false);
@@ -647,19 +690,23 @@ AchieveIt:SecureHook("AchievementFrameCategories_GetCategoryList", function(cate
 		topLevelCategories = AchieveIt.GuildCategories:findParent(false);
 	end
 
-	for topLevelId, topLevelCategory in pairs(topLevelCategories) do
+	if(not topLevelCategories) then
+		AchieveIt:Printd("No Top-Level categories to show", inGuildView);
+	else
 
-		tinsert(categories, {
-			id			= topLevelId,
-			level		= 0,
-			hasChildren	= #topLevelCategory.children > 0
-		});
+		for topLevelId, topLevelCategory in pairs(topLevelCategories) do
 
+			tinsert(categories, {
+				id			= topLevelId,
+				level		= 0,
+				hasChildren	= #topLevelCategory.children > 0
+			});
+
+		end
 	end
-
 	-- loop through each category backwards (so we can add new entries without breaking the loop)
-	for i = #categories, 1, -1 do 
-		
+	for i = #categories, 1, -1 do
+
 		-- current category
 		local currentCategory = categories[i];
 
@@ -675,10 +722,10 @@ AchieveIt:SecureHook("AchievementFrameCategories_GetCategoryList", function(cate
 			parentCategory = { parentCategory };
 
 		end
-		
+
 		-- if addon category exists
 		if (parentCategory) then
-			
+
 			currentCategory.hasChildren = true;
 
 			-- Function to recursively add all sub categories and their children to the achievement frame
@@ -723,15 +770,15 @@ AchieveIt:SecureHook("AchievementFrameCategories_GetCategoryList", function(cate
 				addSubCategories(currentCategory.id, parentCategory[i]);
 
 			end
-			
+
 		end
-		
+
 	end
 
 end);
 
 -- AchievementFrameCategories_DisplayButton
--- 
+--
 -- Displays the achievement category buttons
 -- Extended to format the sub category buttons making them smaller
 AchieveIt:SecureHook("AchievementFrameCategories_DisplayButton", function(button, element)
@@ -755,7 +802,7 @@ AchieveIt:SecureHook("AchievementFrameCategories_DisplayButton", function(button
 end);
 
 -- AchievementFrameCategories_SelectButton
--- 
+--
 -- This function is called when a category button is clicked
 -- We need to totally overwrite this function in order to be able to handle multiple nested categories
 AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
@@ -769,7 +816,7 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 
 	-- debug
 	AchieveIt:Printfd('"%s (ID: %s)" button clicked', button.name, button.categoryID);
-	
+
 	local id = button.element.id;
 
 	----------------------------------------------
@@ -788,10 +835,10 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 		button.isSelected = true;
 
 	end
-		
+
 	-- get button parent chain
 	local parentChain = getParentChain(id);
-	
+
 	-- if button has no parent or it has children
 	if ( type(button.element.parent) ~= "number" or button.element.hasChildren ) then
 
@@ -823,11 +870,11 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 
 			-- loop through each category
 			for i, category in next, ACHIEVEMENTUI_CATEGORIES do
-				
+
 				-- if category parent is button category
 				-- or category is in the parent chain
 				if ( category.parent == id or parentChain[category.id] ) then
-					
+
 					-- show it
 					category.hidden = false;
 
@@ -857,20 +904,20 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 	------------------
 	-- End Modified --
 	------------------
-	
+
 	local buttons = AchievementFrameCategoriesContainer.buttons;
 	for _, button in next, buttons do
 		button.isSelected = nil;
 	end
-	
+
 	button.isSelected = true;
-	
+
 	if ( id == achievementFunctions.selectedCategory ) then
 		AchieveIt:Printd("No category change");
 		-- If this category was selected already, bail after changing collapsed states
 		return
 	end
-	
+
 	--Intercept "summary" category
 	if ( id == "summary" ) then
 		if ( achievementFunctions == ACHIEVEMENT_FUNCTIONS or achievementFunctions == GUILD_ACHIEVEMENT_FUNCTIONS ) then
@@ -892,7 +939,7 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 			achievementFunctions.selectedCategory = ACHIEVEMENT_COMPARISON_STATS_SUMMARY_ID;
 			AchievementFrameComparisonStatsContainerScrollBar:SetValue(0);
 		end
-		
+
 	else
 		if ( achievementFunctions == STAT_FUNCTIONS ) then
 			AchievementFrame_ShowSubFrame(AchievementFrameStats);
@@ -915,7 +962,7 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 		end
 		achievementFunctions.selectedCategory = id;
 	end
-	
+
 	if ( achievementFunctions.clearFunc ) then
 		achievementFunctions.clearFunc();
 	end
@@ -925,7 +972,7 @@ AchieveIt:RawHook("AchievementFrameCategories_SelectButton", function(button)
 end, true);
 
 -- AchievementFrameCategories_Update
--- 
+--
 -- This function is called from multiple places to update the category list
 -- We pre-hook it and set all categories in the parent chain as not hidden so that closing and opening the achievements frame
 -- will have all the correct categories visible
@@ -952,7 +999,7 @@ AchievementFrameCategories_Update = function()
 
 	-- call original function
 	local displayCategories = AchievementFrameCategories_Update_orig();
-	
+
 	-- if there has been a category change
 	if (categoryChange) then
 
@@ -1021,7 +1068,7 @@ dragFrame = function(frame)
 		"AchievementFrameSummary"
 	};
 
-	
+
 	-- only Frames should be draggable
 	if (
 		(frame:GetObjectType() == "Frame" or frame:GetObjectType() == "ScrollFrame") and
@@ -1059,11 +1106,13 @@ dragFrame = function(frame)
 	end
 
 end
-dragFrame(AchievementFrame);
+if (AchieveIt_Data.DraggableAchievementWindow) then
+	dragFrame(AchievementFrame);
+end
 
 AchievementFrame:HookScript("OnShow", function()
 
-	-- Set the selected category to automatically show it when the achievement frame opens	
+	-- Set the selected category to automatically show it when the achievement frame opens
 	--achievementFunctions.selectedCategory = -100;
 
 	-- location was saved
@@ -1097,8 +1146,8 @@ else
 	locateButton:SetPoint("TOPLEFT", AchievementFrameHeader, "TOPLEFT", 5, -33);
 end
 
-locateButton:SetWidth(130);
-locateButton:SetHeight(24);
+locateButton:SetWidth(0);
+locateButton:SetHeight(0);
 locateButton.label:SetText(L["Locate Category"]);
 
 -- Add click handler
@@ -1128,8 +1177,8 @@ locateButton:SetScript("OnClick", function()
 
 end);
 
--- Show it
-locateButton:Show();
+-- Hide it, see if anyone notices
+locateButton:Hide();
 
 
 -- End ModifyAchievementFrame function

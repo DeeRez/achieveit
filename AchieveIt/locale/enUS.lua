@@ -10,10 +10,10 @@ L["Al'Akir"] = "Al'Akir"
 L["Algalon the Observer"] = "Algalon the Observer"
 L["Alysrazor"] = "Alysrazor"
 L["Amber-Shaper Un'sok"] = "Amber-Shaper Un'sok"
+L["Algalon"] = "Algalon"
 L["Anomalus"] = "Anomalus"
 L["Anub'arak"] = "Anub'arak"
 L["Anub'Rekhan"] = "Anub'Rekhan"
-L["Arakkoa"] = "Arakkoa"
 L["Archbishop Benedictus"] = "Archbishop Benedictus"
 L["Archmage Sol"] = "Archmage Sol"
 L["Arena of Annihilation"] = "Arena of Annihilation"
@@ -68,9 +68,7 @@ L["Darkspear Uprising"] = "Darkspear Uprising"
 L["Deathbringer Saurfang"] = "Deathbringer Saurfang"
 L["Devourer of Souls"] = "Devourer of Souls"
 L["Domination Point"] = "Domination Point"
-L["Draenor Clans"] = "Draenor Clans"
 L["Durumu the Forgotten"] = "Durumu the Forgotten"
-L["Dwarf"] = "Dwarf"
 L["Eadric the Pure"] = "Eadric the Pure"
 L["Earthrager Ptah"] = "Earthrager Ptah"
 L["Echo of Sylvanas"] = "Echo of Sylvanas"
@@ -180,33 +178,27 @@ L["Majordomo Staghelm"] = "Majordomo Staghelm"
 L["Malkorok"] = "Malkorok"
 L["Maloriak"] = "Maloriak"
 L["Mannoroth"] = "Mannoroth"
-L["Mantid"] = "Mantid"
 L["Master Snowdrift"] = "Master Snowdrift"
 L["Megaera"] = "Megaera"
 L["Mimiron"] = "Mimiron"
-L["Mogu"] = "Mogu"
 L["Money"] = "Money"
 L["Moorabi"] = "Moorabi"
 L["Morchok"] = "Morchok"
 L["Nefarian"] = "Nefarian"
 L["Ner'zhul"] = "Ner'zhul"
-L["Night Elf"] = "Night Elf"
 L["Nitrogg Thundertower"] = "Nitrogg Thundertower"
 L["Niuzao Temple"] = "Niuzao Temple"
 L["No category found."] = "No category found."
 L["Norushen"] = "Norushen"
 L["Novos the Summoner"] = "Novos the Summoner"
-L["Ogre"] = "Ogre"
 L["Omnotron Defense System"] = "Omnotron Defense System"
 L["Ook-Ook"] = "Ook-Ook"
 L["Operator Thogar"] = "Operator Thogar"
-L["Orc"] = "Orc"
 L["Order of the Cloud Serpent"] = "Order of the Cloud Serpent"
 L["Orebender Gor'ashan"] = "Orebender Gor'ashan"
 L["Oregorger"] = "Oregorger"
 L["Other"] = "Other"
 L["Ozumat"] = "Ozumat"
-L["Pandaren"] = "Pandaren"
 L["Paragons of the Klaxxi"] = "Paragons of the Klaxxi"
 L["Patchwerk"] = "Patchwerk"
 L["Peroth'arn"] = "Peroth'arn"
@@ -278,7 +270,6 @@ L["The Tribunal of Ages"] = "The Tribunal of Ages"
 L["The Twin Val'kyr"] = "The Twin Val'kyr"
 L["Thok the Bloodthirsty"] = "Thok the Bloodthirsty"
 L["Thorim"] = "Thorim"
-L["Tol'vir"] = "Tol'vir"
 L["Tortos"] = "Tortos"
 L["Trial of the King"] = "Trial of the King"
 L["Trollgore"] = "Trollgore"
@@ -311,10 +302,11 @@ L["Zuramat the Obliterator"] = "Zuramat the Obliterator"
 
 -- Patch 6.2
 L["Archimonde"] = "Archimonde"
+L["Barn"] = "Barn"
 L["MoP Challenge Modes"]= "MoP Challenge Modes"
 L["Draenor"] = "Draenor"
 L["Fel Lord Zakuun"] = "Fel Lord Zakuun"
-L["Followers"] = "Followers"
+L["Gladiator's Sanctum"] = "Gladiator's Sanctum"
 L["Gorefiend"] = "Gorefiend"
 L["Gul'dan"] = "Gul'dan"
 L["Hellfire Assault"] = "Hellfire Assault"
@@ -322,6 +314,7 @@ L["Hellfire Council"] = "Hellfire Council"
 L["Iron Reaver"] = "Iron Reaver"
 L["Kilrogg Deadeye"] = "Kilrogg Deadeye"
 L["Kormrok"] = "Kormrok"
+L["Lumber Mill"] = "Lumber Mill"
 L["Pandaria"] = "Pandaria"
 L["Shadow-Lord Iskar"] = "Shadow-Lord Iskar"
 L["Socrethar the Eternal"] = "Socrethar the Eternal"
@@ -345,7 +338,6 @@ L["Dragons of Nightmare"] = "Dragons of Nightmare"
 L["Dresaron"] = "Dresaron"
 L["Elerethe Renferal"] = "Elerethe Renferal"
 L["Festerface"] = "Festerface"
-L["Glories"] = "Glories"
 L["Glory"] = "Glory"
 L["Grand Magistrix Elisande"] = "Grand Magistrix Elisande"
 L["Helya"] = "Helya"
@@ -357,7 +349,6 @@ L["Ivanyr"] = "Ivanyr"
 L["Krosus"] = "Krosus"
 L["Lady Hatecoil"] = "Lady Hatecoil"
 L["Legion"] = "Legion"
-L["Maw of Souls"] ="Maw of Souls"
 L["Millificent Manastorm"] = "Millificent Manastorm"
 L["Mythic Dungeons"] = "Mythic Dungeons"
 L["Mythic+ Dungeons"] = "Mythic+ Dungeons"
@@ -379,13 +370,12 @@ L["Warlord Parjesh"] = "Warlord Parjesh"
 L["Wrath of Azshara"] = "Wrath of Azshara"
 L["WoD Challenge Modes"]="WoD Challenge Modes"
 L["Xavius"] = "Xavius"
-L["Ymiron"] = "Ymiron"
+L["Ymiron, the Fallen King"] = "Ymiron, the Fallen King"
 
 -- Patch 7.1
 L["Opera Event"] = "Opera Event"
 L["Moroes"] = "Moroes"
 L["Shade of Medivh"] = "Shade of Medivh"
-L["Trial of Valor"] = "Trial of Valor"
 L["Guarm"] = "Guarm"
 
 -- Patch 7.2.x
@@ -405,7 +395,7 @@ L["Mistress Sassz'ine"] = "Mistress Sassz'ine"
 L["Mephistroth"] = "Mephistroth"
 L["Sisters of the Moon"] = "Sisters of the Moon"
 L["The Desolate Host"] = "The Desolate Host"
-L["Tomb of Sargeras"] = "Tomb of Sargeras"
+L["Thrashbite the Scornful"] = "Thrashbite the Scornful"
 
 
 -- Patch 7.3.x
@@ -413,7 +403,6 @@ L["Tomb of Sargeras"] = "Tomb of Sargeras"
 L["Admiral Svirax"] = "Admiral Svirax"
 L["Aggramar"] = "Aggramar"
 L["Antoran High Command"] = "Antoran High Command"
-L["Antorus, The Burning Throne"] = "Antorus, The Burning Throne"
 L["Argus"] = "Argus"
 L["Argus the Unmaker"] = "Argus the Unmaker"
 L["Asara, Mother of Night"] = "Asara, Mother of Night"
@@ -445,4 +434,285 @@ L["Varimathras"] = "Varimathras"
 L["Viceroy Nezhar"] = "Viceroy Nezhar"
 L["Zuraal the Ascended"] = "Zuraal the Ascended"
 
--- L[""] = ""
+-- Battle for Azeroth
+
+L["Priestess Alun'za"] = "Priestess Alun'za"
+L["Yazma"] = "Yazma"
+L["Skycap'n Kragg"] = "Skycap'n Kragg"
+L["Harlan Sweete"] = "Harlan Sweete"
+L["Mchimba the Embalmer"] = "Mchimba the Embalmer"
+L["King Dazar"] = "King Dazar"
+L["King Gobbamak"] = "King Gobbamak"
+L["Gunker"] = "Gunker"
+L["Tussle Tonks"] = "Tussle Tonks"
+L["The Platinun Pummeler"] = "The Platinun Pummeler"
+L["Gnomercy 4.U."] = "Gnomercy 4.U."
+L["Head Machinist Sparkflux"] = "Head Machinist Sparkflux"
+L["Lord Stormsong"] = "Lord Stormsong"
+L["Vol'zith the Whisperer"] = "Vol'zith the Whisperer"
+L["Dread Captain Lockwood"] = "Dread Captain Lockwood"
+L["Viq'Goth"] = "Viq'Goth"
+L["Merektha"] = "Merektha"
+L["Avatar of Sethraliss"] = "Avatar of Sethraliss"
+L["Coin-Operated Crowd Pummeler"] = "Coin-Operated Crowd Pummeler"
+L["Mogul Razdunk"] = "Mogul Razdunk"
+L["Elder Leaxa"] = "Elder Leaxa"
+L["Sporecaller Zanchu"] = "Sporecaller Zanchu"
+L["Unbound Abomination"] = "Unbound Abomination"
+L["Knight Captain Valyri"] = "Knight Captain Valyri"
+L["Overseer Korgus"] = "Overseer Korgus"
+L["Soulbound Goliath"] = "Soulbound Goliath"
+L["Gorak Tul"] = "Gorak Tul"
+L["Taloc"] = "Taloc"
+L["MOTHER"] = "MOTHER"
+L["Zek'voz"] = "Zek'voz"
+L["Fetid Devourer"] = "Fetid Devourer"
+L["Vectis"] = "Vectis"
+L["Zul"] = "Zul"
+L["Mythrax the Unraveler"] = "Mythrax the Unraveler"
+L["G'huun"] = "G'huun"
+L["Champion of the Light"] = "Champion of the Light"
+L["Frida Ironbellows"] = "Frida Ironbellows"
+L["Ra'wani Kanae"] = "Ra'wani Kanae"
+L["Grong"] = "Grong"
+L["Jadefire Masters"] = "Jadefire Masters"
+L["Ma'ra Grimfang"] = "Ma'ra Grimfang"
+L["Anathos Firecaller"] = "Anathos Firecaller"
+L["Mestrah"] = "Mestrah"
+L["Manceroy Flamefist"] = "Manceroy Flamefist"
+L["Opulence"] = "Opulence"
+L["Conclave of the Chosen"] = "Conclave of the Chosen"
+L["Pa'ku's Aspect"] = "Pa'ku's Aspect"
+L["Gonk's Aspect"] = "Gonk's Aspect"
+L["Kimbul's Aspect"] = "Kimbul's Aspect"
+L["Akunda's Aspect"] = "Akunda's Aspect"
+L["King Rastakhan"] = "King Rastakhan"
+L["High Tinker Mechatorque"] = "High Tinker Mechatorque"
+L["Stormwall Blockade"] = "Stormwall Blockade"
+L["Brother Joseph"] = "Brother Joseph"
+L["Sister Katherine"] = "Sister Katherine"
+L["Laminaria"] = "Laminaria"
+L["Lady Jaina Proudmoore"] = "Lady Jaina Proudmoore"
+L["The Restless Cabal"] = "The Restless Cabal"
+L["Fa'thuulthe Feared"] = "Fa'thuulthe Feared"
+L["Zaxasj the Speaker"] = "Zaxasj the Speaker"
+L["Uu'nat, Harbinger of the Void"] = "Uu'nat, Harbinger of the Void"
+L["Uu'nat"] = "Uu'nat"
+--[L[""] = ""
+
+
+-- Shadowlands
+L["Amarth the Harvester"] = "Amarth the Harvester"
+L["An Affront of Challengers"] = "An Affront of Challengers"
+L["Artificer Xy'mox"] = "Artificer Xy'mox"
+L["Baroness Frieda"] = "Baroness Frieda"
+L["Castellan Niklaus"] = "Castellan Niklaus"
+L["Dealer Xy'exa"] = "Dealer Xy'exa"
+L["Dessia the Decapitator"] = "Dessia the Decapitator"
+L["Devos"] = "Devos"
+L["Devos, Paragon of Doubt"] = "Devos, Paragon of Doubt"
+L["Doctor Ickus"] = "Doctor Ickus"
+L["Echelon"] = "Echelon"
+L["Executor Tarvold"] = "Executor Tarvold"
+L["Fatescribe Roh-Kalo"] = "Fatescribe Roh-Kalo"
+L["General Grashaal"] = "General Grashaal"
+L["General Kaal"] = "General Kaal"
+L["Guardian of the First Ones"] = "Guardian of the First Ones"
+L["Globgrog"] = "Globgrog"
+L["Gorechop"] = "Gorechop"
+L["Hakkar the Soulflayer"] = "Hakkar the Soulflayer"
+L["Halkias, the Sin-Stained Goliath"] = "Halkias, the Sin-Stained Goliath"
+L["Hungering Destroyer"] = "Hungering Destroyer"
+L["Huntsman Altimor"] = "Huntsman Altimor"
+L["Hylbrande"] = "Hylbrande"
+L["Ingra Maloch"] = "Ingra Maloch"
+L["Kael'thas Sunstrider"] = "Kael'thas Sunstrider"
+L["Kel'Thuzad"] = "Kel'Thuzad"
+L["Kyra"] = "Kyra"
+L["Lady Inerva Darkvein"] = "Lady Inerva Darkvein"
+L["Lord Chamberlain"] = "Lord Chamberlain"
+L["Lord Stavros"] = "Lord Stavros"
+L["Mailroom Mayhem"] = "Mailroom Mayhem"
+L["Mordretha, the Endless Empress"] = "Mordretha, the Endless Empress"
+L["Nalthor the Rimebinder"] = "Nalthor the Rimebinder"
+L["Oryphrion"] = "Oryphrion"
+L["Paceran the Virulent"] = "Paceran the Virulent"
+L["Painsmith Raznal"] = "Painsmith Raznal"
+L["Remnant of Ner'zhul"] = "Remnant of Ner'zhul"
+L["Remornia"] = "Remornia"
+L["Sathel the Accursed"] = "Sathel the Accursed"
+L["Shriekwing"] = "Shriekwing"
+L["Signe"] = "Signe"
+L["Sire Denathrius"] = "Sire Denathrius"
+L["Sludgefist"] = "Sludgefist"
+L["Soulrender Dormazain"] = "Soulrender Dormazain"
+L["Spires of Ascension"] = "Spires of Ascension"
+L["Stone Legion Generals"] = "Stone Legion Generals"
+L["Sun King's Salvation"] = "Sun King's Salvation"
+L["Surgeon Stitchflesh"] = "Surgeon Stitchflesh"
+L["Sylvanas Windrunner"] = "Sylvanas Windrunner"
+L["The Council of Blood"] = "The Council of Blood"
+L["The Eye of the Jailer"] = "The Eye of the Jailer"
+L["The Manastorms"] = "The Manastorms"
+L["The Nine"] = "The Nine"
+L["The Tarragrue"] = "The Tarragrue"
+L["Tred'ova"] = "Tred'ova"
+L["Zo'phex the Sentinel"] = "Zo'phex the Sentinel"
+
+
+
+L["Lore"] = "Lore"
+L["Map"] = "Map"
+L["Treasure"] = "Treasure"
+L["Champions"] = "Champions"
+L["Pathfinder"] = "Pathfinder"
+L["Allied Races"] = "Allied Races"
+L["Order Hall Campaign"] = "Order Hall Campaign"
+L["Return to Karazhan"] = "Return to Karazhan"
+
+
+--NOTE: These names should not require localization
+-- TODO: Replace more instance names with code like this:
+
+--WotLK Dungeons
+L["Utgarde Keep"] = GetLFGDungeonInfo(202)
+L["Utgarde Pinnacle"] = GetLFGDungeonInfo(1020)
+L["The Nexus"] = GetLFGDungeonInfo(225)
+L["The Oculus"] = GetLFGDungeonInfo(206)
+L["Azjol-Nerub"] = GetLFGDungeonInfo(204)
+L["Ahn'kahet: The Old Kingdom"] = GetLFGDungeonInfo(218)
+L["The Culling of Stratholme"] = GetLFGDungeonInfo(209)
+L["Drak'Tharon Keep"] = GetLFGDungeonInfo(214)
+L["Gundrak"] = GetLFGDungeonInfo(216)
+L["The Violet Hold"] = GetLFGDungeonInfo(1172)
+L["Halls of Stone"] = GetLFGDungeonInfo(208)
+L["Halls of Lightning"] = GetLFGDungeonInfo(207)
+L["Trial of the Champion"] = GetLFGDungeonInfo(245)
+L["The Forge of Souls"] = GetLFGDungeonInfo(251)
+L["Pit of Saron"] = GetLFGDungeonInfo(253)
+L["Halls of Reflection"] = GetLFGDungeonInfo(255)
+
+--WotLK Raids
+L["Onyxia's Lair"] = GetLFGDungeonInfo(46)
+L["The Obsidian Sanctum"] = GetLFGDungeonInfo(224)
+L["Ruby Sanctum"] = GetLFGDungeonInfo(293)
+L["The Eye of Eternity"] = GetLFGDungeonInfo(223)
+L["Vault of Archavon"] = GetLFGDungeonInfo(239)
+L["Trial of the Crusader"] = GetLFGDungeonInfo(246)
+L["Naxxramas"] = GetLFGDungeonInfo(159)
+L["Icecrown Citadel"] = GetLFGDungeonInfo(279)
+L["Ulduar"] = GetLFGDungeonInfo(243)
+
+--Cataclysm Dungeons
+L["Blackrock Caverns"] = GetLFGDungeonInfo(303)
+L["Throne of the Tides"] = GetLFGDungeonInfo(302)
+L["The Stonecore"] = GetLFGDungeonInfo(307)
+L["The Vortex Pinnacle"] = GetLFGDungeonInfo(311)
+L["Grim Batol"] = GetLFGDungeonInfo(304)
+L["Halls of Origination"] = GetLFGDungeonInfo(305)
+L["Lost City of the Tol'vir"] = GetLFGDungeonInfo(312)
+L["Deadmines"] = GetLFGDungeonInfo(6)
+L["Shadowfang Keep"] = GetLFGDungeonInfo(8)
+L["Zul'Gurub"] = GetLFGDungeonInfo(334)
+L["Zul'Aman"] = GetLFGDungeonInfo(340)
+L["End Time"] = GetLFGDungeonInfo(435)
+L["Well of Eternity"] = GetLFGDungeonInfo(437)
+L["Hour of Twilight"] = GetLFGDungeonInfo(439)
+
+--Cataclysm Raids
+L["Blackwing Descent"] = GetLFGDungeonInfo(313)
+L["The Bastion of Twilight"] = GetLFGDungeonInfo(315)
+L["Throne of the Four Winds"] = GetLFGDungeonInfo(317)
+L["Firelands"] = GetLFGDungeonInfo(361)
+L["Dragon Soul"] = GetLFGDungeonInfo(447)
+
+
+-- Pandaria Dungeons
+L["Stormstout Brewery"] = GetLFGDungeonInfo(465)
+L["Temple of the Jade Serpent"] = GetLFGDungeonInfo(464)
+L["Mogu'shan Palace"] = GetLFGDungeonInfo(467)
+L["Shado-Pan Monastery"] = GetLFGDungeonInfo(466)
+L["Gate of the Setting Sun"] = GetLFGDungeonInfo(471)
+L["Siege of Niuzao Temple"] = GetLFGDungeonInfo(554)
+L["Scarlet Halls"] = GetLFGDungeonInfo(163)
+L["Scarlet Monastery"] = GetLFGDungeonInfo(164)
+L["Scholomance"] = GetLFGDungeonInfo(2)
+
+-- Pandaria Raids
+L["Mogu'shan Vaults"] = GetLFGDungeonInfo(531)
+L["Heart of Fear"] = GetLFGDungeonInfo(533)
+L["Terrace of Endless Spring"] = GetLFGDungeonInfo(526)
+L["Throne of Thunder"] = GetLFGDungeonInfo(633)
+L["Siege of Orgrimmar"] = GetLFGDungeonInfo(714)
+
+-- Draenor Dungeons
+L["Bloodmaul Slag Mines"] = GetLFGDungeonInfo(787)
+L["Iron Docks"] = GetLFGDungeonInfo(821)
+L["Auchindoun"] = GetLFGDungeonInfo(820)
+L["Skyreach"] = GetLFGDungeonInfo(779)
+L["Upper Blackrock Spire"] = GetLFGDungeonInfo(330)
+L["The Everbloom"] = GetLFGDungeonInfo(824)
+L["Grimrail Depot"] = GetLFGDungeonInfo(822)
+L["Shadowmoon Burial Grounds"] = GetLFGDungeonInfo(783)
+
+-- Draenor Raids
+L["Highmaul"] = GetLFGDungeonInfo(895)
+L["Blackrock Foundry"] = GetLFGDungeonInfo(898)
+L["Hellfire Citadel"] = GetLFGDungeonInfo(987)
+
+
+--Legion Dungeons
+L["Assault on Violet Hold"] = GetLFGDungeonInfo(1208)
+L["Black Rook Hold"] = GetLFGDungeonInfo(1204)
+L["Cathedral of Eternal Night"] = GetLFGDungeonInfo(1488)
+L["Court of Stars"] = GetLFGDungeonInfo(1318)
+L["Darkheart Thicket"] = GetLFGDungeonInfo(1201)
+L["Eye of Azshara"] = GetLFGDungeonInfo(1174)
+L["Halls Of Valor"] = GetLFGDungeonInfo(1193)
+L["Maw of Souls"] = GetLFGDungeonInfo(1191)
+L["Neltharion's Lair"] = GetLFGDungeonInfo(1206)
+L["Seat of the Triumvirate"] = GetLFGDungeonInfo(1535)
+L["The Arcway"] = GetLFGDungeonInfo(1189)
+L["Vault of the Wardens"] = GetLFGDungeonInfo(1043)
+
+--Legion Raids
+L["The Emerald Nightmare"] = GetLFGDungeonInfo(1348)
+L["Trial of Valor"] = GetLFGDungeonInfo(1411)
+L["The Nighthold"] = GetLFGDungeonInfo(1351)
+L["Tomb of Sargeras"] = GetLFGDungeonInfo(1525)
+L["Antorus, The Burning Throne"] = GetLFGDungeonInfo(1640)
+
+--BfA
+L["Battle for Stromgarde"] = GetLFGDungeonInfo(1760)
+L["Halls of Containment"] = GetLFGDungeonInfo(1731)
+L["Crimson Descent"] = GetLFGDungeonInfo(1732)
+L["Heart of Corruption"] = GetLFGDungeonInfo(1733)
+L["Assaults"] = "Assaults"
+L["Battle for Darkshore"] = GetLFGDungeonInfo(1901)
+
+-- Archaeology
+L["Dwarf"] = GetArchaeologyRaceInfoByID(1)
+L["Night Elf"] = GetArchaeologyRaceInfoByID(4)
+L["Orc"] = GetArchaeologyRaceInfoByID(6)
+L["Tol'vir"] = GetArchaeologyRaceInfoByID(7)
+L["Mantid"] = GetArchaeologyRaceInfoByID(29)
+L["Pandaren"] = GetArchaeologyRaceInfoByID(229)
+L["Mogu"] = GetArchaeologyRaceInfoByID(231)
+L["Arakkoa"] = GetArchaeologyRaceInfoByID(315)
+L["Draenor Clans"] = GetArchaeologyRaceInfoByID(350)
+L["Ogre"] = GetArchaeologyRaceInfoByID(382)
+
+--World Events
+L["Day of the Dead"] = "Day of the Dead"
+
+-- Unused Archaeology
+--L["Draenei"] = GetArchaeologyRaceInfoByID(2)
+--L["Fossil"] = GetArchaeologyRaceInfoByID(3)
+--L["Nerubian"] = GetArchaeologyRaceInfoByID(5)
+--L["Troll"] = GetArchaeologyRaceInfoByID(8)
+--L["Vrykul"] = GetArchaeologyRaceInfoByID(27)
+--L["Highborne"] = GetArchaeologyRaceInfoByID(404)
+--L["Highmountain Tauren"] = GetArchaeologyRaceInfoByID(406)
+--L["Demonic"] = GetArchaeologyRaceInfoByID(408)
+
+

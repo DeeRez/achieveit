@@ -1,4 +1,4 @@
-local _, AchieveIt = ...;
+--local _, AchieveIt = ...;
 
 -- Locale
 local L = LibStub("AceLocale-3.0"):GetLocale("AchieveIt");
@@ -8,7 +8,7 @@ local tinsert, setmetatable, pairs = tinsert, setmetatable, pairs;
 local UnitFactionGroup = UnitFactionGroup;
 
 -- Each category is assigned a unique ID which can identify it
--- ID's are negative so they do not clash with WoW ID's and start at -10 because the comparison 
+-- ID's are negative so they do not clash with WoW ID's and start at -10 because the comparison
 -- frames use -1 and -2 to idenitfy themselves
 local categoryID = -10;
 
@@ -98,10 +98,21 @@ function AchieveItCategory:generateId()
 
 end
 
+local function is_achieve_legacy(p_achieve_id)
+	local category_id = GetAchievementCategory(p_achieve_id)
+	if (not category_id) then
+		print("AchieveID:", p_achieve_id, " is invalid");
+		return false
+	end
+	local _title, parent_category_id, _flags = GetCategoryInfo(category_id)
+
+	return (category_id == 15234) or (parent_category_id == 15234)
+end
+
 -- Processes achievements for the category, filtering out any achievements the user can
 -- not access (e.g. for other faction)
 function AchieveItCategory:processAchievements(achievements)
-	
+
 	-- Achievements that will be returned
 	-- This will only contain achievements the player can get (i.e. none for opposite faction)
 	local achievementsToReturn = {};
@@ -116,15 +127,16 @@ function AchieveItCategory:processAchievements(achievements)
 
 			-- if achievement is an id
 			if (type(achievement) == "number") then
-
-	 			-- then just add it
+				if(is_achieve_legacy(achievement)) then print("Warning: Achievement id ", achievement, "is a Legacy achieve"); end;
+				-- then just add it
 				tinsert(achievementsToReturn, achievement);
 
-			-- otherwise check the achivement faction to make sure it's applicable to the user
+			-- otherwise check the achievement faction to make sure it's applicable to the user
 			else
-				
+				if(is_achieve_legacy(achievement.id)) then print("Warning: Achievement id ", achievement.id, "is a Legacy achieve"); end;
+
 				-- if achievement is for player faction or is neutral
-				if (achievement.faction == AchieveIt.FACTION or achievement.faction == AchieveIt.Factions.NEUTRAL) then
+				if (achievement.faction == AchieveIt.FACTION or achievement.faction == AchieveIt.Factions.NEUTRAL or achievement.faction == nil) then
 
 					-- add it to the return array
 					tinsert(achievementsToReturn, achievement.id);
@@ -146,6 +158,7 @@ end
 -- @param {string} name			The sub category to add
 -- @param {table} achievements	Array of achievements to add to the sub category
 function AchieveItCategory:addChild(name, achievements)
+	assert(name ~= nil)
 
 	-- create new sub category
 	local subCategory = self:new(self.id, name, achievements, self.level+1);
@@ -294,7 +307,7 @@ function AchieveItCategory:sort()
 			tinsert(complete, self.achievements[i]);
 
 		-- not completed
-		else 
+		else
 
 			-- add to the incomplete table
 			tinsert(incomplete, self.achievements[i]);
@@ -349,7 +362,17 @@ end
 -- @param {int} id	The ID of the new category
 -- @return AchieveItCategory
 function AchieveItCategories:addCategory(parentId, name, achievements, level)
+--print("AchieveItCategories:addCategory(" .. tostring(parentId) .. ", " .. tostring(name) .. ", " .. tostring(achievements) .. "," .. tostring(level))
 
+	if(parentId == nil) then
+		print("AchieveIt Category", name, "has a nil parent");
+		return;
+	elseif (parentId == false) then
+		-- This is "okay". I really don't like passing a boolean as an int so TODO: Fix this
+	elseif (type(parentId) ~= "number") then
+		print("AchieveIt Category", name, " has an invalid parent (not a number)");
+		return;
+	end
 	-- create new category
 	local category = AchieveItCategory:new(parentId, name, achievements, level);
 
@@ -384,7 +407,7 @@ end
 -- @param {int} id	The ID of the category to find
 function AchieveItCategories:findCategory(id)
 
-	-- loop through each parent category	
+	-- loop through each parent category
 	for parentId, categories in pairs(self.parentCategories) do
 
 		-- if parent is a top level categpry
@@ -434,7 +457,7 @@ function AchieveItCategories:findCategory(id)
 
 end
 
--- Searches through each 
+-- Searches through each
 function AchieveItCategories:findParent(parentId)
 
 	-- if parent is an addon category
@@ -485,10 +508,12 @@ end
 -- Returns the category relating to the users current location
 function AchieveItCategories:locate()
 
+	local current_map = C_Map.GetBestMapForUnit("player");
+
 	-- loop through each custom locate function
 	for i=1, #locate do
 
-		category = locate[i]();
+		category = locate[i](current_map);
 
 		if (category ~= false) then
 
@@ -506,7 +531,7 @@ function AchieveItCategories:locate()
 		local category = self.flat[i];
 
 		-- if the category has a location function and it returns true
-		if (type(category.locate) == "function" and category.locate()) then
+		if (type(category.locate) == "function" and category.locate(current_map)) then
 
 			-- we have found the category so return category id
 			return category;
