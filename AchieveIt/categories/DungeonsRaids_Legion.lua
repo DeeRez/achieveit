@@ -532,7 +532,7 @@ category:addChild(L["Ash'Golm"], {
 	-- is mythic mode
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == L[""];
+			UnitName("target") == L["Ash'Golm"];
 
 end;
 

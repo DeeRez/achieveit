@@ -67,27 +67,21 @@ AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Mythic, {
 -- De Other Side --
 -------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.DeOtherSide));
+local dos_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.DeOtherSide));
 
 
-category:addChild(L["Hakkar the Soulflayer"], {
+dos_cat:addChild(L["Hakkar the Soulflayer"], {
 	14354, -- Highly Communicable
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Hakkar the Soulflayer"];
 
 end;		
 
-category:addChild(L["The Manastorms"], {
+dos_cat:addChild(L["The Manastorms"], {
 	14374, -- Couples Therapy
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 		   (UnitName("target") == L["Millificent Manastorm"] or
@@ -95,293 +89,242 @@ category:addChild(L["The Manastorms"], {
 
 end;
 
-category:addChild(L["Dealer Xy'exa"], {
+dos_cat:addChild(L["Dealer Xy'exa"], {
 	14606, -- Thinking With...
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Dealer Xy'exa"];
 
 end;
 
-category:inheritAchievements();
+dos_cat:inheritAchievements();
 
 ------------------------
 -- Halls of Atonement --
 ------------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.HallsOfAtonement));
+local hoa_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.HallsOfAtonement));
 
- category:addChild(L["Halkias, the Sin-Stained Goliath"], {
+hoa_cat:addChild(L["Halkias, the Sin-Stained Goliath"], {
 	14567, -- Picking Up the Pieces
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Halkias"];
 
 end;
 
-category:addChild(L["Echelon"], {
+hoa_cat:addChild(L["Echelon"], {
 	14284, -- Breaking Bad
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Echelon"];
 
 end;
 
- category:addChild(L["Lord Chamberlain"], {
+ hoa_cat:addChild(L["Lord Chamberlain"], {
 	14352, -- Nobody Puts Denathrius in a Corner
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Lord Chamberlain"];
 
 end;
 
-category:inheritAchievements();
+hoa_cat:inheritAchievements();
 
 ---------------------------
 -- Mists of Tirna Scithe --
 ---------------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.MistsOfTirnaScithe), {
+local mists_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.MistsOfTirnaScithe), {
 	14291, -- Someone Could Trip On These
 });
 
- category:addChild(L["Ingra Maloch"], {
+ mists_cat:addChild(L["Ingra Maloch"], {
 	14503, -- hooked On Hyrdroponics
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 		   (UnitName("target") == L["Ingra Maloch"] or
 			UnitName("target") == L["Droman Oulfarran"]);
 
 end;
- category:addChild(L["Tred'ova"], {
-	14375, --Hunger for Knowledge
-}).locate = function()
 
-	-- in dungeon
-	-- is mythic mode
+ mists_cat:addChild(L["Tred'ova"], {
+	14375, --Hunger for Knowledge
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Tred'ova"];
 
 end;
 
-category:inheritAchievements();
+mists_cat:inheritAchievements();
 
 ----------------
 -- Plaguefall --
 ----------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Plaguefall), {
+local plaguefall_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Plaguefall), {
 	14292, --Riding with my Slimes
 });
 
- category:addChild(L["Globgrog"], {
+ plaguefall_cat:addChild(L["Globgrog"], {
 	14347, -- Full Gores Meal
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Globgrog"];
 
 end;
 
- category:addChild(L["Doctor Ickus"], {
+ plaguefall_cat:addChild(L["Doctor Ickus"], {
 	14296, -- Going Viral
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Doctor Ickus"];
 
 end;
 
-category:inheritAchievements();
+plaguefall_cat:inheritAchievements();
 
 ---------------------
 -- Sanguine Depths --
 ---------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.SanguineDepths), {
+local sanguine_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.SanguineDepths), {
 	14290, -- I Only Have Eyes For You
 });
 
- category:addChild(L["Executor Tarvold"], {
+ sanguine_cat:addChild(L["Executor Tarvold"], {
 	14286, -- Residue Evil
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Executor Tarvold"];
 
 end;
- category:addChild(L["General Kaal"], {
-	14289, -- Kaaled shot
-}).locate = function()
 
-	-- in dungeon
-	-- is mythic mode
+ sanguine_cat:addChild(L["General Kaal"], {
+	14289, -- Kaaled shot
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["General Kaal"];
 
 end;
  
-category:inheritAchievements();
+sanguine_cat:inheritAchievements();
 
 -------------------------
--- Spires os Ascension --
+-- Spires of Ascension --
 -------------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, L["Spires of Ascension"], {
+local soa_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, L["Spires of Ascension"], {
 	14327, -- I Can See My House From Here
 });
 
-category:addChild(L["Oryphrion"], {
+soa_cat:addChild(L["Oryphrion"], {
 	14331, --Goliath Offline
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Oryphrion"];
 
 end;
 
-category:addChild(L["Devos, Paragon of Doubt"], {
+soa_cat:addChild(L["Devos, Paragon of Doubt"], {
 	14323, -- ExSPEARiential
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Devos"];
 
 end;
 
-category:inheritAchievements();
+soa_cat:inheritAchievements();
+
 ---------------------------------
 -- Tazavesh, the Veiled Market --
 ---------------------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Tazavesh), {
+local tazavesh_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Tazavesh), {
 	15190, -- Mischief!
 	15178, -- Fake It 'Til You Make It
 });
 
-category:addChild(L["Zo'phex the Sentinel"], {
+tazavesh_cat:addChild(L["Zo'phex the Sentinel"], {
 	15109, -- Will It Blend
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Zo'phex the Sentinel"];
 
 end;
 
-category:addChild(L["Mailroom Mayhem"], {
+tazavesh_cat:addChild(L["Mailroom Mayhem"], {
 	15106, -- Quality Control
 });
 
-category:addChild(L["Hylbrande"], {
+tazavesh_cat:addChild(L["Hylbrande"], {
 	15179, -- This is Fine
 	
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Hylbrande"];
 
 end;
 
-category:inheritAchievements();
+tazavesh_cat:inheritAchievements();
 
 -----------------------
 -- The Necrotic Wake --
 -----------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheNecroticWake));
+local necrotic_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheNecroticWake));
 
-category:addChild(L["Amarth the Harvester"], {
+necrotic_cat:addChild(L["Amarth the Harvester"], {
 	14295, -- Bountiful Harvest
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Amarth the Harvester"];
 
 end;	
- category:addChild(L["Surgeon Stitchflesh"], {
+ necrotic_cat:addChild(L["Surgeon Stitchflesh"], {
 	14320, -- Surgeon's Supplies
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Surgeon Stitchflesh"];
 
 end;
- category:addChild(L["Nalthor the Rimebinder"], {
+ necrotic_cat:addChild(L["Nalthor the Rimebinder"], {
 	14285, -- Ready for Raiding VII
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Nalthor the Rimebinder"];
 
 end;
 
-category:inheritAchievements();
+necrotic_cat:inheritAchievements();
 
 ---------------------
 -- Theater of Pain --
 ---------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheaterOfPain));
+local top_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheaterOfPain));
 
 
-category:addChild(L["An Affront of Challengers"], {
+top_cat:addChild(L["An Affront of Challengers"], {
 	14297, -- Three Choose One
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 		   (UnitName("target") == L["Dessia the Decapitator"] or
@@ -390,31 +333,25 @@ category:addChild(L["An Affront of Challengers"], {
 
 end;		
 
-category:addChild(L["Gorechop"], {
+top_cat:addChild(L["Gorechop"], {
 	14607, -- Fresh Meat!
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Gorechop"];
 
 end;
 
-category:addChild(L["Mordretha, the Endless Empress"], {
+top_cat:addChild(L["Mordretha, the Endless Empress"], {
 	14533, -- Royal Rumble
-}).locate = function()
-
-	-- in dungeon
-	-- is mythic mode
+}).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
 			UnitName("target") == L["Mordretha, the Endless Empress"];
 
 end;
 
-category:inheritAchievements();
+top_cat:inheritAchievements();
 
 
 -----------
@@ -432,9 +369,9 @@ local category = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, L["Gl
 -- Castle Nathria --
 --------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, AchieveIt.GetMapName(Zone.CastleNathria));
+local nathria_cat = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, AchieveIt.GetMapName(Zone.CastleNathria));
 
-category:addChild(L["Progress"], {
+nathria_cat:addChild(L["Progress"], {
 	14715, -- Castle Nathria
 	14717, -- Heroic: Castle Nathria
 	14356, -- Mythic: Shriekwing
@@ -449,66 +386,66 @@ category:addChild(L["Progress"], {
 	14365, -- Mythic: Sire Denathrius
 });
 
-category:addChild(L["Shriekwing"], {
+nathria_cat:addChild(L["Shriekwing"], {
 	14293, -- Blind as a Bat
 	14356, -- Mythic: Shriekwing
 });
 
-category:addChild(L["Huntsman Altimor"], {
+nathria_cat:addChild(L["Huntsman Altimor"], {
 	14523, -- Taking Care of Business
 	14357, -- Mythic: Huntsman Altimor
 });
 
-category:addChild(L["Sun King's Salvation"], {
+nathria_cat:addChild(L["Sun King's Salvation"], {
 	14608, -- Burning Bright
 	14360, -- Mythic: Sun King's Salvation
 });
 
-category:addChild(L["Artificer Xy'mox"], {
+nathria_cat:addChild(L["Artificer Xy'mox"], {
 	14617, -- Private Stock
 	14359, -- Mythic: Artificer Xy'mox
 });
 
-category:addChild(L["Hungering Destroyer"], {
+nathria_cat:addChild(L["Hungering Destroyer"], {
 	14376, -- Feed the Beast
 	14358, -- Mythic: Hungering Destroyer
 });
 
-category:addChild(L["Lady Inerva Darkvein"], {
+nathria_cat:addChild(L["Lady Inerva Darkvein"], {
 	14524, -- I Don't Know What I Expected
 	14361, -- Mythic: Lady Inerva Darkvein
 });
 
-category:addChild(L["The Council of Blood"], {
+nathria_cat:addChild(L["The Council of Blood"], {
 	14619, -- Pour Decision Making
 	14362, -- Mythic: The Councin of Blood
 });
 
-category:addChild(L["Sludgefist"], {
+nathria_cat:addChild(L["Sludgefist"], {
 	14294, -- Dirtflap's Revenge
 	14363, -- Mythic: Sludgefist
 });
 
-category:addChild(L["Stone Legion Generals"], {
+nathria_cat:addChild(L["Stone Legion Generals"], {
 	14525, -- Feed Me, Seymour!
 	14364, -- Mythic: Stone Legion Generals
 });
 
-category:addChild(L["Sire Denathrius"], {
+nathria_cat:addChild(L["Sire Denathrius"], {
 	14610, -- Clear Conscience
 	14365, -- Mythic: Sire Denathrius
 });
 
-category:inheritAchievements();
+nathria_cat:inheritAchievements();
 
 
 ----------------------------
 -- Sanctumn of Domination --
 ----------------------------
 
-local category = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, AchieveIt.GetMapName(Zone.SanctumOfDomination));
+local sanctum_cat = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, AchieveIt.GetMapName(Zone.SanctumOfDomination));
 
-category:addChild(L["Progress"], {
+sanctum_cat:addChild(L["Progress"], {
 	15122, -- The Jailer's Vanguard
 	15123, -- The Dark Bastille
 	15124, -- The Shackles of Fate
@@ -528,56 +465,57 @@ category:addChild(L["Progress"], {
 	15121, -- Mythic: Sylvanas Windrunner
 });
 
-category:addChild(L["The Tarragrue"], {
+sanctum_cat:addChild(L["The Tarragrue"], {
 	14998, -- Name A Better Duo, I'll Wait 
 	15112, -- Mythic: The Tarragrue
 });
 
-category:addChild(L["The Eye of the Jailer"], {
+sanctum_cat:addChild(L["The Eye of the Jailer"], {
 	15065, -- Eye Wish You Were Here
 	15113, -- Mythic: The Eye of the Jailer
 });
 
-category:addChild(L["The Nine"], {
+sanctum_cat:addChild(L["The Nine"], {
 	15003, -- To the Nines
 	15114, -- Mythic: The Nine
 });
 
-category:addChild(L["Remnant of Ner'zhul"], {
+sanctum_cat:addChild(L["Remnant of Ner'zhul"], {
 	15058, -- I Used to Bullseye Deeprun Rats Back Home
 	15115, -- Mythic: Remnant of Ner'zhul
 });
 
-category:addChild(L["Soulrender Dormazain"], {
+sanctum_cat:addChild(L["Soulrender Dormazain"], {
 	15105, -- Tormentor's Tango
 	15116, -- Mythic: Soulrender Dormazain
 });
 
-category:addChild(L["Painsmith Raznal"], {
+sanctum_cat:addChild(L["Painsmith Raznal"], {
 	15131, -- Whack-A-Soul
 	15117, -- Mythic: Painsmith Raznal
 });
 
-category:addChild(L["Guardian of the First Ones"], {
+sanctum_cat:addChild(L["Guardian of the First Ones"], {
 	15132, -- Knowledge is Power
 	15118, -- Mythic: Guardian of the First Ones
 });
 
-category:addChild(L["Fatescribe Roh-Kalo"], {
+sanctum_cat:addChild(L["Fatescribe Roh-Kalo"], {
+	15040, -- Flawless Fate
 	15119, -- Mythic: Fatescribe Roh-Kalo
 });
 
-category:addChild(L["Kel'Thuzad"], {
+sanctum_cat:addChild(L["Kel'Thuzad"], {
 	15108, -- Together Forever
 	15120, -- Mythic: Kel'Thuzad
 });
 
-category:addChild(L["Sylvanas Windrunner"], {
+sanctum_cat:addChild(L["Sylvanas Windrunner"], {
 	15133, -- This World is a Prism
 	15121, -- Mythic: Sylvanas Windrunner
 });
 	
-category:inheritAchievements();
+sanctum_cat:inheritAchievements();
 
 
 

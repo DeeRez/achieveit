@@ -891,46 +891,45 @@ AchieveIt.Categories:addCategory(CatID.Quests_Legion, AchieveIt.GetMapName(Zone.
 ----------------------
 
 AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, L["Progress"], {
-	{	id	= 12582,	faction = AchieveIt.Factions.ALLIANCE},	-- Come Sail Away
-	{	id	= 12473,	faction = AchieveIt.Factions.ALLIANCE},	-- A Sound Plan
-	{	id	= 12497,	faction = AchieveIt.Factions.ALLIANCE},	-- Drust Do It
-	{	id	= 12496,	faction = AchieveIt.Factions.ALLIANCE},	-- Stormsong and Dance
-	{	id	= 12997,	faction = AchieveIt.Factions.ALLIANCE},	-- The Pride of Kul Tiras
-	{	id	= 12510,	faction = AchieveIt.Factions.ALLIANCE},	-- Ready for War
-	{	id	= 12509,	faction = AchieveIt.Factions.HORDE},	-- Ready for War
-	{	id	= 11868,	faction = AchieveIt.Factions.HORDE},	-- The Dark Heart of Nazmir
-	{	id	= 12478,	faction = AchieveIt.Factions.HORDE},	-- Secrets in the Sands
-	{	id	= 11861,	faction = AchieveIt.Factions.HORDE},	-- The Throne of Zuldazar
-	{	id	= 12479,	faction = AchieveIt.Factions.HORDE},	-- Zandalar Forever
-	{	id	= 13294,	faction = AchieveIt.Factions.HORDE},	-- Loremaster of Zandalar
-	{	id = 12593, faction = AchieveIt.Factions.ALLIANCE}, -- Loremaster of Kul Tiras
-
-	{	id = 13251, faction = AchieveIt.Factions.ALLIANCE},	-- In Teldrassil's Shadow
-	{	id = 13263,	faction = AchieveIt.Factions.HORDE},	-- The Shadow Hunter
-	{	id = 13467, faction = AchieveIt.Factions.ALLIANCE},	-- Tides of Vengeance
-	{	id = 13466,	faction = AchieveIt.Factions.HORDE},	-- Tides of Vengeance
-	{	id = 12891, faction = AchieveIt.Factions.ALLIANCE}, -- A Nation United
-	{	id = 12719,	faction = AchieveIt.Factions.HORDE},	-- Spirits Be With You
-	{	id = 13709,	faction = AchieveIt.Factions.HORDE},	-- Unfathomable
-	{	id = 12555,	faction = AchieveIt.Factions.HORDE},	-- Welcome to Zandalar
-
-	{	id = 13925, faction = AchieveIt.Factions.ALLIANCE},	-- The Fourth War
-	{	id = 13924, faction = AchieveIt.Factions.HORDE},	-- The Fourth War
-	{	id = 13553, faction = AchieveIt.Factions.ALLIANCE},	-- The Mechagonian Threat
-	{	id = 13700,	faction = AchieveIt.Factions.HORDE},	-- The Mechagonian Threat
-	{	id = 13710, faction = AchieveIt.Factions.ALLIANCE},	-- Sunken Ambitions
-
-	13517, -- Two Sides to Every Tale
-	13144, -- Wide World of Quests
+	{ id = 12891, faction = AchieveIt.Factions.ALLIANCE}, -- A Nation United
+	{ id = 12473, faction = AchieveIt.Factions.ALLIANCE},	-- A Sound Plan
+	{ id = 13020, faction = AchieveIt.Factions.ALLIANCE}, -- Bow to Your Masters
+	{ id = 12582, faction = AchieveIt.Factions.ALLIANCE},	-- Come Sail Away
+	{ id = 12497, faction = AchieveIt.Factions.ALLIANCE},	-- Drust Do It
 	13544, -- Essential Empowerment
-	13509, -- The Speaker's Resolve
-	14157, -- The Corruptor's End
-	13512, -- Master Calligrapher
-
-	{ id = 13020, faction = AchieveIt.Factions.HORDE}, -- Bow to Your Masters
-	{ id = 12614, faction = AchieveIt.Factions.HORDE}, -- Loa Expectations
+	{ id = 13251, faction = AchieveIt.Factions.ALLIANCE},	-- In Teldrassil's Shadow
 	{ id = 13060, faction = AchieveIt.Factions.ALLIANCE}, -- Kul Runnings
 	{ id = 13384, faction = AchieveIt.Factions.ALLIANCE}, -- Kul Tirans Don't Look at Explosions
+	{ id = 12614, faction = AchieveIt.Factions.HORDE}, -- Loa Expectations
+	{ id = 12593, faction = AchieveIt.Factions.ALLIANCE}, -- Loremaster of Kul Tiras
+	{ id = 13294, faction = AchieveIt.Factions.HORDE},	-- Loremaster of Zandalar
+	13512, -- Master Calligrapher
+	{ id = 12510, faction = AchieveIt.Factions.ALLIANCE},	-- Ready for War
+	{ id = 12509, faction = AchieveIt.Factions.HORDE},	-- Ready for War
+	{ id = 12478, faction = AchieveIt.Factions.HORDE},	-- Secrets in the Sands
+	{ id = 12719, faction = AchieveIt.Factions.HORDE},	-- Spirits Be With You
+	{ id = 12496, faction = AchieveIt.Factions.ALLIANCE},	-- Stormsong and Dance
+	{ id = 13710, faction = AchieveIt.Factions.ALLIANCE},	-- Sunken Ambitions
+	14157, -- The Corruptor's End
+	{ id = 11868, faction = AchieveIt.Factions.HORDE},	-- The Dark Heart of Nazmir
+	{ id = 13925, faction = AchieveIt.Factions.ALLIANCE},	-- The Fourth War
+	{ id = 13924, faction = AchieveIt.Factions.HORDE},	-- The Fourth War
+	{ id = 13553, faction = AchieveIt.Factions.ALLIANCE},	-- The Mechagonian Threat
+	{ id = 13700, faction = AchieveIt.Factions.HORDE},	-- The Mechagonian Threat
+	{ id = 12997, faction = AchieveIt.Factions.ALLIANCE},	-- The Pride of Kul Tiras
+	{ id = 13263, faction = AchieveIt.Factions.HORDE},	-- The Shadow Hunter
+	13509, -- The Speaker's Resolve
+	{ id = 11861, faction = AchieveIt.Factions.HORDE},	-- The Throne of Zuldazar
+	{ id = 13467, faction = AchieveIt.Factions.ALLIANCE},	-- Tides of Vengeance
+	{ id = 13466, faction = AchieveIt.Factions.HORDE},	-- Tides of Vengeance
+	13517, -- Two Sides to Every Tale
+	{ id = 13709, faction = AchieveIt.Factions.HORDE},	-- Unfathomable
+	{ id = 12555, faction = AchieveIt.Factions.HORDE},	-- Welcome to Zandalar
+	13144, -- Wide World of Quests
+	{ id = 12479, faction = AchieveIt.Factions.HORDE},	-- Zandalar Forever
+
+
+
 
 });
 -----------
@@ -941,9 +940,10 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 	{	id	= 12497,	faction = AchieveIt.Factions.ALLIANCE},	-- Drust Do It
 	{	id	= 13435,	faction = AchieveIt.Factions.HORDE},	-- Doomsoul Surprise
 
-}).locate =	function(p_current_map)
+}).locate =	function() -- p_current_map)
 
-	return Zone.Drustvar ==	p_current_map;
+	-- return Zone.Drustvar ==	p_current_map;
+	return 896 == C_Map.GetBestMapForUnit("player") 
 
 end;
 
@@ -952,17 +952,18 @@ end;
 -----------
 
 AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zone.Stormsong_Valley), {
-	{	id	= 12496,	faction = AchieveIt.Factions.ALLIANCE},	-- Stormsong and Dance
-	{	id	= 13053,	faction = AchieveIt.Factions.ALLIANCE},	-- Deadliest Cache
-	{	id	= 13062,	faction = AchieveIt.Factions.ALLIANCE},	-- Let's Bee Friends
 	13042,	-- About To Break
 	13047,	-- Clever Use of Mechanical Explosives
+	{	id	= 13053,	faction = AchieveIt.Factions.ALLIANCE},	-- Deadliest Cache
 	13045, 	-- Every Day I'm Truffling
+	{	id	= 13062,	faction = AchieveIt.Factions.ALLIANCE},	-- Let's Bee Friends
 	13054,	-- Sabertron Assemble
+	{	id	= 12496,	faction = AchieveIt.Factions.ALLIANCE},	-- Stormsong and Dance
 	13046,	-- These Hills Sing
-}).locate =	function(p_current_map)
+}).locate =	function() -- p_current_map)
 
-	return Zone.Stormsong_Valley ==	p_current_map;
+	-- return Zone.Stormsong_Valley ==	p_current_map;
+	return 942 == C_Map.GetBestMapForUnit("player") 
 
 end;
 -----------
@@ -977,7 +978,8 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 	13050,	-- Bless the Rains Down in Freehold
 }).locate =	function(p_current_map)
 
-	return Zone.Tiragarde_Sound ==	p_current_map;
+	-- return Zone.Tiragarde_Sound ==	p_current_map;
+	return 895 == C_Map.GetBestMapForUnit("player") 
 
 end;
 -----------
@@ -995,9 +997,10 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 	{	id	= 13022,	faction = AchieveIt.Factions.HORDE},	-- Revenge is Best Served Speedily
 	{	id	= 11868,	faction = AchieveIt.Factions.HORDE},	-- The Dark Heart of Nazmir
 	{	id	= 13025,	faction = AchieveIt.Factions.HORDE},	-- Zandalari Spycatcher
-}).locate =	function(p_current_map)
+}).locate =	function() -- p_current_map)
 
-	return Zone.Nazmir ==	p_current_map;
+	-- return Zone.Nazmir ==	p_current_map;
+	return 863 == C_Map.GetBestMapForUnit("player") 
 
 end;
 -----------
@@ -1010,12 +1013,13 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 	{	id	= 13017,	faction = AchieveIt.Factions.HORDE},	-- Champion of the Vulpera
 	{	id	= 13041,	faction = AchieveIt.Factions.HORDE},	-- Hungry, Hungry Ranishu
 	{	id	= 12478,	faction = AchieveIt.Factions.HORDE},	-- Secrets in the Sands
-	{	id	= 13014,	faction = AchieveIt.Factions.HORDE},	-- Vorrik's Champion
 	{	id	= 13437,	faction = AchieveIt.Factions.HORDE},	-- Scavenge like a Vulpera
+	{	id	= 13014,	faction = AchieveIt.Factions.HORDE},	-- Vorrik's Champion
 
-}).locate =	function(p_current_map)
+}).locate =	function() -- p_current_map)
 
-	return Zone.Voldun ==	p_current_map;
+	-- return Zone.Voldun ==	p_current_map;
+	return 864 == C_Map.GetBestMapForUnit("player") 
 
 end;
 -----------
@@ -1035,7 +1039,12 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 	{	id	= 11861,	faction = AchieveIt.Factions.HORDE},	-- The Throne of Zuldazar
 	{	id	= 13037,	faction = AchieveIt.Factions.HORDE},	-- Torcanata
 
-});
+}).locate =	function() --p_current_map)
+
+	-- return Zone.Zuldazar ==	p_current_map;
+	return 862 == C_Map.GetBestMapForUnit("player") 
+
+end;
 
 -----------
 -- Quests / Battle for Azeroth / Mechagon --
@@ -1065,17 +1074,17 @@ AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, AchieveIt.GetMapName(Zo
 -----------
 
 AchieveIt.Categories:addCategory(CatID.Quests_BFAzeroth, L["Assaults"], {
-	{	id	= 13284,	faction = AchieveIt.Factions.HORDE},	-- Frontline Warrior
-	{	id	= 13435,	faction = AchieveIt.Factions.HORDE},	-- Doomsoul Surprise
-	{	id	= 13437,	faction = AchieveIt.Factions.HORDE},	-- Scavenge like a Vulpera
-	{	id	= 13441,	faction = AchieveIt.Factions.HORDE},	-- Pushing the Payload
-	{	id	= 13283,	faction = AchieveIt.Factions.ALLIANCE},	-- Frontline Warrior
-	{	id	= 13285,	faction = AchieveIt.Factions.ALLIANCE},	-- Upright Citizens
-	{	id	= 13426,	faction = AchieveIt.Factions.ALLIANCE},	-- Come On and Slam
-	{	id	= 13440,	faction = AchieveIt.Factions.ALLIANCE},	-- Pushing the Payload
 	14161, -- All Consuming
 	14154, -- Defend the Vale
+	{	id	= 13435,	faction = AchieveIt.Factions.HORDE},	-- Doomsoul Surprise
+	{	id	= 13284,	faction = AchieveIt.Factions.HORDE},	-- Frontline Warrior
+	{	id	= 13441,	faction = AchieveIt.Factions.HORDE},	-- Pushing the Payload
+	{	id	= 13437,	faction = AchieveIt.Factions.HORDE},	-- Scavenge like a Vulpera
+	{	id	= 13426,	faction = AchieveIt.Factions.ALLIANCE},	-- Come On and Slam
+	{	id	= 13283,	faction = AchieveIt.Factions.ALLIANCE},	-- Frontline Warrior
+	{	id	= 13440,	faction = AchieveIt.Factions.ALLIANCE},	-- Pushing the Payload
 	14153, -- Uldum Under Assault
+	{	id	= 13285,	faction = AchieveIt.Factions.ALLIANCE},	-- Upright Citizens
 
 });
 
@@ -1096,72 +1105,70 @@ AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, L["Progress"], {
 	14280, -- Loremaster of Shadowlands
 	14790, -- Covenant Campaign
 	14758, -- The World Beyond
+	15000, -- United Front
+	15064, -- Breaking the Chains
+	15035, -- On the Offensive
 
 });
 
 AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.Ardenweald), {
+	14164, -- Awaken, Ardenweald
 	14672, -- A Bit of This, A Bit of That
 	14671, -- Something's Not Quite Right....
-	14164, -- Awaken, Ardenweald
-	14800, -- Sojourner of Ardenweald
 });
 
 AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.Bastion), {
-	14737, -- What Bastion Remembered
 	14741, -- Aerial Ace
 	14762, -- Breaking the Stratus Fear
 	14735, -- Flight School Graduate
 	14281, -- The Path to Ascension
-	14801, -- Sojourner of Bastion
+	14737, -- What Bastion Remembered
 });
 
 AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.Korthia), {
-	15055, -- Friend of Ooz 
+	15107, -- Conquering Korthia
 	15056, -- Friend of Bloop
+	15055, -- Friend of Ooz 
 	15057, -- Friend of Plaguey
-});	
+	15066, -- Reliquary Restoration
+}).locate =	function()
+
+	return 1961 == C_Map.GetBestMapForUnit("player") 
+
+end;	
 
 AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.Maldraxxus), {
+	14206, -- Blade of the Primus
 	14802, -- Bloodsport
 	14626, -- Harvester of Sorrow
 	14721, -- It's In The Mix
-	14206, -- Blade of the Primus
-	14799, -- Sojourner of Maldraxxus
 });
 
 AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.Revendreth), {
-	14276, -- It's Always Sinny in Revendreth
-	14273, -- Crypt Kicker
 	14274, -- Absolution for All
 	14272, -- Best Bud With Benefits
-	14765, -- Ramparts Racer
 	14772, -- Caught in a Bat Romance
-	14233, -- Tea Tales
+	14273, -- Crypt Kicker
+	14276, -- It's Always Sinny in Revendreth
 	14766, -- Parasoling
+	14765, -- Ramparts Racer
+	14233, -- Tea Tales
 	14277, -- The Accuser's Avowed
 	13878, -- The Master of Revendreth
-	14798, -- Sojourner of Revendreth
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands, AchieveIt.GetMapName(Zone.TheMaw), {
+	15032, -- Breaking their Hold
+	15043, -- Hoarder of Torghast
+	15001, -- Jailer's Personal Stash
+	15044, -- Krrprripripkraak's Heroes
+	15036, -- Rooting Out the Evil
+	15033, -- Taking the Tremaculum
+	15042, -- Tea for the Troubled
+	15041, -- The Zovaal Shuffle
+	15037, -- This Army	
+	15039, -- Up For Grabs
+	15034, -- Wings Against the Flames
+});
 
 end; --function AchieveIt:LoadQuestCategories()
