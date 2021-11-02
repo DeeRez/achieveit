@@ -1,6 +1,6 @@
---------------------------------------------
--- Expansion Features
---------------------------------------------
+------------------------
+-- Expansion Features --
+------------------------
 
 local AchieveIt = AchieveIt;
 local CatID = AchieveItConstants.CategoryIDs
@@ -11,9 +11,9 @@ local Difficulty = AchieveItConstants.DifficultyNames
 local L = LibStub("AceLocale-3.0"):GetLocale("AchieveIt");
 
 
---------------------------------------------
--- Pandaria Scenarios
---------------------------------------------
+------------------------
+-- Pandaria Scenarios --
+------------------------
 
 ---------
 -- All --
@@ -213,7 +213,7 @@ end;
 
 if (AchieveIt.FACTION == "Alliance") then
 
-	AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_PandariaScenarios, L["Lion's Landing"], {
+	AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_PandariaScenarios,L["Lion's Landing"], {
 		{ id = 8010, faction = AchieveIt.Factions.ALLIANCE },	-- Lion's Landing
 		{ id = 8011, faction = AchieveIt.Factions.ALLIANCE },	-- Number Five Is Alive
 		{ id = 8012, faction = AchieveIt.Factions.ALLIANCE },	-- Waste Not, Want Not
@@ -273,18 +273,18 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_PandariaScenarios,  Ach
 end;
 
 
---------------------------------------------
--- Wintergrasp
---------------------------------------------
+-----------------
+-- Wintergrasp --
+-----------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Wintergrasp, L["Progress"], {
 	1752, -- Master of Wintergrasp
 	2080, -- Black War Mammoth
 });
 
-----------------------
+---------
 -- PvP --
-----------------------
+---------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Wintergrasp, PVP, {
 	{ id = 1737, faction = AchieveIt.Factions.ALLIANCE}, -- Destruction Derby
@@ -325,9 +325,9 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Wintergrasp, RAID_DIFFI
 end;
 
 
---------------------------------------------
--- Tol Barad
---------------------------------------------
+---------------
+-- Tol Barad --
+---------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_TolBarad, L["Progress"], {
 	{ id = 5718, faction = AchieveIt.Factions.ALLIANCE}, -- Just Another Day in Tol Barad
@@ -336,7 +336,7 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_TolBarad, L["Progress"]
 	{ id = 5489, faction = AchieveIt.Factions.ALLIANCE}, -- Master of Tol Barad
 });
 
-AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_TolBarad, L["Other"], {
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_TolBarad, _G["OTHER"], {
 	6108, -- Alizabal
 	6045, -- Occu'thar
 	5416, -- Pit Lord Argaloth
@@ -350,9 +350,9 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_TolBarad, L["Other"], {
 });
 
 
---------------------------------------------
--- Proving Grounds
---------------------------------------------
+---------------------
+-- Proving Grounds --
+---------------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_ProvingGrounds, HEALER, {
 	9584, -- Proving Yourself: Bronze Healer
@@ -382,13 +382,13 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_ProvingGrounds, DAMAGE,
 });
 
 
-AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_ProvingGrounds, L["Other"], {
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_ProvingGrounds, _G["OTHER"], {
 	9590, -- You're Doing it Wrong
 });
 
---------------------------------------------
--- Draenor Garrison
---------------------------------------------
+----------------------
+-- Draenor Garrison --
+----------------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_DraenorGarrison, SPLASH_NEW_6_2_FEATURE2_TITLE, { -- "Garrison Naval Missions"
 	10177, -- Set Sail!
@@ -541,7 +541,7 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_DraenorGarrison, STABLE
 	9526, -- Master of Mounts
 });
 
-AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_DraenorGarrison, L["Other"], {
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_DraenorGarrison, _G["OTHER"], {
 	8933, -- Staying Regular
 	{ id = 9828, faction = AchieveIt.Factions.ALLIANCE}, -- Ten Hit Tunes
 	{ id = 9897, faction = AchieveIt.Factions.HORDE}, -- Ten Hit Tunes
@@ -569,9 +569,9 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_DraenorGarrison, L["Oth
 });
 
 
---------------------------------------------
--- Legion Class Hall
---------------------------------------------
+-----------------------
+-- Legion Class Hall --
+-----------------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_LegionClassHall, GARRISON_FOLLOWERS, {
 	11220, -- Roster of Champions (8 champions)
@@ -611,9 +611,9 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_LegionClassHall, TRANSM
 });
 
 
---------------------------------------------
--- Island Expeditions
---------------------------------------------
+------------------------
+-- Island Expeditions --
+------------------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_IslandExpeditions, PVP, {
 	13098, -- Bane of the Chain
@@ -697,7 +697,7 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_IslandExpeditions, Diff
 
 })
 
-AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_IslandExpeditions,  L["Other"], {
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_IslandExpeditions,  _G["OTHER"], {
 	13142, -- Archipelago Explorer
 	13125, -- Azerite Admiral
 	13134, -- Expedition Leader
@@ -713,9 +713,9 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_IslandExpeditions,  L["
 })
 
 
---------------------------------------------
--- War Effort
---------------------------------------------
+----------------
+-- War Effort --
+----------------
 
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_WarEffort,  WAR_MISSIONS, {
 	{ id = 12869, faction = AchieveIt.Factions.HORDE}, -- Azeroth at War: After Lordaeron
@@ -777,3 +777,194 @@ Hidden:
 
 
 --]]
+
+--------------
+-- Torghast --
+--------------
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Progress"],{
+
+15091, -- A Taste of Perfection
+15093, -- Avenge Me!
+15096, -- Crowd Pleaser
+14773, -- Explosive Extermination
+14778, -- Extremely Ravenous
+15089, -- Flawless Master
+14776, -- For the Hoarder!
+14498, -- Gatekeepers of Torghast
+15075, -- Infiltrators
+15079, -- Many, Many Things
+15092, -- Master of Torment
+15095, -- No Doubt	
+14501, -- Phanatical
+14499, -- Phanciful
+14500, -- Phantastic
+15094, -- Rampage
+15080, -- So Blessed
+14810, -- Terror of Torghast
+15076, -- The Box of Many Things
+14808, -- Touring Torghast
+14809, -- Traversing Torghast
+
+}).locate =	function(p_current_map)
+
+	return Zone.Torghast_Entrance == p_current_map;
+
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Runecarver"],{
+
+14795, -- Clearing the Fog
+14759, -- It's Coming Back to Me...
+14755, -- Legendary Accord
+14760, -- Recollection Collection
+14754, -- The Forgotten One
+
+}).locate = function() 
+	
+	return	C_Map.GetBestMapForUnit("player") == 1912;
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Coldheart Interstitia"],{
+
+14483, -- Coldheart Interstitia
+15083, -- Flawless: Coldheart Interstitia
+
+}).locate = function() 
+	
+	return	L["Coldheart Interstitia"] == GetSubZoneText();
+	
+end;
+
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Mort'regar"],{
+
+14488, -- Mort'regar
+15087, -- Flawless: Mort'regar
+
+}).locate = function() 
+	
+	return	L["Mort'regar"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Skoldus Hall"],{
+
+14463, -- Skoldus Hall
+15081, -- Flawless: Skoldus Hall
+
+}).locate = function() 
+	
+	return	L["Skoldus Hall"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Fracture Chambers"],{
+
+14473, -- Fracture Chambers
+15082, -- Flawless: Fracture Chambers
+}).locate = function() 
+	
+	return	L["The Fracture Chambers"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Soulforges"],{
+
+14478, -- The Soulforges
+15084, -- Flawless: The Soulforges
+
+}).locate = function() 
+	
+	return	L["The Soulforges"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Upper Reaches"],{
+
+14493, -- The Upper Reaches
+15088, -- Flawless: The Upper Reaches
+
+}).locate = function() 
+	
+	return	L["The Upper Reaches"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Twisting Corridors"],{
+
+14468, -- Twisting Corridors: Layer 1
+14469, -- Twisting Corridors: Layer 2
+14470, -- Twisting Corridors: Layer 3
+14471, -- Twisting Corridors: Layer 4
+14472, -- Twisting Corridors: Layer 5
+14568, -- Twisting Corridors: Layer 6
+14569, -- Twisting Corridors: Layer 7
+14570, -- Twisting Corridors: Layer 8
+
+});
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Adamant Vaults"],{
+
+15067, -- Adamant Vaults
+
+}).locate = function() 
+	
+	return	L["The Adamant Vaults"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Covenant_Sanctums,L["Kyrian"], {
+14853, -- All The Colours of the Painbow
+14860, -- Bare Necessities
+14851, -- Bastion of Protection
+14856, -- Charmed, I'm Sure
+14858, -- Curse of Thirst
+14863, -- Death Foursworn
+14865, -- Disciple of Humility
+14859, -- Inside the Park Home Run
+14862, -- It's How You Wear It
+14854, -- It's Not what You Wear
+14857, -- Itsy Bitsy Fighters
+14861, -- Learning from the Masters  
+14866, -- Master of the Path
+14864, -- Personal Nightmare
+14852, -- The Hoot of the Issue
+14887, -- To the Moon
+});
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Covenant_Sanctums,L["Necrolords"], {
+14684, -- Abominable Lives
+14833, -- Fashion Abomination
+14753, -- It's a Wrap
+14751, -- The Gang's All Here
+14764, -- The Great Luckydo
+14752, -- Things To Do When You're Dead
+14748, -- Wardrobe Makeover
+});
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Covenant_Sanctums,L["Night Fae"], {
+14789, -- All Spirits Great and Small
+14676, -- Divine Spirit Saviour
+14780, -- Meditation mater
+14775, -- Mush Appreciated
+14675, -- Spirit Talker
+14677, -- Spiritual Observations
+14670, -- That's the Spirit
+});
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Covenant_Sanctums,L["Venthyr"], {
+14723, -- Be Our Guest
+14678, -- Court Favours
+14681, -- Dredger Academy
+14683, -- Dredger Style
+14726, -- It's Certainly Never Boring
+14727, -- Master of Ceremonies
+14679, -- Party Palace
+14724, -- People Pleaser
+14749, -- Rendle's Big Day
+14680, -- Something for Everyone
+14682, -- The Party Herald
+14725, -- We Happy Few
+});

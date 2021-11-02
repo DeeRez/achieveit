@@ -26,6 +26,43 @@ local category = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, L[
 -- Difficulties --
 ------------------
 
+	-- dungeon map ids
+	
+local sl_dungeon_ids = {
+	1677, -- De Other Side: Ardenweald
+    1678, -- De Other Side: Mechagon
+    1679, -- De Other Side: Zul'gurub
+    1680, -- De Other Side
+    1663, -- Halls of Atonement
+    1664, -- Halls of Atonement: The Nave of Pain
+    1665, -- Halls of Atonement: The Sanctuary of souls
+    1669, -- Mists of Tirna Scithe
+    1674, -- Plaguefall
+    1697, -- Plaguefall: The Festering Sanctum
+    1675, -- Sanguine Depths: Depths of Despair
+    1676, -- sanguine Depths: Amphitheater of Sorrow
+    1692, -- Spires of Ascension: Honors Ascent
+    1693, -- Spires of Ascension: Gardens of Repose
+    1694, -- Spires of Ascension: Font of Fealty
+    1695, -- Spires of Ascension: Seat of the Archon
+    1666, -- Necrotic Wake
+    1667, -- Necrotic Wake: Stitchwerks
+    1668, -- Necrotic Wake: Zolramus
+    1683, -- Theater of Pain
+    1684, -- Theater of Pain: Chambers of Conquest
+    1685, -- Theater of Pain: Altars of Agony
+    1686, -- Theater of Pain: Upper Barrow of Carnage
+    1687, -- Theater of Pain: Lower Barrow of Carnage
+	1989, -- Tazavesh, the Veiled Market - The Veiled Market	 
+	1990, -- Tazavesh, the Veiled Market - The Grand Menagerie	 
+	1991, -- Tazavesh, the Veiled Market - The P.O.S.T.	 
+	1992, -- Tazavesh, the Veiled Market - Myza's Oasis	 
+	1993, -- Tazavesh, the Veiled Market - The Opulent Nexus	 
+	1995, -- Tazavesh, the Veiled Market - Stormheim	 
+	1996, -- Tazavesh, the Veiled Market - Boralus Harbor	 
+	1997, -- Tazavesh, the Veiled Market - Aggramar's Vault ]]
+	};
+	
 AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Normal, {
 	14373, -- De Other Side
 	14370, -- Halls of Atonement
@@ -36,7 +73,12 @@ AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Normal, {
 	14366, -- The Necrotic Wake
 	14372, -- Theater of Pain
 	
-});
+}).locate = function()
+
+	return 	AchieveIt:Contains(sl_dungeon_ids,C_Map.GetBestMapForUnit("player")) and 
+			AchieveIt.difficulty.isDungeon();
+
+end;
 
 AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Heroic, {
 	14408, -- De Other Side
@@ -48,7 +90,12 @@ AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Heroic, {
 	14367, -- The Necrotic Wake
 	14416, -- Theater of Pain
 	
-});
+}).locate = function()
+
+	return 	AchieveIt:Contains(sl_dungeon_ids,C_Map.GetBestMapForUnit("player")) and 
+			AchieveIt.difficulty.isHeroicDungeon();
+
+end;
 
 AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Mythic, {
 	14409, -- De Other Side
@@ -61,14 +108,18 @@ AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Mythic, {
 	14417, -- Theater of Pain
 	15177, -- Tazavesh, the Veiled Market
 	
-});
+}).locate = function()
+
+	return 	AchieveIt:Contains(sl_dungeon_ids,C_Map.GetBestMapForUnit("player")) and 
+			AchieveIt.difficulty.isMythicDungeon();
+
+end;
 
 -------------------
 -- De Other Side --
 -------------------
 
-local dos_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.DeOtherSide));
-
+local dos_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["De Other Side"]);
 
 dos_cat:addChild(L["Hakkar the Soulflayer"], {
 	14354, -- Highly Communicable
@@ -83,8 +134,9 @@ dos_cat:addChild(L["The Manastorms"], {
 	14374, -- Couples Therapy
 }).locate = function() 
 	
-	return	AchieveIt.difficulty.isMythicDungeon() and
-		   (UnitName("target") == L["Millificent Manastorm"] or
+	return	C_Map.GetBestMapForUnit("player") == 1678 and
+			AchieveIt.difficulty.isMythicDungeon() and
+			(UnitName("target") == L["Millificent Manastorm"] or 
 			UnitName("target") == L["Millhouse Manastorm"]);
 
 end;
@@ -104,7 +156,7 @@ dos_cat:inheritAchievements();
 -- Halls of Atonement --
 ------------------------
 
-local hoa_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.HallsOfAtonement));
+local hoa_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Halls of Atonement"]);
 
 hoa_cat:addChild(L["Halkias, the Sin-Stained Goliath"], {
 	14567, -- Picking Up the Pieces
@@ -139,7 +191,7 @@ hoa_cat:inheritAchievements();
 -- Mists of Tirna Scithe --
 ---------------------------
 
-local mists_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.MistsOfTirnaScithe), {
+local mists_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Mists of Tirna Scithe"], {
 	14291, -- Someone Could Trip On These
 });
 
@@ -148,7 +200,7 @@ local mists_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, A
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-		   (UnitName("target") == L["Ingra Maloch"] or
+		   (UnitName("target") == L["Ingra Maloch"] or 
 			UnitName("target") == L["Droman Oulfarran"]);
 
 end;
@@ -168,7 +220,7 @@ mists_cat:inheritAchievements();
 -- Plaguefall --
 ----------------
 
-local plaguefall_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Plaguefall), {
+local plaguefall_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Plaguefall"], {
 	14292, --Riding with my Slimes
 });
 
@@ -196,7 +248,7 @@ plaguefall_cat:inheritAchievements();
 -- Sanguine Depths --
 ---------------------
 
-local sanguine_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.SanguineDepths), {
+local sanguine_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Sanguine Depths"], {
 	14290, -- I Only Have Eyes For You
 });
 
@@ -252,7 +304,7 @@ soa_cat:inheritAchievements();
 -- Tazavesh, the Veiled Market --
 ---------------------------------
 
-local tazavesh_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.Tazavesh), {
+local tazavesh_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Tazavesh, the Veiled Market"], {
 	15190, -- Mischief!
 	15178, -- Fake It 'Til You Make It
 });
@@ -262,13 +314,18 @@ tazavesh_cat:addChild(L["Zo'phex the Sentinel"], {
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == L["Zo'phex the Sentinel"];
+			UnitName("target") == L["Zo'phex"];
 
 end;
 
 tazavesh_cat:addChild(L["Mailroom Mayhem"], {
 	15106, -- Quality Control
-});
+}).locate = function() 
+	
+	return	AchieveIt.difficulty.isMythicDungeon() and
+			UnitName("target") == L["P.O.S.T. Master"];
+
+end;
 
 tazavesh_cat:addChild(L["Hylbrande"], {
 	15179, -- This is Fine
@@ -286,14 +343,15 @@ tazavesh_cat:inheritAchievements();
 -- The Necrotic Wake --
 -----------------------
 
-local necrotic_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheNecroticWake));
+local necrotic_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["The Necrotic Wake"]);
 
 necrotic_cat:addChild(L["Amarth the Harvester"], {
 	14295, -- Bountiful Harvest
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == L["Amarth the Harvester"];
+			(UnitName("target") == L["Amarth the Harvester"] or
+			UnitName("target") == L["Bonefang"]);
 
 end;	
  necrotic_cat:addChild(L["Surgeon Stitchflesh"], {
@@ -301,7 +359,8 @@ end;
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == L["Surgeon Stitchflesh"];
+		   (UnitName("target") == L["Surgeon Stitchflesh"] or
+			UnitName("target") == L["Stitchflesh's Creation"]);
 
 end;
  necrotic_cat:addChild(L["Nalthor the Rimebinder"], {
@@ -319,7 +378,7 @@ necrotic_cat:inheritAchievements();
 -- Theater of Pain --
 ---------------------
 
-local top_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands, AchieveIt.GetMapName(Zone.TheaterOfPain));
+local top_cat = AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,L["Theater of Pain"]);
 
 
 top_cat:addChild(L["An Affront of Challengers"], {
@@ -327,8 +386,8 @@ top_cat:addChild(L["An Affront of Challengers"], {
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-		   (UnitName("target") == L["Dessia the Decapitator"] or
-			UnitName("target") == L["Paceran the Virulent"] or
+		   (UnitName("target") == L["Dessia the Decapitator"] or 
+			UnitName("target") == L["Paceran the Virulent"] or 
 			UnitName("target") == L["Sathel the Accursed"]);
 
 end;		
@@ -347,7 +406,7 @@ top_cat:addChild(L["Mordretha, the Endless Empress"], {
 }).locate = function() 
 	
 	return	AchieveIt.difficulty.isMythicDungeon() and
-			UnitName("target") == L["Mordretha, the Endless Empress"];
+			UnitName("target") == L["Mordretha"];
 
 end;
 
@@ -374,6 +433,7 @@ local nathria_cat = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, Ac
 nathria_cat:addChild(L["Progress"], {
 	14715, -- Castle Nathria
 	14717, -- Heroic: Castle Nathria
+	14718, -- Mythic Castle Nathria
 	14356, -- Mythic: Shriekwing
 	14357, -- Mythic: Huntsman Altimor
 	14360, -- Mythic: Sun King's Salvation
@@ -384,57 +444,129 @@ nathria_cat:addChild(L["Progress"], {
 	14363, -- Mythic: Sludgefist
 	14364, -- Mythic: Stone Legion Generals
 	14365, -- Mythic: Sire Denathrius
-});
+}).locate = function()
+
+	-- Castle Nathria raid map ids
+	local nathria_raid_ids = {
+	1735, -- Castle Nathria - The Grand Walk
+	1744, -- Castle Nathria - The Purloined Stores
+	1745, -- Castle Nathria - Halls of the Faithful
+	1746, -- Castle Nathria - Pride's Prison
+	1747, -- Castle Nathria - Nightcloak Sanctum
+	1748, -- Castle Nathria - The Observatorium
+	1750, -- Castle Nathria - Feast of Arrogance
+	};
+	return	AchieveIt:Contains(nathria_raid_ids,C_Map.GetBestMapForUnit("player")) 
+end;
 
 nathria_cat:addChild(L["Shriekwing"], {
 	14293, -- Blind as a Bat
 	14356, -- Mythic: Shriekwing
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Shriekwing"];
+
+end;
 
 nathria_cat:addChild(L["Huntsman Altimor"], {
 	14523, -- Taking Care of Business
 	14357, -- Mythic: Huntsman Altimor
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+		   (UnitName("target") == L["Huntsman Altimor"] or 
+			UnitName("target") == L["Margore"] or 
+			UnitName("target") == L["Bargast"] or 
+			UnitName("target") == L["Hecutis"]);
+			
+end;
 
 nathria_cat:addChild(L["Sun King's Salvation"], {
 	14608, -- Burning Bright
 	14360, -- Mythic: Sun King's Salvation
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			1746 == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Kael'thas Sunstrider"];
+
+end;
 
 nathria_cat:addChild(L["Artificer Xy'mox"], {
 	14617, -- Private Stock
 	14359, -- Mythic: Artificer Xy'mox
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Artificer Xy'mox"];
+
+end;
 
 nathria_cat:addChild(L["Hungering Destroyer"], {
 	14376, -- Feed the Beast
 	14358, -- Mythic: Hungering Destroyer
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Hungering Destroyer"];
+
+end;
 
 nathria_cat:addChild(L["Lady Inerva Darkvein"], {
 	14524, -- I Don't Know What I Expected
 	14361, -- Mythic: Lady Inerva Darkvein
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Lady Inerva Darkvein"];
+
+end;
 
 nathria_cat:addChild(L["The Council of Blood"], {
 	14619, -- Pour Decision Making
 	14362, -- Mythic: The Councin of Blood
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+		   (UnitName("target") == L["Baroness Frieda"] or 
+			UnitName("target") == L["Castellan Niklaus"] or 
+			UnitName("target") == L["Lord Stavros"]);
+
+end;
 
 nathria_cat:addChild(L["Sludgefist"], {
 	14294, -- Dirtflap's Revenge
 	14363, -- Mythic: Sludgefist
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Sludgefist"];
+
+end;
 
 nathria_cat:addChild(L["Stone Legion Generals"], {
 	14525, -- Feed Me, Seymour!
 	14364, -- Mythic: Stone Legion Generals
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			C_Map.GetBestMapForUnit("player") == 1747 and
+		   (UnitName("target") == L["General Kaal"] or 
+			UnitName("target") == L["General Grashaal"]);
+
+end;
 
 nathria_cat:addChild(L["Sire Denathrius"], {
 	14610, -- Clear Conscience
 	14365, -- Mythic: Sire Denathrius
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+		   (UnitName("target") == L["Sire Denathrius"] or 
+			UnitName("target") == L["Remornia"]);
+
+end;
 
 nathria_cat:inheritAchievements();
 
@@ -463,57 +595,124 @@ sanctum_cat:addChild(L["Progress"], {
 	15119, -- Mythic: Fatescribe Roh-Kalo
 	15120, -- Mythic: Kel'Thuzad
 	15121, -- Mythic: Sylvanas Windrunner
-});
+}).locate = function()
+
+	-- Sanctum of Domination raid map ids
+	local sanctum_raid_ids = {
+	1998, -- Sanctum of Domination - Tower of the Damned
+	1999, -- Sanctum of Domination - Shadowsteel Foundry
+	2000, -- Sanctum of Domination - The Torment Chambers
+	2001, -- Sanctum of Domination - Crown of Gorgoa
+	2002, -- Sanctum of Domination - Pinnacle of Domination	
+	};
+	
+	return	AchieveIt:Contains(sanctum_raid_ids,C_Map.GetBestMapForUnit("player")) 
+	
+end;
 
 sanctum_cat:addChild(L["The Tarragrue"], {
 	14998, -- Name A Better Duo, I'll Wait 
 	15112, -- Mythic: The Tarragrue
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["The Tarragrue"];
+
+end;
 
 sanctum_cat:addChild(L["The Eye of the Jailer"], {
 	15065, -- Eye Wish You Were Here
 	15113, -- Mythic: The Eye of the Jailer
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["The Eye of the Jailer"];
+
+end;
 
 sanctum_cat:addChild(L["The Nine"], {
 	15003, -- To the Nines
 	15114, -- Mythic: The Nine
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+		   (UnitName("target") == L["Kyra"] or 
+			UnitName("target") == L["Signe"] or 
+			UnitName("target") == L["Skyja"]);
+
+end;
 
 sanctum_cat:addChild(L["Remnant of Ner'zhul"], {
 	15058, -- I Used to Bullseye Deeprun Rats Back Home
 	15115, -- Mythic: Remnant of Ner'zhul
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Remnant of Ner'zhul"];
+
+end;
 
 sanctum_cat:addChild(L["Soulrender Dormazain"], {
 	15105, -- Tormentor's Tango
 	15116, -- Mythic: Soulrender Dormazain
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Soulrender Dormazain"];
+
+end;
 
 sanctum_cat:addChild(L["Painsmith Raznal"], {
 	15131, -- Whack-A-Soul
 	15117, -- Mythic: Painsmith Raznal
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Painsmith Raznal"];
+
+end;
 
 sanctum_cat:addChild(L["Guardian of the First Ones"], {
 	15132, -- Knowledge is Power
 	15118, -- Mythic: Guardian of the First Ones
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Guardian of the First Ones"];
+
+end;
 
 sanctum_cat:addChild(L["Fatescribe Roh-Kalo"], {
 	15040, -- Flawless Fate
 	15119, -- Mythic: Fatescribe Roh-Kalo
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			UnitName("target") == L["Fatescribe Roh-Kalo"];
 
-sanctum_cat:addChild(L["Kel'Thuzad"], {
+end;
+
+sanctum_cat:addChild(L["Kel'Thuzad_SoD"], {
 	15108, -- Together Forever
 	15120, -- Mythic: Kel'Thuzad
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			2001 == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Kel'Thuzad_SoD"];
 
-sanctum_cat:addChild(L["Sylvanas Windrunner"], {
+end;
+
+sanctum_cat:addChild(L["Sylvanas Windrunner_SoD"], {
 	15133, -- This World is a Prism
 	15121, -- Mythic: Sylvanas Windrunner
-});
+}).locate = function()
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			C_Map.GetBestMapForUnit("player") == 2002 and
+			UnitName("target") == L["Sylvanas Windrunner_SoD"];
+
+end;
 	
 sanctum_cat:inheritAchievements();
 

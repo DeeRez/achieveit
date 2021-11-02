@@ -104,7 +104,7 @@ local legion_category = AchieveIt.Categories:addCategory(CatID.PetBattles_Battle
 -- Broken Isles Category --
 ---------------------------
 
-legion_category:addChild(L["Broken Isles"], {
+legion_category:addChild(AchieveIt.GetMapName(Zone.Broken_Isles), { -- L["Broken Isles"], {
 	9686,	-- Aquatic Acquiescence
 	9687,	-- Best of the Beasts
 	9689,	-- Dragons!
@@ -122,7 +122,7 @@ legion_category:addChild(L["Broken Isles"], {
 -- Argus Category --
 --------------------
 
-legion_category:addChild(L["Argus"], {
+legion_category:addChild(AchieveIt.GetMapName(Zone.Argus), { -- L["Argus"], {
 	12089,	-- Aquatic Assault
 	12091,	-- Beast Blitz
 	12092,	-- Critical Critters

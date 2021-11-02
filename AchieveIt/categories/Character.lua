@@ -30,7 +30,7 @@ AchieveIt.Categories:addCategory(CatID.Character, L["Levelling"], {
 -- Character / Equip --
 ---------------------
 
-AchieveIt.Categories:addCategory(CatID.Character, L["Equip"], {
+AchieveIt.Categories:addCategory(CatID.Character, _G["EQUIPSET_EQUIP"], {
 	14796, -- Superior
 	14797, -- Epic
 }, 1);
@@ -39,7 +39,7 @@ AchieveIt.Categories:addCategory(CatID.Character, L["Equip"], {
 -- Character / Money --
 ---------------------
 
-AchieveIt.Categories:addCategory(CatID.Character, L["Money"], {
+AchieveIt.Categories:addCategory(CatID.Character, _G["MONEY"], {
 
     1176,	-- Got My Mind On My Money
     1177,	-- Got My Mind On My Money
@@ -78,7 +78,7 @@ AchieveIt.Categories:addCategory(CatID.Character, L["Characters"], {
 -- General / Other --
 ---------------------
 
-AchieveIt.Categories:addCategory(CatID.Character, L["Other"], {
+AchieveIt.Categories:addCategory(CatID.Character, _G["OTHER"], {
     545,	-- Shave and a Haircut
     546,	-- Safe Deposit
 }, 1);

@@ -356,7 +356,6 @@ function AchieveIt.CurrentMapCheck(...)
 	return false;
 end
 
-
 --[[
 
 MUFFMAPS = {}

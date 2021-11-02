@@ -1,6 +1,6 @@
 local ADDON_NAME, _ADDON_DATA = ... -- Pulls back the Addon-Local Variables and store them locally.
 
-local font_size = 13
+local font_size = 16
 local font_name = "Fonts\\FRIZQT__.TTF"
 local font_spacing = 2
 local initial_delay = 4
@@ -39,6 +39,7 @@ local function build_queue_frame()
 		edgeSize = 32,
 		insets = { left = 11, right = 11, top = 11, bottom = 10 }
 	})
+	frame:SetFrameStrata("Tooltip")
 	frame:SetBackdropColor(0, 0, 0, 0.9);
 	frame:SetPoint("CENTER", UIParent, "CENTER")
 	frame:EnableMouse(true)
@@ -48,11 +49,11 @@ local function build_queue_frame()
 	frame:SetScript('OnDragStart', function(f) f:StartMoving() end)
 	frame:SetScript('OnDragStop', function(f) f:StopMovingOrSizing() end)
 
-	local muffin_texture = frame:CreateTexture("MuffinWhatsNewFrameMuffinTexture", "ARTWORK");
+	--[[ local muffin_texture = frame:CreateTexture("MuffinWhatsNewFrameMuffinTexture", "ARTWORK");
 	muffin_texture:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -8, 10)
 	muffin_texture:SetSize(64, 64);
 	muffin_texture:SetTexture("Interface\\Addons\\" .. ADDON_NAME .. "\\Textures\\muffin.tga")
-	muffin_texture:SetBlendMode("BLEND")
+	muffin_texture:SetBlendMode("BLEND") ]]--
 
 	local header_frame = CreateFrame("Frame", "MuffinWhatsNewHeaderFrame", frame, BackdropTemplateMixin and "BackdropTemplate")
 	header_frame:SetBackdrop({
@@ -153,7 +154,7 @@ local function queue_show_whats_new_internal()
 	local body_height = body_text:GetStringHeight()
 	body_text:SetSize(body_width, body_height)
 
-	frame:SetSize(math.max(body_width * 1.2, 300), math.max(body_height * 1.5, 100) + ok_button:GetHeight())
+	frame:SetSize(math.max(body_width * 1.1, 300), math.max(body_height * 1.1, 100) + ok_button:GetHeight())
 
 	PlaySound(888) -- Level Up sound
 	frame:Show()

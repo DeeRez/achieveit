@@ -25,6 +25,9 @@ local function event_handler(self, event, arg1)
 			if(AchieveIt_Data.ShowBPetRewards == nil) then
 				AchieveIt_Data.ShowBPetRewards = true;
 			end
+			if(AchieveIt_Data.UsePandariaRepView == nil) then
+				AchieveIt_Data.UsePandariaRepView = true;
+			end
 		elseif (arg1 == "Blizzard_AchievementUI") then
 			AchieveIt:Printd("ADDON_LOADED: Blizzard_AchievementUI")
 			AchieveIt:LoadCharacterCategories()
@@ -61,7 +64,6 @@ function ModifyAchievementFrame()
 
 -- fix for 5.4.1 UpdateMicroButtons taint issue
 setfenv(AchievementFrame_OnShow, setmetatable({ UpdateMicroButtons = function() end }, { __index = _G }))
-
 
 local inGuildView = false;
 
@@ -1060,6 +1062,8 @@ local savedLocation;
 
 -- dateFrame(frame)
 -- Makes each frame and child frames move the AchievementFrame
+--if (Overachiever == nil) then
+
 local dragFrame;
 dragFrame = function(frame)
 
@@ -1106,9 +1110,15 @@ dragFrame = function(frame)
 	end
 
 end
+
 if (AchieveIt_Data.DraggableAchievementWindow) then
 	dragFrame(AchievementFrame);
+	
 end
+
+--end	
+	
+
 
 AchievementFrame:HookScript("OnShow", function()
 
@@ -1146,8 +1156,8 @@ else
 	locateButton:SetPoint("TOPLEFT", AchievementFrameHeader, "TOPLEFT", 5, -33);
 end
 
-locateButton:SetWidth(0);
-locateButton:SetHeight(0);
+locateButton:SetWidth(130);
+locateButton:SetHeight(24);
 locateButton.label:SetText(L["Locate Category"]);
 
 -- Add click handler
@@ -1177,9 +1187,9 @@ locateButton:SetScript("OnClick", function()
 
 end);
 
--- Hide it, see if anyone notices
-locateButton:Hide();
+-- Show it, I totally noticed btw
+locateButton:Show();
 
+end
 
 -- End ModifyAchievementFrame function
-end

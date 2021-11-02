@@ -1,6 +1,60 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("AchieveIt", "esMX");
 if not L then return end
 
+-- Category labels
+-- L["Allied Races"] = ""
+-- L["Bank Vouchers"] = ""
+-- L["Battle Standards"] = ""
+-- L["Blueprints"] = ""
+-- L["Champions"] = ""
+-- L["Characters"] = ""
+-- L["Cloaks"] = ""
+-- L["Glory"] = ""
+-- L["Heirlooms"] = ""
+-- L["Levelling"] = ""
+-- L["Lore"] = ""
+-- L["Map"] = ""
+-- L["Order Hall Campaign"] = ""
+-- L["Pathfinder"] = ""
+-- L["Progress"] = ""
+-- L["Riding"] = ""
+-- L["Shirts"] = ""
+-- L["Tabards"] = ""
+-- L["Teleports"] = ""
+-- L["Treasure"] = ""
+-- L["World Bosses"] = ""
+
+-- Expansion Features
+-- L["Barn"] = ""
+-- L["Gladiator's Sanctum"] = ""
+-- L["Lumber Mill"] = ""
+
+-- Text output
+-- L["Locate Category"] = ""
+-- L["No category found."] = ""
+
+-- Zones and Sub-zones
+-- L["Adamant Vaults"] = ""
+-- L["Runecarver"] = ""
+-- L["The Fracture Chambers"] = ""
+-- L["The Upper Reaches"] = ""
+-- L["Valley of the Four Winds"] = ""
+
+-- Scenarios
+-- L["Arena of Annihilation"] = ""
+-- L["Blood in the Snow"] = ""
+-- L["Dark Heart of Pandaria"] = ""
+-- L["Domination Point"] = ""
+-- L["Greenstone Village"] = ""
+-- L["Theramore's Fall"] = ""
+
+-- Dungeons
+-- L["Return to Karazhan"] = ""
+
+-- World Events
+-- L["Day of the Dead"] = ""
+
+--[[
 L["Admiral Ripsnarl"] = "Almirante Rasgagruñido"
 L["Al'Akir"] = "Al'Akir"
 L["Algalon the Observer"] = "Algalon el Observador"
@@ -294,4 +348,4 @@ L["Yan-Zhu the Uncasked"] = "Yan-Zhu el Peleón"
 L["Yogg-Saron"] = "Yogg-Saron"
 L["Yor'sahj the Unsleeping"] = "Yor'sahj el Velador"
 L["Zuramat the Obliterator"] = "Zuramat el Obliterador"
-
+]]

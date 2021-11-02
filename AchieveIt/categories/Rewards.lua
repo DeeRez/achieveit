@@ -28,7 +28,7 @@ local titleAchievements	= {
 	{ id = 5351, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Blood Guard
 	1683, -- Brewmaster
 	{ id = 5338, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Centurion
-	{ id = 12959, activity = act.PvP}, -- Challenger: Battle for Azeroth Season 1
+	-- { id = 12959, activity = act.PvP}, -- Challenger: Battle for Azeroth Season 1
 	{ id = 5353, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Champion
 	1658, -- Champion of the Frozen Wastes
 	{ id = 9080, faction = AchieveIt.Factions.HORDE}, -- Choppin' Even More Logs
@@ -45,8 +45,8 @@ local titleAchievements	= {
 	8301, -- Deadly Pet Brawler
 	5506, -- Defender of a Shattered World
 	6177, -- Destroyer's End
-	{ id = 12945, activity = act.PvP}, -- Dread Gladiator: Battle for Azeroth Season 1
-	{ id = 12962, activity = act.PvP}, -- Duelist: Battle for Azeroth Season 1
+	--[[ { id = 12945, activity = act.PvP}, -- Dread Gladiator: Battle for Azeroth Season 1
+	{ id = 12962, activity = act.PvP}, -- Duelist: Battle for Azeroth Season 1 ]]
 	{ id = 2817, faction = AchieveIt.Factions.ALLIANCE}, -- Exalted Argent Champion of the Alliance
 	{ id = 2816, faction = AchieveIt.Factions.HORDE}, -- Exalted Argent Champion of the Horde
 	{ id = 2760, faction = AchieveIt.Factions.ALLIANCE}, -- Exalted Champion of Darnassus
@@ -69,7 +69,7 @@ local titleAchievements	= {
 	1793, -- For the Children
 	9094, -- Garrison Architect
 	{ id = 5355, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- General
-	{ id = 12961, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 1
+	-- { id = 12961, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 1
 	11763, -- Glory of the Tomb Raider
 	{ id = 5343, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Grand Marshal
 	{ id = 5346, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Grunt
@@ -98,6 +98,7 @@ local titleAchievements	= {
 	2336, -- Insane in the Membrane
 	7284, -- Is Another Man's Treasure
 	4856, -- It Belongs in a Museum!
+	13555, -- Junkyard Tinkmaster
 	{ id = 8052, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Khan
 	{ id = 8055, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Khan
 	{ id = 5335, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Knight
@@ -111,8 +112,10 @@ local titleAchievements	= {
 	{ id = 5354, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Lieutenant General
 	11232, -- Lock, Stock and Two Smoking Goblins
 	4477, -- Looking For Many
+	-- 14140, -- Mad World
 	9072, -- Mantle of the Talon King
-	{ id = 5341, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Marshal
+	{ id = 5341, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Marshall
+	{ id = 14175, activity = act.PvP}, -- Master of Deepwind Gorge	
 	{ id = 12861, activity = act.PvP}, -- Master of Duels
 	7306, -- Master of Pandaren Cooking
 	{ id = 12412, activity = act.PvP}, -- Master of Seething Shore
@@ -127,6 +130,11 @@ local titleAchievements	= {
 	10850, -- Mythic: Gul'dan
 	8965, -- Mythic: Imperator's Fall
 	11781, -- Mythic: Kil'jaeden
+	13314, -- Mythic: Lady Jaina Proudmoore
+	14055, -- Mythic: N'Zoth the Corruptor
+	13733, -- Mythic: Queen Azshara
+	14365, -- Mythic: Sire Denathrius Title Reward: Sinbreaker
+	15121, -- Mythic: Sylvanas Windrunner  Title Reward: Breaker of Chains
 	10827, -- Mythic: Xavius
 	{ id = 9517, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Nemesis: Death Stalker
 	{ id = 9509, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Nemesis: Draenei Destroyer
@@ -146,6 +154,7 @@ local titleAchievements	= {
 	2798, -- Noble Gardener
 	12399, -- Observed
 	12083, -- Paragon of Argus
+	-- 13779, -- Phenomenal Cosmic Power
 	3478, -- Pilgrim
 	10334, -- Predator
 	12439, -- Priority Mail
@@ -154,7 +163,7 @@ local titleAchievements	= {
 	9577, -- Proving Yourself: Endless Damage (Wave 30)
 	9589, -- Proving Yourself: Endless Healer (Wave 30)
 	9583, -- Proving Yourself: Endless Tank (Wave 30)
-	{ id = 12960, activity = act.PvP}, -- Rival: Battle for Azeroth Season 1
+	-- { id = 12960, activity = act.PvP}, -- Rival: Battle for Azeroth Season 1
 	{ id = 10072, faction = AchieveIt.Factions.ALLIANCE}, -- Rumble in the Jungle
 	{ id = 10265, faction = AchieveIt.Factions.HORDE}, -- Rumble in the Jungle
 	9619, -- Savage Hero
@@ -166,23 +175,27 @@ local titleAchievements	= {
 	{ id = 5332, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Sergeant
 	{ id = 5347, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Sergeant
 	{ id = 5334, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Sergeant Major
+	{ id = 14191, activity = act.PvP}, -- Servant of N'Zoth
 	{ id = 5350, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Stone Guard
 	8121, -- Stormbreaker
 	6607, -- Taming Azeroth
+	14277, -- The Accuser's Avowed
 	945, -- The Argent Champion
 	4598, -- The Ashen Verdict
-	11387, -- The Chosen
+	-- 11387, -- The Chosen
 	{ id = 714, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- The Conqueror
 	{ id = 942, faction = AchieveIt.Factions.ALLIANCE}, -- The Diplomat
 	{ id = 943, faction = AchieveIt.Factions.HORDE}, -- The Diplomat
 	{ id = 1039, faction = AchieveIt.Factions.HORDE}, -- The Flame Keeper
 	{ id = 1038, faction = AchieveIt.Factions.ALLIANCE}, -- The Flame Warden
+	{ id = 13924, faction = AchieveIt.Factions.HORDE}, -- The Fourth War
 	4530, -- The Frozen Throne (10 player)
 	4597, -- The Frozen Throne (25 player)
 	{ id = 907, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- The Justicar
 	9725, -- The Last of Us
 	4584, -- The Light of Dawn
 	7520, -- The Loremaster
+	14682, -- The Party Herald Title Reward: The Party Herald
 	7612, -- The Seat of Knowledge
 	7479, -- The Shado-Master
 	{ id = 9540, faction = AchieveIt.Factions.ALLIANCE}, -- The Stable Master
@@ -191,6 +204,7 @@ local titleAchievements	= {
 	2054, -- The Twilight Zone (25 player)
 	913, -- To Honor One's Elders
 	6926, -- Tranquil Master
+	14568, -- Twisting Corridors: Layer 6
 	13638, -- Undersea Usurper
 	46, -- Universal Explorer
 	{ id = 5328, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Veteran of the Alliance
@@ -206,35 +220,30 @@ local titleAchievements	= {
 	6590, -- World Safari
 	{ id = 13925, faction = AchieveIt.Factions.ALLIANCE}, -- The Fourth War
 
-	14140, -- Mad World
-	{ id = 13924, faction = AchieveIt.Factions.HORDE}, -- The Fourth War
-	{ id = 14191, activity = act.PvP}, -- Servant of N'Zoth
-	13779, -- Phenomenal Cosmic Power
+	
+	--[[ Unobtinable/obsolete achievements. Add some way to filter in the future, maybe.
+	
+	
 	{ id = 13647, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 3
-	{ id = 13630, faction = fac.NEUTRAL, activity = act.PvP}, -- Notorious Gladiator: Battle for Azeroth Season 3
+	{ id = 13630, faction = fac.NEUTRAL, activity = act.PvP}, -- Notorious Gladiator: Battle for Azeroth Season 3 
 	14144, -- Battle for Azeroth Keystone Conqueror: Season Four
-	13555, -- Junkyard Tinkmaster
-	13733, -- Mythic: Queen Azshara
-	{ id = 14175, activity = act.PvP}, -- Master of Deepwind Gorge
 	{ id = 13967, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 4
 	{ id = 13957, faction = fac.NEUTRAL, activity = act.PvP}, -- Corrupted Gladiator: Battle for Azeroth Season 4
-	{ id = 13199, faction = fac.NEUTRAL, activity = act.PvP}, -- Combatant: Battle for Azeroth Season 1
+	{ id = 13199, faction = fac.NEUTRAL, activity = act.PvP}, -- Combatant: Battle for Azeroth Season 1 
 	3117, -- Realm First! Death's Demise
-	14055, -- Mythic: N'Zoth the Corruptor
 	{ id = 13639, faction = fac.NEUTRAL, activity = act.PvP}, -- Combatant: Battle for Azeroth Season 3
 	9618, -- The Iron Invasion
 	{ id = 12034, faction = fac.NEUTRAL, activity = act.PvP}, -- Duelist: Legion Season 5
 	{ id = 13641, faction = fac.NEUTRAL, activity = act.PvP}, -- Rival: Battle for Azeroth Season 3
 	{ id = 12035, faction = fac.NEUTRAL, activity = act.PvP}, -- Rival: Legion Season 5
-	{ id = 13676, faction = fac.NEUTRAL, activity = act.PvP}, -- Elite: Battle for Azeroth Season 3
+	{ id = 13676, faction = fac.NEUTRAL, activity = act.PvP}, -- Elite: Battle for Azeroth Season 3 
 	9016, -- Breaker of the Black Harvest
 	{ id = 13212, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 2
 	{ id = 13634, faction = fac.NEUTRAL, activity = act.PvP}, -- Challenger: Battle for Azeroth Season 3
 	{ id = 13989, faction = fac.NEUTRAL, activity = act.PvP}, -- Elite: Battle for Azeroth Season 4
 	{ id = 13642, faction = fac.NEUTRAL, activity = act.PvP}, -- Duelist: Battle for Azeroth Season 3
 	456, -- Realm First! Obsidian Slayer
-	{ id = 13200, faction = fac.NEUTRAL, activity = act.PvP}, -- Sinister Gladiator: Battle for Azeroth Season 2
-	13314, -- Mythic: Lady Jaina Proudmoore
+	--{ id = 13200, faction = fac.NEUTRAL, activity = act.PvP}, -- Sinister Gladiator: Battle for Azeroth Season 2
 	8903, -- Mistwalker
 	{ id = 12168, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Legion Season 7
 	{ id = 11012, faction = fac.NEUTRAL, activity = act.PvP}, -- Vindictive Gladiator: Legion Season 1
@@ -373,18 +382,14 @@ local titleAchievements	= {
 	{ id = 11050, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Soldier of the Alliance: Legion Season 4
 	{ id = 12189, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Soldier of the Alliance: Legion Season 7
 	{ id = 10096, faction = fac.NEUTRAL, activity = act.PvP}, -- Wild Gladiator: Warlords Season 2
-	{ id = 14690, faction = fac.NEUTRAL, activity = act.PvP}, -- Sinful Gladiator: Shadowlands Season 1
+	{ id = 14690, faction = fac.NEUTRAL, activity = act.PvP}, -- Sinful Gladiator: Shadowlands Season 1 
 	14531, -- Shadowlands Keystone Conqueror: Season One
-	14277, -- The Accuser's Avowed
-	{ id = 14689, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Shadowlands Season 1
-	14365, -- Mythic: Sire Denathrius Title Reward: Sinbreaker
-	14682, -- The Party Herald Title Reward: The Party Herald
+	{ id = 14689, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Shadowlands Season 1 
 	{ id = 14688, faction = fac.NEUTRAL, activity = act.PvP}, -- Duelist: Shadowlands Season 1 Title Reward: Duelist
 	{ id = 14686, faction = fac.NEUTRAL, activity = act.PvP}, -- Challenger: Shadowlands Season 1 Title Reward: Challenger
 	{ id = 14685, faction = fac.NEUTRAL, activity = act.PvP}, -- Combatant: Shadowlands Season 1 Title Reward: Combatant
 	{ id = 14687, faction = fac.NEUTRAL, activity = act.PvP}, -- Rival: Shadowlands Season 1 Title Reward: Rival
-	{ id = 14691, faction = fac.NEUTRAL, activity = act.PvP}, -- Elite: Shadowlands Season 1 Title Reward: the Elite
-	15121, -- Mythic: Sylvanas Windrunner  Title Reward: Breaker of Chains
+	{ id = 14691, faction = fac.NEUTRAL, activity = act.PvP}, -- Elite: Shadowlands Season 1 Title Reward: the Elite ]]
 
 };
 
@@ -397,22 +402,22 @@ local mountAchievements		= {
 	{ id = 13928, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Alterac Valley of Olde
 	{ id = 13930, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Alterac Valley of Olde
 	9713,	-- Awake the Drakes
-	14145,  -- Battle for Azeroth Keystone Master: Season Four
+	-- 14145,  -- Battle for Azeroth Keystone Master: Season Four
 	12989,  -- Battle for Azeroth Pathfinder, Part One
 	13250,  -- Battle for Azeroth Pathfinder, Part Two
-	9550,   -- Boldly, You Sought the Power of Ragnaros
+	-- 9550,   -- Boldly, You Sought the Power of Ragnaros
 	11190,  -- Broken Isles Pathfinder, Part One
 	11446,  -- Broken Isles Pathfinder, Part Two
-	{ id = 11005, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Cruel Combatant
-	{ id = 11008, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Cruel Combatant
+	-- { id = 11005, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Cruel Combatant
+	-- { id = 11008, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Cruel Combatant
 	10018,	-- Draenor Pathfinder
 	12069,  -- Explore Argus
 	{ id = 614, faction = AchieveIt.Factions.ALLIANCE},	-- For The Alliance!
 	{ id = 619, faction = AchieveIt.Factions.HORDE},	-- For The Horde!
 	11474,  -- Free For All, More For Me
 	{ id = 2091, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator
-	{ id = 12961, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 1
-	{ id = 14689, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Shadowlands Season 1	
+	--[[ { id = 12961, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Battle for Azeroth Season 1
+	{ id = 14689, faction = fac.NEUTRAL, activity = act.PvP}, -- Gladiator: Shadowlands Season 1	]]
 	11987,  -- Glory of the Argus Raider
 	4845,	-- Glory of the Cataclysm Hero
 	4853,	-- Glory of the Cataclysm Raider
@@ -451,7 +456,7 @@ local mountAchievements		= {
 	{ id = 10355, faction = AchieveIt.Factions.HORDE},	-- Lord of the Reins
 	{ id = 10356, faction = AchieveIt.Factions.ALLIANCE},	-- Lord of the Reins
 	13541,  -- Mecha-Done
-	13931,  -- Memories of Fel, Frost and Fire
+	-- 13931,  -- Memories of Fel, Frost and Fire
 	{ id = 8304, faction = AchieveIt.Factions.ALLIANCE},	-- Mount Parade
 	{ id = 8302, faction = AchieveIt.Factions.HORDE},	-- Mount Parade
 	{ id = 9598, faction = AchieveIt.Factions.ALLIANCE},	-- Mountacular
@@ -463,13 +468,14 @@ local mountAchievements		= {
 	{ id = 6828, faction = AchieveIt.Factions.ALLIANCE},	-- Pandaren Ambassador
 	{ id = 6827, faction = AchieveIt.Factions.HORDE},	-- Pandaren Ambassador
 	11176,	-- Remember to Share
-	14532,  -- Shadowlands Keystone Master: Season One
+	-- 14532,  -- Shadowlands Keystone Master: Season One
 	5866,	-- The Molten Front Offensive
 	13994,  -- Through the Depths of Visions
 	14570,  -- Twisting Corridors: Layer 8
 	13517,  -- Two Sides to Every Tale
 	{ id = 9540, faction = AchieveIt.Factions.ALLIANCE}, -- The Stable Master
 	{ id = 9706, faction = AchieveIt.Factions.HORDE}, -- The Stable Master
+	14570, -- Twisting Corridors: Layer 8
 	11066,  -- Underbelly Tycoon
 	13638,  -- Undersea Usurper
 	{ id = 5328, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP},	-- Veteran of the Alliance
@@ -478,7 +484,7 @@ local mountAchievements		= {
 	{ id = 5824, faction = AchieveIt.Factions.HORDE, activity = act.PvP},	-- Veteran of the Horde II
 	{ id = 5329, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP},	-- Warbound Veteran of the Alliance
 	{ id = 5326, faction = AchieveIt.Factions.HORDE, activity = act.PvP},	-- Warbringer of the Horde
-	9496,   -- Warlord's Deathwheel
+	-- 9496,   -- Warlord's Deathwheel
 	{ id = 7860, faction = AchieveIt.Factions.ALLIANCE},	-- We're Going to Need More Saddles
 	{ id = 7862, faction = AchieveIt.Factions.HORDE},	-- We're Going to Need More Saddles
 	2144,	-- What a Long, Strange Trip It's Been
@@ -539,7 +545,7 @@ local petAchievements	= {
 	7521,	-- Time to Open a Pet Store
 	12996,	-- Toybox Tycoon
 
-	8820, -- WoW's 10th Anniversary
+	-- 8820, -- WoW's 10th Anniversary
 
 };
 
@@ -619,13 +625,13 @@ local followerAchievements = {
 local allied_races_achievements = {
 	{ id = 12515, faction = AchieveIt.Factions.ALLIANCE}, -- Allied Races: Dark Iron Dwarf
 	{ id = 12245, faction = AchieveIt.Factions.HORDE}, -- Allied Races: Highmountain Tauren
+	13163, -- Allied Races: Kul Tiran
 	{ id = 12243, faction = AchieveIt.Factions.ALLIANCE}, -- Allied Races: Lightforged Draenei
 	{ id = 12518, faction = AchieveIt.Factions.HORDE}, -- Allied Races: Mag'har Orc
+	14013, -- Allied Races: Mechagnome
 	{ id = 12244, faction = AchieveIt.Factions.HORDE}, -- Allied Races: Nightborne
 	{ id = 12242, faction = AchieveIt.Factions.ALLIANCE}, -- Allied Races: Void Elf
-	14013, -- Allied Races: Mechagnome
 	13206, -- Allied Races: Vulpera
-	13163, -- Allied Races: Kul Tiran
 	13161, -- Allied Races: Zandalari Troll
 
 }
@@ -648,8 +654,8 @@ local itemAchievements = {
 	9761,	-- Darkmoon Racer Roadhog
 	{ id =  8920, faction = AchieveIt.Factions.ALLIANCE}, -- Don't Let the Tala-door Hit You on the Way Out
 	{ id =  8919, faction = AchieveIt.Factions.HORDE}, -- Don't Let the Tala-door Hit You on the Way Out
-	{ id =  11210, faction = AchieveIt.Factions.ALLIANCE},  -- Fight for the Alliance
-	{ id =  11211, faction = AchieveIt.Factions.HORDE},  -- Fight for the Horde
+	-- { id =  11210, faction = AchieveIt.Factions.ALLIANCE},  -- Fight for the Alliance
+	-- { id =  11211, faction = AchieveIt.Factions.HORDE},  -- Fight for the Horde
 	11725,	-- Fisherfriend of the Isles
 	6556,	-- Going to Need More Traps
 	10774,	-- Hatchling of the Talon
@@ -694,12 +700,11 @@ local itemAchievements = {
 	7499,	-- Taming the World
 	2096,	-- The Coin Master
 	8348,	-- The Longest Day
-	{ id = 13189, faction = AchieveIt.Factions.ALLIANCE}, -- The Second Rule of Brawler's Guild
-	{ id = 13190, faction = AchieveIt.Factions.HORDE}, -- The Second Rule of Brawler's Guild
 	14021,  -- The Shadows Revealed
 	9673,	-- The Toymaster
 	9394,	-- They Really Love Me
-	9894,	-- Triumphant Turtle Tossing
+	9894,	-- Triumphant Turtle Tossing	
+	14471, -- Twisting Corridors: Layer 4
 	{ id = 13285, faction = AchieveIt.Factions.ALLIANCE },	-- Upright Citizens
 	9792,	-- Wanderluster: Gold
 	9838,	-- What A Strange, Interdimensional Trip It's Been

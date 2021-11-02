@@ -237,7 +237,7 @@ AchieveIt.Categories:addCategory(CatID.Professions_Archaeology, Expac.BattleForA
 -- Cooking - General --
 -------------
 
-AchieveIt.Categories:addCategory(CatID.Professions_Cooking, L["General"], {
+AchieveIt.Categories:addCategory(CatID.Professions_Cooking, _G["GENERAL"], {
 	1998,1999,2000,2001,2002,	-- Cooking Awards (1, 10, 25, 50, 100)
 	1781,	-- Critter Gitter
 	1785,	-- Dinner Impossible

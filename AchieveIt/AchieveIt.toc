@@ -1,9 +1,9 @@
-## Interface: 90100
+## Interface: 90150
 ## Title: Achieve It
 ## Notes: Organises your achievements into sub groups to make looking through them easier
 ## Author: wrakky, MuffinManKen
 ## Additions: DeeRez
-## Version: 9.1.0.00
+## Version: 9.1.5.00
 ## SavedVariables: AchieveIt_Data
 
 libs\LibStub\LibStub.lua

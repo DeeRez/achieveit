@@ -11,7 +11,10 @@ AchieveItConstants.CategoryIDs =
 {
 
 	Character = 92,
-
+	Quests_Eastern_Kingdoms = 14861,
+	Quests_Kalimdor = 15081,
+	Quests_Outland = 14862,
+	Quests_Northrend = 14863,
 	Quests_Cataclysm = 15070,
 	Quests_Pandaria = 15110,
 	Quests_Draenor = 15220,
@@ -41,7 +44,8 @@ AchieveItConstants.CategoryIDs =
 	ExpansionFeatures_LegionClassHall = 15304,
 	ExpansionFeatures_IslandExpeditions = 15307,
 	ExpansionFeatures_WarEffort = 15308,
-
+	ExpansionFeatures_Torghast = 15440,
+	ExpansionFeatures_Covenant_Sanctums = 15441,
 	DungeonsAndRaids_Classic = 14808,
 	DungeonsAndRaids_BurningCrusade = 14805,
 	Dungeons_WrathOfTheLichKing = 14806,
@@ -58,6 +62,7 @@ AchieveItConstants.CategoryIDs =
 	Raids_BfA = 15286,
 	Dungeons_Shadowlands = 15428,
 	Raids_Shadowlands = 15438,
+	
 }
 
 AchieveItConstants.ExpacNames =
@@ -91,7 +96,7 @@ Azuremyst_Isle = 97,				-- Azuremyst Isle
 Bloodmyst_Isle = 106,				-- Bloodmyst Isle
 Camp_Narache = 462,					-- Camp Narache
 Darkshore = 62,						-- Darkshore
-Darnassus = 89,					-- Darnassus
+Darnassus = 89,						-- Darnassus
 Desolace = 66,						-- Desolace
 Durotar = 1,						-- Durotar
 Dustwallow_Marsh = 416,				-- Dustwallow Marsh
@@ -99,11 +104,11 @@ Echo_Isles = 463,					-- Echo Isles
 Felwood = 77,						-- Felwood
 Feralas = 69,						-- Feralas
 Molten_Front = 338,					-- Molten Front
-Moonglade = 80,					-- Moonglade
+Moonglade = 80,						-- Moonglade
 Mount_Hyjal = 198,					-- Mount Hyjal
 Mulgore = 7,						-- Mulgore
 Northern_Barrens = 10,				-- Northern Barrens
-Orgrimmar = 85,					-- Orgrimmar
+Orgrimmar = 85,						-- Orgrimmar
 Shadowglen = 460,					-- Shadowglen
 Silithus = 81,						-- Silithus
 Southern_Barrens = 199,				-- Southern Barrens
@@ -112,9 +117,9 @@ Tanaris = 71,						-- Tanaris
 Teldrassil = 57,					-- Teldrassil
 The_Exodar = 103,					-- The Exodar
 Thousand_Needles = 64,				-- Thousand Needles
-Thunder_Bluff = 88,				-- Thunder Bluff
+Thunder_Bluff = 88,					-- Thunder Bluff
 Uldum = 249,						-- Uldum
-UnGoro_Crater = 78,				-- Un'Goro Crater
+UnGoro_Crater = 78,				    -- Un'Goro Crater
 Valley_of_Trials = 461,				-- Valley of Trials
 Winterspring = 83,					-- Winterspring
 
@@ -137,7 +142,7 @@ Ghostlands = 95,					-- Ghostlands
 Gilneas = 179,						-- Gilneas
 Gilneas_City = 179,					-- Gilneas City
 Hillsbrad_Foothills = 25,			-- Hillsbrad Foothills
-Ironforge = 87,					-- Ironforge
+Ironforge = 87,					    -- Ironforge
 Isle_of_QuelDanas = 122,			-- Isle of Quel'Danas
 Kelpthar_Forest = 201,				-- Kelp'thar Forest
 Loch_Modan = 48,					-- Loch Modan
@@ -162,7 +167,7 @@ Tirisfal_Glades = 997,				-- Tirisfal Glades
 Tol_Barad = 244,					-- Tol Barad
 Tol_Barad_Peninsula = 245,			-- Tol Barad Peninsula
 Twilight_Highlands = 241,			-- Twilight Highlands
-Undercity = 90,					-- Undercity
+Undercity = 90,					    -- Undercity
 Vashjir = 203,						-- Vashj'ir
 Western_Plaguelands = 22,			-- Western Plaguelands
 Westfall = 52,						-- Westfall
@@ -205,7 +210,7 @@ The_Maelstrom2 = 725,				-- The Maelstrom
 Pandaria = 424,						-- Pandaria
 Dread_Wastes = 422,					-- Dread Wastes
 Isle_of_Giants = 507,				-- Isle of Giants
-Isle_of_Thunder = 516,				-- Isle of Thunder
+Isle_of_Thunder = 504,				-- Isle of Thunder
 Krasarang_Wilds = 418,				-- Krasarang Wilds
 Kun_Lai_Summit = 379,				-- Kun-Lai Summit
 Shrine_of_Seven_Stars = 393,		-- Shrine of Seven Stars
@@ -216,7 +221,7 @@ The_Wandering_Isle = 378,			-- The Wandering Isle
 Timeless_Isle = 554,				-- Timeless Isle
 Townlong_Steppes = 388,				-- Townlong Steppes
 Vale_of_Eternal_Blossoms = 390,		-- Vale of Eternal Blossoms
-Valley_of_the_Four_Winds = 376,		-- Valley of the Four Wind
+Valley_of_the_Four_Winds = 376,		-- Valley of the Four Winds - Breaks automatic menu naming, use manual entry for title instead
 
 -- Draenor
 Draenor = 572,						-- Draenor
@@ -231,27 +236,29 @@ Spires_of_Arak = 542,				-- Spires of Arak **
 Stormshield = 622,					-- Stormshield
 Talador = 535,						-- Talador
 Tanaan_Jungle = 534,				-- Tanaan Jungle **
-Tanaan_Jungle_Assault_on_the_Dark_Portal = 577,				-- Tanaan Jungle - Assault on the Dark Portal
-Warspear = 624,					-- Warspear
+Tanaan_Jungle_Assault_on_the_Dark_Portal = 577, -- Tanaan Jungle - Assault on the Dark Portal
+Warspear = 624,			 			-- Warspear
 
 --Legion
-Azsuna	= 630,					-- Azsuna
-Valsharah	= 641,				-- Valsharah
-Highmountain	= 650,			-- Highmountain
-Stormheim		= 634,			-- Sormheim
-Suramar			= 680,			-- Suramar
-Broken_Shore	= 646,			-- Broken_Shore
-Argus				= 905,			-- Argus
+Broken_Isles = 619,					-- Broken Isles
+Azsuna	= 630, 						-- Azsuna
+Valsharah = 641, 					-- Valsharah
+Highmountain = 650, 				-- Highmountain
+Stormheim = 634, 					-- Sormheim
+Suramar = 680, 						-- Suramar
+Broken_Shore = 646, 				-- Broken_Shore
+Argus = 905, 						-- Argus
 
 --Battle for Azeroth
-Drustvar			= 1197,
-Stormsong_Valley = 1198,
-Tiragarde_Sound = 1196,
-Nazmir			= 1194,
-Voldun			= 1195,
-Zuldazar			= 1193,
-Mechagon			= 1490,
-Nazjatar			= 1355,
+Dazaralor = 1165,
+Drustvar = 896,
+Stormsong_Valley = 942,
+Tiragarde_Sound = 895,
+Nazmir = 863,
+Voldun = 864,
+Zuldazar = 862,
+Mechagon = 1462,
+Nazjatar = 1355,
 
 -- Shadowlands
 Ardenweald = 1565,
@@ -272,7 +279,7 @@ Strand_of_the_Ancients = 128,		-- Strand of the Ancients
 Temple_of_Kotmogu = 417,			-- Temple of Kotmogu
 The_Battle_for_Gilneas = 275,		-- The Battle for Gilneas
 Twin_Peaks = 206,					-- Twin Peaks
-Warsong_Gulch = 92,				-- Warsong Gulch
+Warsong_Gulch = 92,					-- Warsong Gulch
 
 ---- Scenarios
 A_Brewing_Storm = 447,				-- A Brewing Storm
@@ -306,7 +313,7 @@ Razorfen_Downs = 300,				-- Razorfen Downs
 Razorfen_Kraul = 301,				-- Razorfen Kraul
 Shadowfang_Keep = 310,				-- Shadowfang Keep
 Stratholme = 317,					-- Stratholme
-The_Deadmines = 291,			-- The Deadmines
+The_Deadmines = 291,				-- The Deadmines
 The_Stockade = 225,					-- The Stockade
 The_Temple_of_AtalHakkar = 220,		-- The Temple of Atal'Hakkar
 Uldaman = 230,						-- Uldaman
@@ -429,6 +436,10 @@ Upper_Blackrock_Spire = 616,		-- Upper Blackrock Spire
 ---- Draenor Raids
 Highmaul = 610,
 Blackrock_Foundry = 596,
+Hellfire_Citadel = 661,
+
+-- Legion Dungeons
+-- Legion Raids
 
 --- Battle for Azeroth Dungeons
 AtalDazar = 934,
@@ -455,10 +466,11 @@ HallsOfAtonement = 1663,
 MistsOfTirnaScithe = 1669,
 Plaguefall = 1674,
 SanguineDepths = 1675,
--- SpiresOfAscension = 1692, -- Returns nil breaking automatic menu naming, use manual entry instead
+SpiresOfAscension = 1692, -- Breaks automatic menu naming, use manual entry for title instead
 Tazavesh = 1989,
 TheNecroticWake = 1666,
 TheaterOfPain = 1683,
+Torghast_Entrance = 1911,
 
 -- Shadowlands Raids
 CastleNathria = 1735,
