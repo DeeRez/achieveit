@@ -267,6 +267,7 @@ Korthia = 1961,
 Maldraxxus = 1536,
 Revendreth = 1525,
 TheMaw = 1543,
+ZerethMortis = 1970,
 
 ---- Battlegrounds
 Alterac_Valley = 91,				-- Alterac Valley

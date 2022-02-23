@@ -26,7 +26,7 @@ itemsCategory:addChild(L["Battle Standards"], {
 	5422,	-- A Daily Routine
 	5143,	-- Guild Cataclysm Dungeon Hero
 	4860,	-- Working as a Team
-   9388,	-- Guild Draenor Dungeon Hero
+	9388,	-- Guild Draenor Dungeon Hero
 });
 
 --------------------
@@ -87,7 +87,6 @@ category:addChild(_G["MOUNTS"], {
 category:addChild(_G["PETS"], {
 	{id = 5179, faction = AchieveIt.Factions.HORDE},	-- Alliance Slayer
 	{id = 5031, faction = AchieveIt.Factions.ALLIANCE},	-- Horde Slayer
-	--9651,	-- Challenge Warlords: Gold - Guild Edition No longer achievable?
 	5144,	-- Critter Kill Squad
 	5840,	-- Dragonwrath, Tarecgosa's Rest - Guild Edition
 	5201,	-- Profit Sharing

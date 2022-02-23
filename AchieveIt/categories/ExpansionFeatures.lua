@@ -789,7 +789,8 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Progress"],
 15096, -- Crowd Pleaser
 14773, -- Explosive Extermination
 14778, -- Extremely Ravenous
-15089, -- Flawless Master
+15089, -- Flawless Master 12
+15322, -- Flawless Master 16
 14776, -- For the Hoarder!
 14498, -- Gatekeepers of Torghast
 15075, -- Infiltrators
@@ -804,6 +805,7 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Progress"],
 14810, -- Terror of Torghast
 15076, -- The Box of Many Things
 14808, -- Touring Torghast
+15324, -- Tower Ranger
 14809, -- Traversing Torghast
 
 }).locate =	function(p_current_map)
@@ -829,7 +831,8 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Coldheart Interstitia"],{
 
 14483, -- Coldheart Interstitia
-15083, -- Flawless: Coldheart Interstitia
+15083, -- Flawless: Coldheart Interstitia 12
+15318, -- Flawless: Coldheart Interstitia 16
 
 }).locate = function() 
 	
@@ -841,7 +844,8 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Mort'regar"],{
 
 14488, -- Mort'regar
-15087, -- Flawless: Mort'regar
+15087, -- Flawless: Mort'regar 12
+15319, -- Flawless: Mort'regar 16
 
 }).locate = function() 
 	
@@ -852,7 +856,8 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["Skoldus Hall"],{
 
 14463, -- Skoldus Hall
-15081, -- Flawless: Skoldus Hall
+15081, -- Flawless: Skoldus Hall 12
+15314, -- Flawless: Skoldus Hall 16
 
 }).locate = function() 
 	
@@ -863,7 +868,9 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Fracture Chambers"],{
 
 14473, -- Fracture Chambers
-15082, -- Flawless: Fracture Chambers
+15082, -- Flawless: Fracture Chambers 12
+15316, -- Flawless: Fracture Chambers 16
+
 }).locate = function() 
 	
 	return	L["The Fracture Chambers"] == GetSubZoneText();
@@ -873,7 +880,8 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Soulforges"],{
 
 14478, -- The Soulforges
-15084, -- Flawless: The Soulforges
+15084, -- Flawless: The Soulforges 12
+15317, -- Flawless: The Soulforges 16
 
 }).locate = function() 
 	
@@ -884,7 +892,8 @@ end;
 AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Upper Reaches"],{
 
 14493, -- The Upper Reaches
-15088, -- Flawless: The Upper Reaches
+15088, -- Flawless: The Upper Reaches 12
+15320, -- Flawless: The Upper Reaches 16
 
 }).locate = function() 
 	
@@ -912,6 +921,23 @@ AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Adamant
 }).locate = function() 
 	
 	return	L["The Adamant Vaults"] == GetSubZoneText();
+	
+end;
+
+AchieveIt.Categories:addCategory(CatID.ExpansionFeatures_Torghast,L["The Jailer's Gauntlet"],{
+
+15251, -- The Jailer's Gauntlet: Layer 1
+15252, -- The Jailer's Gauntlet: Layer 2
+15253, -- The Jailer's Gauntlet: Layer 3
+15254, -- The Jailer's Gauntlet: Layer 4
+15255, -- The Jailer's Gauntlet: Layer 5
+15256, -- The Jailer's Gauntlet: Layer 6
+15257, -- The Jailer's Gauntlet: Layer 7
+15258, -- The Jailer's Gauntlet: Layer 8
+
+}).locate = function() 
+	
+	return	L["The Jailer's Gauntlet"] == GetSubZoneText();
 	
 end;
 

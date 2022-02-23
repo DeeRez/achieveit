@@ -1799,4 +1799,18 @@ AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands,AchieveIt.GetMapName(Z
 
 end;	
 
+AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands,AchieveIt.GetMapName(Zone.ZerethMortis),{
+
+	15518, -- A Means to an End
+	15336, -- From A to Zeroth
+	15515, -- Path to Enlightenment
+	15259, -- Secrets of the First Ones
+	15229, -- Traversing the Spheres
+
+}).locate =	function(p_current_map)
+
+	return Zone.ZerethMortis == p_current_map;
+
+end;
+
 end; --function AchieveIt:LoadQuestCategories()

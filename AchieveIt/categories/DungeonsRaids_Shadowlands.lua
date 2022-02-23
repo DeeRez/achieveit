@@ -422,6 +422,7 @@ local category = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, L["Gl
 
 	14355, -- Glory of the Nathria Raider
 	15130, -- Glory of the Dominant Raider
+	15491, -- Glory of the Sepulcher Raider
 });
 
 --------------------
@@ -716,7 +717,172 @@ end;
 	
 sanctum_cat:inheritAchievements();
 
+local sotfo_cat = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, L["Sepulcher of the First Ones"]);-- (Zone.SepulcherOfTheFirstOnes));
 
+sotfo_cat:addChild(L["Progress"], {
+
+	15492, -- Cornerstone of Creation
+	15493, -- Ephemeral Plains
+	15416, -- Domination's Grasp
+	15418, -- The Grand Design
+	15478, -- Heroic: Sepulcher of the First Ones
+	15490, -- Mythic: Sepulcher of the First Ones
+	15479, -- Mythic: Vigilant Guardian
+	15482, -- Mythic: Dausegne
+	15481, -- Mythic: Artificer Xy'mox
+	15483, -- Mythic: Prototype Pantheon
+	15484, -- Mythic: Lihuvim
+	15480, -- Mythic: Skolex, the Insatiable Ravener
+	15485, -- Mythic: Halondrus the Reclaimer
+	15486, -- Mythic: Anduin Wrynn
+	15487, -- Mythic: Lords of Dread
+	15488, -- Mythic: Rygelon
+	15489, -- Mythic: The Jailer
+}).locate = function()
+
+	-- Sepulcher of the First Ones raid map ids
+
+local sotfo_raid_ids = {
+	2047, -- Progenitor_Raid_A
+	2048, -- Progenitor_Raid_B
+	2049, -- Progenitor_Raid_C
+	2050, -- Progenitor_Raid_Anduin
+	2051, -- Progenitor_Raid_Jailer
+	2052, -- Progenitor_Raid_E
+	};
+	
+	return	AchieveIt:Contains(sotfo_raid_ids,C_Map.GetBestMapForUnit("player")) 
+	
+end;
+
+sotfo_cat:addChild(L["Vigilant Guardian"], {
+	15381, -- Power ON
+	15479, -- Mythic: Vigilant Guardian
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Vigilant Guardian"];
+
+end;
+
+sotfo_cat:addChild(L["Dausegne, the Fallen Oracle"], {
+	15397, -- Four Ring Circus
+	15482, -- Mythic: Dausegne
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Dausegne"];
+
+end;
+
+sotfo_cat:addChild(L["Artificer Xy'mox"], {
+	15398, -- Xy Never, Ever Marks the Spot
+	15481, -- Mythic: Artificer Xy'mox
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Artificer Xy'mox"];
+
+end;
+
+sotfo_cat:addChild(L["Prototype Pantheon"], {
+	15400, -- Where the Wild Corgis Are
+	15483, -- Mythic: Prototype Pantheon
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Prototype of War"] or
+			UnitName("target") == L["Prototype of Duty"] or
+			UnitName("target") == L["Prototype of Renewal"] or
+			UnitName("target") == L["Prototype of Absolution"];
+
+end;
+
+sotfo_cat:addChild(L["Lihuvim, Principal Architect"], {
+	15419, -- The Protoform Matrix
+	15484, -- Mythic: Lihuvim
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Lihuvim, Principal Architect"];
+
+end;
+
+sotfo_cat:addChild(L["Skolex, the Insatiable Ravener"], {
+	15401, -- Wisdom Comes From The Desert
+	15480, -- Mythic: Skolex, the Insatiable Ravener
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Skolex, the Insatiable Ravener"];
+
+end;
+
+sotfo_cat:addChild(L["Halondrus the Reclaimer"], {
+	15386, -- Shimmering Secrets
+	15485, -- Mythic: Halondrus the Reclaimer
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Halondrus the Reclaimer"];
+
+end;
+
+sotfo_cat:addChild(L["Anduin Wrynn"], {
+	15399, -- Coming to Terms
+	15486, -- Mythic: Anduin Wrynn
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Anduin Wrynn"];
+
+end;
+
+
+
+sotfo_cat:addChild(L["Lords of Dread"], {
+	15315, -- Amidst Ourselves
+	15487, -- Mythic: Lords of Dread
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Mal'Ganis"] or
+			UnitName("target") == L["Kin'tessa"];
+
+end;
+
+sotfo_cat:addChild(L["Rygelon"], {
+	15396, -- We Are All Made of Stars
+	15488, -- Mythic: Rygelon
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Rygelon"];
+
+end;
+
+sotfo_cat:addChild(L["The Jailer"], {
+	15494, -- Damnation Aviation
+	15489, -- Mythic: The Jailer
+}).locate = function() 
+	
+	return	not AchieveIt.difficulty.isRaidFinder() and
+			-- == C_Map.GetBestMapForUnit("player") and
+			UnitName("target") == L["Zovaal"];
+
+end;
+
+sotfo_cat:inheritAchievements();
 
 
 
