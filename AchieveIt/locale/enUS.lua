@@ -45,6 +45,7 @@ L["Lion's Landing"] = "Lion's Landing"
 L["Runecarver"] = "Runecarver"
 L["Skoldus Hall"] = C_ScenarioInfo.GetJailersTowerTypeString(1) -- "Skoldus Hall"
 L["The Fracture Chambers"] = "The Fracture Chambers"
+L["The Jailer's Gauntlet"] = "The Jailer's Gauntlet"
 L["The Soulforges"] = C_ScenarioInfo.GetJailersTowerTypeString(3) -- "The Soulforges"
 L["The Upper Reaches"] = "The Upper Reaches"
 L["Twisting Corridors"] = C_ScenarioInfo.GetJailersTowerTypeString(0) -- "Twisting Corridors"
@@ -113,6 +114,7 @@ L["Cruelfang"] = "Cruelfang"
 L["Dam'ren"] = "Dam'ren"
 L["Dazar, the First King"] = "Dazar, the First King"
 L["Darkfang"] = "Darkfang"
+L["Dausegne"] = "Dausegne"
 L["Dessia the Decapitator"] = "Dessia the Decapitator"
 L["Devos"] = "Devos"
 L["Dia Darkwhisper"] = "Dia Darkwhisper"
@@ -163,6 +165,7 @@ L["Grong"] = "Grong"
 L["Gruul"] = "Gruul"
 L["Gurtogg Bloodboil"] = "Gurtogg Bloodboil"
 -- H
+L["Halondrus"] = "Halondrus"
 L["Hans'gar"] = "Hans'gar"
 L["Haiyan the Unstoppable"] = "Haiyan the Unstoppable"
 L["Halkias"] = "Halkias"
@@ -199,6 +202,7 @@ L["Khadgar"] = "Khadgar"
 L["Kil'ruk the Wind-Reaver"] = "Kil'ruk the Wind-Reaver"
 L["Kimbul's Aspect"] = "Kimbul's Aspect"
 L["King Dazar"] = "King Dazar"
+L["Kin'tessa"] = "Kin'tessa"
 L["Ko'ragh"] = "Ko'ragh"
 L["Koramar"] = "Koramar"
 L["Korven the Prime"] = "Korven the Prime"
@@ -207,12 +211,14 @@ L["Kyra"] = "Kyra"
 -- L
 L["Lady Blaumeux"] = "Lady Blaumeux"
 L["Laminaria"] = "Laminaria"
+L["Lihuvim"] = "Lihuvim"
 L["Liu Flameheart"] = "Liu Flameheart"
 L["Lethon"] = "Lethon"
 L["Lord Stavros"] = "Lord Stavros"
 L["Lu'lin"] = "Lu'lin"
 -- M
 L["Magmatron"] = "Magmatron"
+L["Mal'Ganis"] = "Mal'Ganis"
 L["Mannoroth"] = "Mannoroth"
 L["Melador Valestrider"] = "Melador Valestrider" 
 L["Meng the Demented"] = "Meng the Demented"
@@ -245,6 +251,10 @@ L["Prince Taldaram"] = "Prince Taldaram"
 L["Prince Valanar"] = "Prince Valanar"
 L["Prophet Skitra"] = "Prophet Skitra"
 L["Protector Kaolan"] = "Protector Kaolan"
+L["Prototype of Absolution"] = "Prototype of Absolution"
+L["Prototype of Duty"] = "Prototype of Duty"
+L["Prototype of Renewal"] = "Prototype of Renewal"
+L["Prototype of War"] = "Prototype of War"
 -- Q
 L["Qiang the Merciless"] = "Qiang the Merciless"
 L["Quet'zal"] = "Quet'zal"
@@ -271,6 +281,7 @@ L["Silivaz the Zealous"] = "Silivaz the Zealous"
 L["Sir Zeliek"] = "Sir Zeliek"
 L["Sister Katherine"] = "Sister Katherine"
 L["Skeer the Bloodseeker"] = "Skeer the Bloodseeker"
+L["Skolex"] = "Skolex"
 L["Skyja"] = "Skyja"
 L["Slad'ran"] = "Slad'ran"
 L["Solarist Tel'arn"] = "Solarist Tel'arn"
@@ -314,6 +325,7 @@ L["Zek'voz"] = "Zek'voz"
 L["Zian of the Endless Shadow"] = "Zian of the Endless Shadow"
 L["Zoggosh"] = "Zoggosh"
 L["Zo'phex"] = "Zo'phex"
+L["Zovaal"] = "Zovaal"
 L["Zul"] = "Zul"
 
 
@@ -893,6 +905,17 @@ L["The Eye of the Jailer"] = EJ_GetEncounterInfo(2442) -- "The Eye of the Jailer
 L["The Nine"] = EJ_GetEncounterInfo(2439) -- "The Nine"
 L["The Tarragrue"] = EJ_GetEncounterInfo(2435) -- "The Tarragrue"
 
+L["Vigilant Guardian"] = EJ_GetEncounterInfo(2458)
+L["Dausegne, the Fallen Oracle"] = EJ_GetEncounterInfo(2459)
+L["Prototype Pantheon"] = EJ_GetEncounterInfo(2460)
+L["Lihuvim, Principal Architect"] = EJ_GetEncounterInfo(2461)
+L["Skolex, the Insatiable Ravener"] = EJ_GetEncounterInfo(2465)
+L["Halondrus the Reclaimer"] = EJ_GetEncounterInfo(2463)
+L["Anduin Wrynn"] = EJ_GetEncounterInfo(2469)
+L["Lords of Dread"] = EJ_GetEncounterInfo(2457)
+L["Rygelon"] = EJ_GetEncounterInfo(2467)
+L["The Jailer"] = EJ_GetEncounterInfo(2464)
+
 --L[""] = ""
 
 -- TODO: Replace more instance names with code like this:
@@ -1057,6 +1080,8 @@ L["Spires of Ascension"] = GetLFGDungeonInfo(2122)
 L["Tazavesh, the Veiled Market"] = GetLFGDungeonInfo(2225)
 L["The Necrotic Wake"] = GetLFGDungeonInfo(2123)
 L["Theater of Pain"] = GetLFGDungeonInfo(2124)
+
+L["Sepulcher of the First Ones"] = GetLFGDungeonInfo(2288)
 
 -- Shadowlands Factions
 
