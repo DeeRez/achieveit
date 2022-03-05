@@ -2,9 +2,8 @@ local _ADDON_NAME, ADDON = ... -- Pulls back the Addon-Local Variables and store
 
 ADDON.WHATSNEW_TEXT = "" ..
 [[ 
-- Added Sepulcher of the First Ones raid achievements.
-- Added Zereth Mortis exploration achievements.
-- Added Zereth Mortis quest achievements.
+- Moved 'Traversing the Spheres' to the correct category.
+- Add 'Sand, Sand Everywhere' exploration achievement
 		
 - IMPORTANT NOTE FOR FOREIGN LOCALES: 
 - Category localisation is pretty much done. A few sub-category translations are still needed for some locales. 
