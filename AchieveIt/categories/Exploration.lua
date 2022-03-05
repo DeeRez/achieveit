@@ -547,16 +547,19 @@ AchieveIt.Categories:addCategory(CatID.Exploration_Shadowlands, AchieveIt.GetMap
 	15512, -- Adventures in Zereth Mortis
 	15542, -- Apocopocolypse
 	15211, -- Completing the Code
+	15404, -- Cosmic Empowerment
 	15513, -- Curious Collections
 	15402, -- Cyphers of the First Ones
 	15392, -- Dune Dominance
 	15224, -- Explore Zereth Mortis
 	15508, -- Fashion of the First Ones
+	15502, -- Sand, Sand Everywhere!
 	15406, -- Synthesized
 	15407, -- Synthe-fived!
 	15410, -- Synthe-superfived
 	15411, -- Synthe-supersized
 	15509, -- Tales of the Exile
+	15229, -- Traversing the Spheres
 	15331, -- Treasures of Zereth Mortis
 	15514, -- Unlocking the Secrets
 	

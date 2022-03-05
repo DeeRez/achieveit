@@ -1805,7 +1805,6 @@ AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands,AchieveIt.GetMapName(Z
 	15336, -- From A to Zeroth
 	15515, -- Path to Enlightenment
 	15259, -- Secrets of the First Ones
-	15229, -- Traversing the Spheres
 
 }).locate =	function(p_current_map)
 
