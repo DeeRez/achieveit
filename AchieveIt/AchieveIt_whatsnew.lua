@@ -2,8 +2,8 @@ local _ADDON_NAME, ADDON = ... -- Pulls back the Addon-Local Variables and store
 
 ADDON.WHATSNEW_TEXT = "" ..
 [[ 
-- Moved 'Traversing the Spheres' to the correct category.
-- Add 'Sand, Sand Everywhere' exploration achievement
+- Moved 'Collector: Carved Bronze Mirrors' achievements to the correct category.
+- Fixed some category spelling errors 
 		
 - IMPORTANT NOTE FOR FOREIGN LOCALES: 
 - Category localisation is pretty much done. A few sub-category translations are still needed for some locales. 

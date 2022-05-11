@@ -3,7 +3,7 @@
 ## Notes: Organises your achievements into sub groups to make looking through them easier
 ## Author: wrakky, MuffinManKen
 ## Additions: DeeRez
-## Version: 9.2.0.01
+## Version: 9.2.0.02
 ## SavedVariables: AchieveIt_Data
 
 libs\LibStub\LibStub.lua

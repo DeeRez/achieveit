@@ -89,8 +89,6 @@ AchieveIt.Categories:addCategory(CatID.Professions_Archaeology, L["Mantid"], {
 	8223,	-- Collector: Ancient Sap Feeders (20)
 	8220,	-- Collector: Banners of the Mantid Empire (5 banners)
 	8221,	-- Collector: Banners of the Mantid Empire (20 Banners)
-	7343,	-- Collector: Carved Bronze Mirrors	(5)
-	7363,	-- Collector: Carved Bronze Mirrors (20)
 	8226,	-- Collector: Inert Sound Beacons (5)
 	8227,	-- Collector: Inert Sound Beacons (20)
 	8234,	-- Collector: Kypari Sap Containers (5)
@@ -173,6 +171,8 @@ AchieveIt.Categories:addCategory(CatID.Professions_Archaeology, L["Pandaren"], {
 
 	7345,	-- Collector: Apothecary Tins (5)
 	7365,	-- Collector: Apothecary Tins(20)
+	7343,	-- Collector: Carved Bronze Mirrors	(5)
+	7363,	-- Collector: Carved Bronze Mirrors (20)
 	7342,	-- Collector: Empty Kegs of Brewfather Xin Wo Yin (5)
 	7362,	-- Collector: Empty Kegs of Brewfather Xin Wo Yin (20)
 	7344,	-- Collector: Gold-Inlaid Porcelain Funerary Figurines (5)
