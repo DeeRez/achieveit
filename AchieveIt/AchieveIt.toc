@@ -4,6 +4,7 @@
 ## Author: wrakky, MuffinManKen, DeeRez
 ## Version: 9.2.0.02
 ## SavedVariables: AchieveIt_Data
+## X-Curse-Project-ID: 50663
 ## X-Wago-ID: Rn6VqZNd
 
 libs\LibStub\LibStub.lua
