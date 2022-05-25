@@ -1680,6 +1680,7 @@ AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands,L["Progress"],{
 	15000, -- United Front
 	15064, -- Breaking the Chains
 	15035, -- On the Offensive
+	15647, -- Dead Men Tell Some Tales
 
 });
 
@@ -1805,6 +1806,7 @@ AchieveIt.Categories:addCategory(CatID.Quests_Shadowlands,AchieveIt.GetMapName(Z
 	15336, -- From A to Zeroth
 	15515, -- Path to Enlightenment
 	15259, -- Secrets of the First Ones
+	15229, -- Traversing the Spheres
 
 }).locate =	function(p_current_map)
 

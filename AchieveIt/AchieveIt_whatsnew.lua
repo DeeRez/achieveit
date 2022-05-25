@@ -2,8 +2,7 @@ local _ADDON_NAME, ADDON = ... -- Pulls back the Addon-Local Variables and store
 
 ADDON.WHATSNEW_TEXT = "" ..
 [[ 
-- Moved 'Collector: Carved Bronze Mirrors' achievements to the correct category.
-- Fixed some category spelling errors 
+- Added 9.2.5 achievements
 		
 - IMPORTANT NOTE FOR FOREIGN LOCALES: 
 - Category localisation is pretty much done. A few sub-category translations are still needed for some locales. 
