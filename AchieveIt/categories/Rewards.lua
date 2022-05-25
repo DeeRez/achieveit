@@ -22,6 +22,7 @@ local titleAchievements	= {
 	871, -- Avast Ye, Admiral!
 	5827, -- Avengers of Hyjal
 	11761, -- Azeroth's Next Top Model
+	15654, -- Back from the Beyond
 	4583, -- Bane of the Fallen King
 	{ id = 230, faction = AchieveIt.Factions.ALLIANCE, activity = act.PvP}, -- Battlemaster
 	{ id = 1175, faction = AchieveIt.Factions.HORDE, activity = act.PvP}, -- Battlemaster
