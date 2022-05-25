@@ -531,7 +531,7 @@ AchieveIt.Categories:addCategory(CatID.Exploration_Shadowlands, AchieveIt.GetMap
 	14761, -- Deciphering Death's Intentions
 	14894, -- To 'Ghast, Two Curios
 	14895, -- 'Ghast Five
-
+	15648, -- Walking in Maw-mphis
 });
 
 AchieveIt.Categories:addCategory(CatID.Exploration_Shadowlands, AchieveIt.GetMapName(Zone.Korthia), {
