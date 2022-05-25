@@ -107,7 +107,9 @@ AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Mythic, {
 	14368, -- The Necrotic Wake
 	14417, -- Theater of Pain
 	15177, -- Tazavesh, the Veiled Market
-	
+	15652, -- Mythic: So'leah's Gambit
+	15650, -- Mythic: Streets of Wonder
+	15651, -- Myths of the Shadowlands Dungeons
 }).locate = function()
 
 	return 	AchieveIt:Contains(sl_dungeon_ids,C_Map.GetBestMapForUnit("player")) and 
