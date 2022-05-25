@@ -60,7 +60,7 @@ local sl_dungeon_ids = {
 	1993, -- Tazavesh, the Veiled Market - The Opulent Nexus	 
 	1995, -- Tazavesh, the Veiled Market - Stormheim	 
 	1996, -- Tazavesh, the Veiled Market - Boralus Harbor	 
-	1997, -- Tazavesh, the Veiled Market - Aggramar's Vault ]]
+	1997, -- Tazavesh, the Veiled Market - Aggramar's Vault 
 	};
 	
 AchieveIt.Categories:addCategory(CatID.Dungeons_Shadowlands,Difficulty.Normal, {
@@ -423,6 +423,9 @@ local category = AchieveIt.Categories:addCategory(CatID.Raids_Shadowlands, L["Gl
 	14355, -- Glory of the Nathria Raider
 	15130, -- Glory of the Dominant Raider
 	15491, -- Glory of the Sepulcher Raider
+	15684, -- Fates of the Shadowlands Raids
+	15685, -- Heroic: Fates of the Shadowlands Raids
+	15687, -- Mythic: Fates of the Shadowlands Raids
 });
 
 --------------------
@@ -445,6 +448,9 @@ nathria_cat:addChild(L["Progress"], {
 	14363, -- Mythic: Sludgefist
 	14364, -- Mythic: Stone Legion Generals
 	14365, -- Mythic: Sire Denathrius
+	15663, -- Fate of Nathria
+	15665, -- Heroic: Fate of Nathria
+	15664, -- Nythic: Fate of Nathria
 }).locate = function()
 
 	-- Castle Nathria raid map ids
@@ -596,6 +602,9 @@ sanctum_cat:addChild(L["Progress"], {
 	15119, -- Mythic: Fatescribe Roh-Kalo
 	15120, -- Mythic: Kel'Thuzad
 	15121, -- Mythic: Sylvanas Windrunner
+	15667, -- Fate of Domination
+	15668, -- Heroic: Fate of Domination
+	15669, -- Mythic: Fate of Domination
 }).locate = function()
 
 	-- Sanctum of Domination raid map ids
@@ -738,6 +747,9 @@ sotfo_cat:addChild(L["Progress"], {
 	15487, -- Mythic: Lords of Dread
 	15488, -- Mythic: Rygelon
 	15489, -- Mythic: The Jailer
+	15681, -- Fate of the Sepulcher
+	15682, -- Heroic: Fate of the Sepulcher
+	15683, -- Mythic: Fate of the Sepulcher
 }).locate = function()
 
 	-- Sepulcher of the First Ones raid map ids

@@ -1,11 +1,12 @@
-## Interface: 90200
+## Interface: 90250
 ## Title: Achieve It
 ## Notes: Organises your achievements into sub groups to make looking through them easier
-## Author: wrakky, MuffinManKen, DeeRez
-## Version: 9.2.0.02
+## Author: wrakky, MuffinManKen
+## Additions: DeeRez
+## Version: 9.2.5.00
 ## SavedVariables: AchieveIt_Data
-## X-Curse-Project-ID: 50663
 ## X-Wago-ID: Rn6VqZNd
+## X-Curse-Project-ID: 50663
 
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
@@ -31,5 +32,3 @@ AchieveIt_whatsnew.lua
 ## Categories ##
 categories\Categories.lua
 categories\Categories.xml
-
-
