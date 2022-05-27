@@ -1,4 +1,4 @@
-## Interface: 90250
+## Interface: 90205
 ## Title: Achieve It
 ## Notes: Organises your achievements into sub groups to make looking through them easier
 ## Author: wrakky, MuffinManKen
