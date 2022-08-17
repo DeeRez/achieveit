@@ -1,9 +1,9 @@
-## Interface: 90205
+## Interface: 90207
 ## Title: Achieve It
 ## Notes: Organises your achievements into sub groups to make looking through them easier
 ## Author: wrakky, MuffinManKen
 ## Additions: DeeRez
-## Version: 9.2.5.00
+## Version: 9.2.7.00
 ## SavedVariables: AchieveIt_Data
 ## X-Wago-ID: Rn6VqZNd
 ## X-Curse-Project-ID: 50663

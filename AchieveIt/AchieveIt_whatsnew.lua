@@ -2,7 +2,7 @@ local _ADDON_NAME, ADDON = ... -- Pulls back the Addon-Local Variables and store
 
 ADDON.WHATSNEW_TEXT = "" ..
 [[ 
-- Added 9.2.5 achievements
+- Fixed the list order of some achievements
 		
 - IMPORTANT NOTE FOR FOREIGN LOCALES: 
 - Category localisation is pretty much done. A few sub-category translations are still needed for some locales. 

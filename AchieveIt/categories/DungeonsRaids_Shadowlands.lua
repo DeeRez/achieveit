@@ -451,8 +451,8 @@ nathria_cat:addChild(L["Progress"], {
 	14364, -- Mythic: Stone Legion Generals
 	14365, -- Mythic: Sire Denathrius
 	15663, -- Fate of Nathria
-	15665, -- Heroic: Fate of Nathria
-	15664, -- Nythic: Fate of Nathria
+	15664, -- Heroic: Fate of Nathria
+	15665, -- Nythic: Fate of Nathria
 }).locate = function()
 
 	-- Castle Nathria raid map ids
